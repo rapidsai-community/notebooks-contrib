@@ -8,7 +8,7 @@ Many of these notebooks use additional PyData ecosystem packages, and include co
 
 ## Exploring the Repo
 Notebooks live under two subfolders:
-- `cpu_comparisons` - these notebooks demonstrate “why RAPIDS’ by directly comparing compute time between single and multi threaded CPU implementations vs GPU (RAPIDS library) implementations. Of note here is the similarity of RAPIDS APIs to common PyData ecosystem packages like Pandas and scikit-learn. Notebooks in here include: 
+- `cpu_comparisons` - these notebooks demonstrate "why RAPIDS" by directly comparing compute time between single and multi threaded CPU implementations vs GPU (RAPIDS library) implementations. Of note here is the similarity of RAPIDS APIs to common PyData ecosystem packages like Pandas and scikit-learn. Notebooks in here include: 
     - DBScan Demo Full
     - XGBoost
     - Linear Regression
