@@ -34,9 +34,9 @@ Please ensure you meet the [pre-requisites](https://rapids.ai/start.html#prerequ
 
 Our container extends the base notebooks container. To build:
 ```
-git clone https://github.com/rapidsai/extended-notebooks
-cd extended-notebooks
-docker build -t extended-notebooks .
+git clone https://github.com/rapidsai/notebooks-extended
+cd notebooks-extended
+docker build -t notebooks-extended .
 ```
 
 To use previous versions of the notebooks, do a `git checkout` to the relevant commit.
