@@ -1,18 +1,20 @@
 # RAPIDS Extended Notebooks
 ## Intro
-Welcome to the auxiliary notebooks repo!  The purpose of this collection of notebooks is to help prospective users experience the power of RAPIDS, understand why they would want to implement RAPIDS in their data science pipeline, and help them get started and grow their skills to master the RAPIDS libraries. 
+Welcome to the extended notebooks repo!
 
-This collection started as the community notebooks that require external sources for libraries and data, so it requires a network connected workstation.  If you plan to explore on an air gapped system, please use our core notebooks repo.  
+The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn how, why, and when including it in data science pipelines makes sense, and help get started using RAPIDS libraries by example. 
+
+Many of these notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please use the [core notebooks repo](https://github.com/rapidsai/notebooks).
+
 ## Exploring the Repo
-Our notebooks are split into two major folders, with subfolders
-- `cpu_comparison_notebooks` - contains notebooks that will let you experience “why RAPIDS’ by directly comparing the data science compute time between popular single and multi threaded CPU implementations and RAPIDS GPU implementation.  You’ll also see how similar RAPIDS APIs are to your favorite data science packages. 
-Notebooks in here include: 
+Notebooks live in two root folders:
+- `cpu_comparison_notebooks` - these notebooks demonstrate “why RAPIDS’ by directly comparing compute time between single and multi threaded CPU implementations vs GPU (RAPIDS library) implementations. Of note here is the similarity of RAPIDS APIs to common PyData ecosystem packages like Pandas and scikit-learn. Notebooks in here include: 
     - DBScan Demo Full
     - XGBoost
     - Linear Regression
     - Ridge Regression
     - PCA
-- `tutorial_notebooks` - contains notebooks that will help you learn “how [to master] RAPIDS”.  It contains these subfolders
+- `tutorial_notebooks` - contains notebooks showing “how [to master] RAPIDS”:
     - `getting_started` - to help you quickly learn the basic RAPIDS APIs.  It contains these notebooks
         - Dask Hello World
         - Getting Started with cuDF
@@ -22,29 +24,27 @@ Notebooks in here include:
     - `advanced` - these notebooks show you the power of the RAPIDS libraries unleashed to solve real world problems.  
         - PLASTICC 
 
-The `data` folder is where we save our data for our examples.  There is some small, initial data set in there, but some notebooks may require you to download larger datasets for external websites.
+The `data` folder contains small data samples used in running purely functional examples. Some notebooks include cells that download larger datasets from external websites.
 
-Finally, there is a DOCKERFILE for building a container from source as well as the README, which you are viewing now!
+Lastly, a Dockerfile is provided for installing pre-requisite packages & launching JupyterLab.
 
 ## Installation
-### Prerequisites for Installation
-Please see our [getting started page](https://rapids.ai/start.html) on our website for full installation requirements and instructions
--	Workstation or Cloud Instance with a Pascal, Tesla, Volta, or Turning GPU 
-    - (Maxwell , Kepler, and Fermi GPUs are not supported)
--	Ubuntu 16.04 or 18.04
--	Python 3.6 or 3.7
--	Docker CE
--	Nvidia-Docker
 
-### Getting Containers
-We will host a precompiled docker container here.  Please run this docker command to pull our late
-`coming soon`
-If you prefer to get the most cutting edge notebooks, or explore a different branch, we have included a docker file to build this notebook by following the instructions below
-`coming soon`
-## Contributing Back
+Please ensure you meet the [pre-requisites](https://rapids.ai/start.html#prerequisites)
+
+Our container extends the base notebooks container. To build:
+```
+git clone https://github.com/rapidsai/extended-notebooks
+cd extended-notebooks
+docker build -t extended-notebooks .
+```
+
+To use previous versions of the notebooks, do a `git checkout` to the relevant commit.
+
+## Contributing
 You can contribute to this repo in 5 ways:
-1. Finding bugs in existing notebooks – sometimes things unexpectedly break in our notebooks.  Please raise a bug issue appropriately and let us know so that we can quickly fix it!
-1. Peer reviewing and benchmarking new and existing notebooks – Both new and existing notebooks need to be checked against current and new RAPIDS library releases.  Your help is truly appreciated in making sure that those notebooks not just work, but are efficient, effective and, well, run rapidly
-1. Suggesting notebook content that would interest you – We create notebooks that we think are useful to you, but what do we know?  You know what’s useful to you.  Please tell us by suggesting a new notebook or upvoting an existing suggestion!
-1. Creating and submitting a great, new notebook – A good notebooks takes time and  effort so it would be great if you would share the load and enhance the community’s knowledge and capabilities
-1. Writing a tutorial blog - Show your expertise in RAPIDS while teaching people how to use RAPIDS for their data science pipeline.
+1. Finding bugs in existing notebooks – sometimes things unexpectedly break in our notebooks.  Please raise an issue so we can fix it!
+2. Peer reviewing and benchmarking new and existing notebooks – Both new and existing notebooks need to be checked against current and new RAPIDS library releases. Your help is truly appreciated in making sure that those notebooks not just work, but are efficient, effective and, well, run rapidly
+3. Suggesting notebook content that would interest you – We create notebooks that we think are useful to you, but what do we know?  You know what’s useful to you.  Please tell us by suggesting a new notebook or upvoting an existing suggestion!
+4. Creating and submitting a great, new notebook – A good notebooks takes time and  effort so it would be great if you would share the load and enhance the community’s knowledge and capabilities
+5. Writing a tutorial blog - Show your expertise in RAPIDS while teaching people how to use RAPIDS in their data science pipeline.
