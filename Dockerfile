@@ -10,8 +10,12 @@ RUN source activate rapids && conda install -y \
 RUN source activate rapids && pip install kaggle
 
 ADD data /data
-ADD cpu_comparisons /rapids/notebooks/cpu_comparisons
-ADD tutorials /rapids/notebooks/tutorials
+RUN mkdir -p /rapids/notebooks/extended
+# symlinked so users can browse the data directory inside JupyterLab
+RUN ln -s /data /rapids/notebooks/extended
 
-WORKDIR /rapids/notebooks
+ADD cpu_comparisons /rapids/notebooks/extended/cpu_comparisons
+ADD tutorials /rapids/notebooks/extended/tutorials
+
+WORKDIR /rapids/notebooks/extended
 CMD source activate rapids && sh /rapids/notebooks/utils/start-jupyter.sh
