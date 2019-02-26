@@ -10,8 +10,8 @@ RUN source activate rapids && conda install -y \
 RUN source activate rapids && pip install kaggle
 
 ADD data /data
-ADD cpu_comparisons /rapids/notebooks/
-ADD tutorials /rapids/notebooks/
+ADD cpu_comparisons /rapids/notebooks/cpu_comparisons
+ADD tutorials /rapids/notebooks/tutorials
 
 WORKDIR /rapids/notebooks
 CMD source activate rapids && sh /rapids/notebooks/utils/start-jupyter.sh
