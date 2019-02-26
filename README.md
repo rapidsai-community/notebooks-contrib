@@ -24,7 +24,9 @@ Notebooks live under two subfolders:
     - `advanced` - these notebooks show you the power of the RAPIDS libraries unleashed to solve real world problems.  
         - PLASTICC 
 
-The `data` folder contains small data samples used in running purely functional examples. Some notebooks include cells that download larger datasets from external websites.
+`/data` contains small data samples used for purely functional demonstrations. Some notebooks include cells that download larger datasets from external websites.
+
+The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so you can browse it from JupyterLab's UI.
 
 Lastly, a Dockerfile is provided for installing pre-requisite packages & launching JupyterLab.
 
