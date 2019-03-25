@@ -1,4 +1,8 @@
-FROM rapidsai/rapidsai:cuda9.2-runtime-ubuntu16.04
+# FROM rapidsai/rapidsai:cuda9.2-runtime-ubuntu16.04
+#FROM rapidsai/rapidsai-nightly:0.6-cuda10.0-devel-ubuntu18.04-gcc7-py3.7
+FROM rapidsai/rapidsai:0.6-cuda10.0-devel-ubuntu18.04-gcc7-py3.7
+
+
 
 SHELL ["/bin/bash", "-c"]
 RUN source activate rapids && conda install -y \
