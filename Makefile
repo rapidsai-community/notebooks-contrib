@@ -21,3 +21,6 @@ clean:
 copy: clean
 	docker cp $(DOCKER_ID):/rapids/notebooks/extended/tutorials .
 
+convert:
+	jupyter nbconvert --to script foo.ipynb 
+
