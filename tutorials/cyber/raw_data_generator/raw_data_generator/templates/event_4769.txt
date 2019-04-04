@@ -1,0 +1,30 @@
+A Kerberos service ticket was requested.
+
+Account Information:
+
+   Account Name:  {{ UserName }}
+   Account Domain:  {{ DomainName }}
+   Logon GUID:  {4a5cfd43-84a6-c32e-b6a3-b634f57eafe7}
+
+Service Information:
+
+   Service Name:  {{ ServiceName }}
+   Service ID:  ACME\WIN-PY3ZJZTXPIL$
+
+Network Information:
+
+   Client Address:  {{ Source }}
+   Client Port:  50979
+
+Additional Information:
+
+   Ticket Options:  0x40810000
+   Ticket Encryption Type: 0x12
+   Failure Code:  0x0
+   Transited Services: -
+
+This event is generated every time access is requested to a resource such as a computer or a Windows service.  The service name indicates the resource to which access was requested.
+
+This event can be correlated with Windows logon events by comparing the Logon GUID fields in each event.  The logon event occurs on the machine that was accessed, which is often a different machine than the domain controller which issued the service ticket.
+
+Ticket options, encryption types, and failure codes are defined in RFC 4120.

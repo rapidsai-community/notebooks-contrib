@@ -1,0 +1,45 @@
+name: data_generator
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - boost-cpp=1.66.0=1
+  - bzip2=1.0.6=h14c3975_1002
+  - ca-certificates=2019.3.9=hecc5488_0
+  - certifi=2019.3.9=py36_0
+  - curl=7.62.0=hbc83047_0
+  - gettext=0.19.8.1=hc5be6a0_1002
+  - hdfs3=0.3.0=py36_1000
+  - icu=58.2=hf484d3e_1000
+  - jinja2=2.10=py36_0
+  - krb5=1.14.6=0
+  - libcurl=7.62.0=h20c2e04_0
+  - libedit=3.1.20181209=hc058e9b_0
+  - libffi=3.2.1=hd88cf55_4
+  - libgcc-ng=8.2.0=hdf63c60_1
+  - libgcrypt=1.8.4=hf484d3e_1000
+  - libgpg-error=1.36=he1b5a44_0
+  - libgsasl=1.8.0=h8f92815_1003
+  - libhdfs3=2.3=3
+  - libiconv=1.15=h516909a_1005
+  - libntlm=1.4=h14c3975_1002
+  - libprotobuf=3.5.2=hd28b015_1
+  - libssh2=1.8.2=h22169c7_2
+  - libstdcxx-ng=8.2.0=hdf63c60_1
+  - libuuid=2.32.1=h14c3975_1000
+  - libxml2=2.9.8=h143f9aa_1005
+  - markupsafe=1.1.1=py36h7b6447c_0
+  - ncurses=6.1=he6710b0_1
+  - openssl=1.1.1b=h14c3975_1
+  - pip=19.0.3=py36_0
+  - python=3.6.8=h0371630_0
+  - readline=7.0=h7b6447c_5
+  - setuptools=40.8.0=py36_0
+  - sqlite=3.27.2=h7b6447c_0
+  - tk=8.6.8=hbc83047_0
+  - wheel=0.33.1=py36_0
+  - xz=5.2.4=h14c3975_4
+  - zlib=1.2.11=h7b6447c_3
+  - pip:
+    - mockito==1.1.1
+prefix: /conda/envs/data_generator
