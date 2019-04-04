@@ -4,7 +4,8 @@ SHELL ["/bin/bash", "-c"]
 RUN source activate rapids && conda install -y \
         matplotlib \
         scikit-learn \
-        seaborn
+        seaborn \
+        && pip install graphistry
 
 # ToDo: let user supply kaggle creds
 RUN source activate rapids && pip install kaggle

@@ -11,7 +11,7 @@ class RawDataGeneratorTest(unittest.TestCase):
 
     def test_data_generator(self):
         cwd = os.getcwd()
-        output_dir = "/test/data/output"
+        output_dir = "/data/lanl/output"
         input_dir = "/test/data/input"
         input_path = cwd + input_dir + "/sample_data.txt"
         output_path = cwd + output_dir + "/sample_data.csv"
