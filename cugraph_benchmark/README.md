@@ -49,10 +49,22 @@ rm -rf tmp
 
 
 
+**Test files**
 
+| File Name              | Num of Vertices | Num of Edges |
+| ---------------------- | --------------: | -----------: |
+| preferentialAttachment |         100,000 |      999,970 |
+| caidaRouterLevel       |         192,244 |    1,218,132 |
+| coAuthorsDBLP          |         299,067 |    1,955,352 |
+| dblp-2010              |         326,186 |    1,615,400 |
+| citationCiteseer       |         268,495 |    2,313,294 |
+| coPapersDBLP           |         540,486 |   30,491,458 |
+| coPapersCiteseer       |         434,102 |   32,073,440 |
+| as-Skitter             |       1,696,415 |   22,190,596 |
 
 
 
 ## Benchmarks
 
 1. Louvain - louvain benchmark notebook
+2. PageRank
