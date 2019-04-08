@@ -2,30 +2,28 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 import os
 import json
 import logging
-import re
 
 class RawDataGenerator:
-    def __init__(self, hdfs_conn):
+    def __init__(self):
         # Read templates
         self.env = Environment(loader=PackageLoader('raw_data_generator', 'templates'),)
         self.schema = ["Time", "EventID", "LogHost", "LogonType", "LogonTypeDescription", "UserName", "DomainName", "LogonID",
                        "SubjectUserName", "SubjectDomainName", "SubjectLogonID", "Status", "Source", "ServiceName", "Destination",
                        "AuthenticationPackage", "FailureReason", "ProcessName", "ProcessID", "ParentProcessName", "ParentProcessID", "Raw"]
-        self.hdfs = hdfs_conn
 
     # Generates raw data from templates
     def generate_raw_data(self, infilepath, outfilepath, output_format):
-        with self.hdfs.open(infilepath, "rb") as infile:
+        with open(infilepath, "r") as infile:
             filename = os.path.basename(infilepath).split('.')[0]
             logging.info("Reading fileprint... " + infilepath)
             logging.info(outfilepath + '/' + filename + '.' + output_format)
-            with self.hdfs.open(outfilepath + '/' + filename + '.' + output_format, "wb") as outfile:
+            with open(outfilepath + '/' + filename + '.' + output_format, "w") as outfile:
                 logging.info("Writing to file..." +  outfilepath)
                 if output_format == "csv":
                     # Write header
-                    outfile.write((",".join(self.schema) + "\n").encode('utf-8'))
+                    outfile.write((",".join(self.schema) + "\n"))
                 for line in infile:
-                    str_line = line.decode('utf-8')
+                    str_line = line
                     json_line = json.loads(str_line)
                     raw_data = repr(self._generate_raw_log(json_line))
                     json_line["Raw"] = raw_data
@@ -36,7 +34,7 @@ class RawDataGenerator:
                     # If this line from the input source ends in a newline, then add a newline to output line
                     if repr(str_line)[-3:] == "\\n'":
                         raw_line = raw_line + "\n"
-                    outfile.write(raw_line.encode('utf-8'))
+                    outfile.write(raw_line)
                 logging.info("Generate raw data is complete")
 
     def _generate_raw_log(self, json_line):

@@ -3,7 +3,6 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - hdfs3
   - jinja2
   - python=3.6
   - pip:
