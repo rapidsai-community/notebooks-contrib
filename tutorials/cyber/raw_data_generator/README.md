@@ -13,13 +13,6 @@ To add a template for a new windows log event type add it to the `raw_data_gener
 ## Requirements
 1. Python (tested on 3.6)
 
-## Conda Environment
-
-Reference `data_generator.yml` for specifics on creating your own conda environment.
-```aidl
-conda env create -f data_generator.yml
-```
-
 ## Run Data Generator
 
 ```$xslt
