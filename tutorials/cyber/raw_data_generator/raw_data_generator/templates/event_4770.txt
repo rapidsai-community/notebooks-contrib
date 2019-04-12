@@ -1,0 +1,23 @@
+A Kerberos service ticket was renewed.
+
+Account Information:
+
+   Account Name:  {{ UserName }}
+   Account Domain:  {{ DomainName }}
+
+Service Information:
+
+   Service Name:  {{ ServiceName }}
+   Service ID:  ACME-FR\krbtgt
+
+Network Information:
+
+   Client Address:  {{ Source }}
+   Client Port:  0
+
+Additional Information:
+
+   Ticket Options:  0x2
+   Ticket Encryption Type: 0x12
+
+Ticket options and encryption types are defined in RFC 4120.

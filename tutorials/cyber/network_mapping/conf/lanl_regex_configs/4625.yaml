@@ -1,0 +1,44 @@
+account_for_which_logon_failed_account_domain:
+    - for which logon failed:.+ account domain:([a-z0-9\.]+)
+account_for_which_logon_failed_account_name:
+    - for which logon failed:.+ account name:([a-z0-9\. ]+)[ $]
+account_for_which_logon_failed_security_id:
+    - for which logon failed:.+ security id:([a-z0-9\. ]+)[ $]
+computername:
+    - computername=([a-z0-9\.\-]+)
+detailed_authentication_information_authentication_package:
+    - authentication package:([a-z 0-9\.]+)
+detailed_authentication_information_key_length:
+    - key length:([0-9]+)
+detailed_authentication_information_logon_process:
+    - logon process:([a-z 0-9\-\.]+)
+detailed_authentication_information_package_name_ntlm_only:
+    - package name \(ntlm only\):([a-z0-9\-]+)
+detailed_authentication_information_transited_services:
+    - transited services:([a-z0-9\-]+)
+failure_information_failure_reason:
+    - failure reason:([a-z0-9\- \.]+)[ $]
+failure_information_status:
+    - status:([a-z0-9]+)
+failure_information_sub_status:
+    - sub status:([a-z0-9]+)
+logon_type:
+    - logon type:([a-z0-9 ]+)
+network_information_source_network_address:
+    - source network address:([0-9\.a-z]+)
+network_information_source_port:
+    - source port:([0-9 \-]+)
+network_information_workstation_name:
+    - workstation name:([a-z0-9 \-]+)[ $]
+process_information_caller_process_id:
+    - caller process id:([a-z0-9]+)
+process_information_caller_process_name:
+    - caller process name:([a-z0-9:\\.]+)
+subject_account_domain:
+    - account domain:([a-z\.\-0-9]+)
+subject_account_name:
+    - account name:([a-z\.\-0-9$\-]+)
+subject_logon_id:
+    - logon id:([a-z0-9]+)
+subject_security_id:
+    - security id:([a-z0-9\. \\]+)

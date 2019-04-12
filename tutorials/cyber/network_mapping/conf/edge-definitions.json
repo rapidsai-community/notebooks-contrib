@@ -1,0 +1,42 @@
+[{
+		"dataSource": "lanl_auth",
+		"timeCol": "time",
+        "intCols": ["eventcode"],
+        "stringCols": ["new_logon_account_name", "subject_account_name", "network_information_source_network_address"],
+		"edges": [{
+				"filters": [{
+					"key": "eventcode",
+					"value": "4624"
+				}],
+				"srcCol": "new_logon_account_name",
+				"srcNodeType": "account",
+				"dstCol": "network_information_source_network_address",
+				"dstNodeType": "address",
+				"relationship": "login"
+			},
+			{
+                "filters": [{
+					"key": "eventcode",
+					"value": "4625"
+				}],
+				"srcCol": "subject_account_name",
+				"srcNodeType": "account",
+				"dstCol": "network_information_source_network_address",
+				"dstNodeType": "address",
+				"relationship": "login"
+			}
+		]
+	},
+	{
+		"dataSource": "lanl_flow",
+		"timeCol": "Time",
+        "stringCols": ["SrcDevice", "DstDevice"],
+		"edges": [{
+			"srcCol": "SrcDevice",
+			"srcNodeType": "address",
+			"dstCol": "DstDevice",
+			"dstNodeType": "address",
+			"relationship": "connect"
+		}]
+	}
+]
