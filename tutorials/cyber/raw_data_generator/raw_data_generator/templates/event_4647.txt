@@ -1,0 +1,9 @@
+User initiated logoff:
+
+Subject:
+   Security ID:  {{ DomainName }}\{{ UserName }}
+   Account Name:  {{ UserName }}
+   Account Domain:  {{ DomainName }}
+   Logon ID:  {{ LogonID }}
+
+This event is generated when a logoff is initiated but the token reference count is not zero and the logon session cannot be destroyed.  No further user-initiated activity can occur.  This event can be interpreted as a logoff event.

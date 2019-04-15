@@ -1,0 +1,9 @@
+The screen saver was dismissed.
+
+Subject:
+
+   Security ID:  {{ DomainName }}\{{ UserName }}
+   Account Name:  {{ UserName }}
+   Account Domain:  {{ DomainName }}
+   Logon ID:  {{ LogonID }}
+   Session ID: 1

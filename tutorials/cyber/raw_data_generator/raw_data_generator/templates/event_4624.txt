@@ -1,0 +1,41 @@
+An account was successfully logged on.
+
+Subject:
+   	Security ID:	SYSTEM
+   	Account Name:	DESKTOP-LLHJ389$
+   	Account Domain:	WORKGROUP
+   	Logon ID:	0x3E7
+
+Logon Information:
+   	Logon Type:	{{ LogonType }}
+   	Restricted Admin Mode:	-
+   	Virtual Account:	No
+   	Elevated Token:	No
+
+Impersonation Level:	Impersonation
+
+New Logon:
+   	Security ID:	{{ DomainName }}\{{ UserName }}
+   	Account Name:	{{ UserName }}
+   	Account Domain:	{{ DomainName }}
+   	Logon ID:	{{ LogonID }}
+   	Linked Logon ID:	0xFD5112A
+   	Network Account Name:	{{ UserName }}
+   	Network Account Domain:	{{ DomainName }}
+   	Logon GUID:	{00000000-0000-0000-0000-000000000000}
+
+Process Information:
+   	Process ID:	{{ ProcessID }}
+   	Process Name:	C:\Windows\System32\{{ ProcessName }}
+
+Network Information:
+   	Workstation Name:	{{ Source }}
+   	Source Network Address:	{{ Source }}
+   	Source Port:	-
+
+Detailed Authentication Information:
+   	Logon Process:	User32
+   	Authentication Package:	{{ AuthenticationPackage }}
+   	Transited Services:	-
+   	Package Name (NTLM only):	-
+   	Key Length:	0

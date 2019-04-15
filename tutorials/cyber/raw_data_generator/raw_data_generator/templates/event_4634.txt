@@ -1,0 +1,10 @@
+An account was logged off.
+
+Subject:
+   Security ID:  ANONYMOUS LOGON
+   Account Name:  {{ UserName }}
+   Account Domain:  {{ DomainName }}
+   Logon ID:  {{ LogonID }}
+   Logon Type:  {{ LogonType }}
+
+This event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.

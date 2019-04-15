@@ -1,0 +1,6 @@
+The domain controller attempted to validate the credentials for an account.
+
+Authentication Package: {{ AuthenticationPackage }}
+Logon Account: {{ UserName }}
+Source Workstation: {{ Source }}
+Error Code: 0xc0000064
