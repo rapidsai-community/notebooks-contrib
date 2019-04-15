@@ -4,7 +4,9 @@ SHELL ["/bin/bash", "-c"]
 RUN source activate rapids && conda install -y \
         matplotlib \
         scikit-learn \
-        seaborn
+        seaborn \
+        jinja2 \
+        && pip install graphistry mockito
 
 # ToDo: let user supply kaggle creds
 RUN source activate rapids && pip install kaggle
