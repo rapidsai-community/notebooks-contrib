@@ -6,6 +6,8 @@ RUN source activate rapids && conda install -y \
         scikit-learn \
         seaborn \
         python-louvain
+        jinja2 \
+        && pip install graphistry mockito
 
 RUN source activate rapids && conda install -c \
         nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba -c conda-forge -c defaults cugraph
