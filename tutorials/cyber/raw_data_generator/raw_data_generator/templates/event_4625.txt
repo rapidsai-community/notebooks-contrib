@@ -1,0 +1,45 @@
+An account failed to log on.
+
+Subject:
+   Security ID:  NULL SID
+   Account Name:  -
+   Account Domain:  -
+   Logon ID:  {{ LogonID }}
+Logon Type:  {{ LogonType }}
+Account For Which Logon Failed:
+   Security ID:  NULL SID
+   Account Name:  {{ UserName }}
+   Account Domain: {{ DomainName }}
+Failure Information:
+   Failure Reason:  {{ FailureReason }}
+   Status:   0xc000006d
+   Sub Status:  0xc0000064
+Process Information:
+   Caller Process ID: 0x0
+   Caller Process Name: {{ ProcessName }}
+Network Information:
+   Workstation Name: {{ Source }}
+   Source Network Address: {{ Source }}
+   Source Port:  53176
+Detailed Authentication Information:
+   Logon Process:  NtLmSsp
+   Authentication Package: {{ AuthenticationPackage }}
+   Transited Services: -
+   Package Name (NTLM only): -
+   Key Length:  0
+
+This event is generated when a logon request fails. It is generated on the computer where access was attempted.
+
+The Subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The Logon Type field indicates the kind of logon that was requested. The most common types are 2 (interactive) and 3 (network).
+
+The Process Information fields indicate which account and process on the system requested the logon.
+
+The Network Information fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The authentication information fields provide detailed information about this specific logon request.
+
+Transited services indicate which intermediate services have participated in this logon request.
+Package name indicates which sub-protocol was used among the NTLM protocols
+Key length indicates the length of the generated session key. This will be 0 if no session key was requested
