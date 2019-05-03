@@ -4,9 +4,10 @@ Welcome to the extended notebooks repo!
 
 The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn how, why, and when including it in data science pipelines makes sense, and help get started using RAPIDS libraries by example. 
 
-Many of these notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please use the [core notebooks repo](https://github.com/rapidsai/notebooks).
+Many of these notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, and you want to use Notebooks Extended, you may have to manually download and transfer any packages and data sources from a machine that has network access.
 
 ## Exploring the Repo
+```This is about to change.  A new folder hierarchy is coming with 0.7!```
 Notebooks live under two subfolders:
 - `cpu_comparisons` - these notebooks demonstrate "why RAPIDS" by directly comparing compute time between single and multi threaded CPU implementations vs GPU (RAPIDS library) implementations. Of note here is the similarity of RAPIDS APIs to common PyData ecosystem packages like Pandas and scikit-learn. Notebooks in here include: 
     - DBScan Demo Full
@@ -34,19 +35,27 @@ Lastly, a Dockerfile is provided for installing pre-requisite packages & launchi
 
 Please ensure you meet the [pre-requisites](https://rapids.ai/start.html#prerequisites)
 
-Our container extends the base notebooks container. To build:
+Our container extends the base notebooks container. Unlike our Notebooks repo, which comes with the container, Notebooks Extended is meant to be a constatly updating source of community contributions.  We've made it easy to include Notebooks Extended in your RAPIDS container with 3 easy steps:
+
+Step 1: Download your RAPIDS container
 ```bash
+docker pull rapidsai/rapidsai:latest
+```
+
+Step 2: Git Pull Notebooks Extended into the folder of your choice (change "#/folder/of/your/choice" into wherever you desire Notebooks Extended to be). 
+
+```bash
+mkdir #/folder/of/your/choice
 git clone https://github.com/rapidsai/notebooks-extended
-cd notebooks-extended
-docker build -t notebooks-extended .
 ```
 
-To run:
+Step 3: Run Docker mounting your Notebooks Extended folder as a volume, changing "/folder/of/your/choice/" to where you put Notebooks Extended
 ```bash
-docker run -p 8888:8888 -it notebooks-extended
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 -v /folder/of/your/choice/ -it rapidsai/rapidsai:latest
 ```
 
-To use previous versions of the notebooks, do a `git checkout` to the relevant commit.
+
+To use previous versions of Notebooks Extended, do a `git checkout` to the relevant commit.
 
 ## Contributing
 You can contribute to this repo in 5 ways:
