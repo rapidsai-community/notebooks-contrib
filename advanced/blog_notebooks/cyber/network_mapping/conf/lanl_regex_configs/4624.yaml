@@ -1,0 +1,40 @@
+detailed_authentication_information_authentication_package:
+    - authentication package:([a-z 0-9\.]+)
+detailed_authentication_information_key_length:
+    - key length:([0-9]+)
+detailed_authentication_information_logon_process:
+    - logon process:([a-z 0-9\-\.]+)
+detailed_authentication_information_package_name_ntlm_only:
+    - package name \(ntlm only\):([a-z0-9 \-]+)
+detailed_authentication_information_transited_services:
+    - transited services:([a-z0-9 \-]+)
+logon_type:
+    - logon type:([a-z0-9 ]+)
+network_information_source_network_address:
+    - source network address:([0-9\.a-z]+)
+network_information_source_port:
+    - source port:([0-9 \-]+)
+network_information_workstation_name:
+    - workstation name:([a-z0-9 \-]+)
+new_logon_account_domain:
+    - new logon:.+ account domain:([a-z0-9\. ]+)
+new_logon_account_name:
+    - new logon:.+ account name:([a-z0-9\.$\-]+)
+new_logon_logon_guid:
+    - logon guid:([{}a-z0-9\-]+)
+new_logon_logon_id:
+    - logon id:([a-z0-9]+) \| logon guid
+new_logon_security_id:
+    - 'new logon: \| security id:([a-z\.\\ ]+)'
+process_information_process_id:
+    - process id:([a-z0-9]+)
+process_information_process_name:
+    - process name:([a-z0-9\-:\\]+)
+subject_account_domain:
+    - account domain:([a-z\.\-0-9]+)
+subject_account_name:
+    - account name:([a-z\.\-0-9$]+)
+subject_logon_id:
+    - logon id:([a-z0-9]+)
+subject_security_id:
+    - security id:([a-z0-9\. \\]+)

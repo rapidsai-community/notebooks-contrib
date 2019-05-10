@@ -1,0 +1,14 @@
+A process has exited.
+
+Subject:
+
+   Security ID:  {{ DomainName }}\{{ UserName }}
+   Account Name:  {{ UserName }}
+   Account Domain:  {{ DomainName }}
+   Logon ID:  {{ LogonID }}
+
+Process Information:
+
+   Process ID: {{ ProcessID }}
+   Process Name: {{ ProcessName }}
+   Exit Status: 0x0
