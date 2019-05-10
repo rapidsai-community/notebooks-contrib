@@ -1,0 +1,23 @@
+A logon was attempted using explicit credentials.
+
+Subject:
+   Security ID:  WIN-R9H529RIO4Y\Administrator
+   Account Name:  {{ SubjectUserName }}
+   Account Domain:  {{ SubjectDomainName }}
+   Logon ID:  {{ SubjectLogonID }}
+   Logon GUID:  {00000000-0000-0000-0000-000000000000}
+Account Whose Credentials Were Used:
+   Account Name:  {{ UserName }}
+   Account Domain:  {{ DomainName }}
+   Logon GUID:  {{ LogonID }}
+Target Server:
+   Target Server Name: {{ Destination }}
+   Additional Information: sp01.IceMAIL.com
+Process Information:
+   Process ID:  {{ ProcessID }}
+   Process Name:  {{ ProcessName }}
+Network Information:
+   Network Address: -
+   Port:   -
+
+This event is generated when a process attempts to log on an account by explicitly specifying that account’s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, or when using the RUNAS command.
