@@ -1,1 +1,0 @@
-Windows is shutting down. All logon sessions will be terminated by this shutdown.
