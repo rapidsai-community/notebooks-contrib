@@ -1,0 +1,5 @@
+An account was mapped for logon.
+
+   Authentication Package: %1
+   Account UPN: %2
+   Mapped Name: %3
