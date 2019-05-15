@@ -64,8 +64,7 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 #### Databrix Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| databrix   | RAPIDS_PCA_demo_avro_read                | This notebooks purpose is to use a Sample Dataset and compare the CPU vs GPU comparison for the PCA algorithm.                                                                                                                              |
-| databrix   | spark_rapids_pca_demo      | Demonstration of using cuGraph to compute vertex similarity using both the Jaccard Similarity and the Overlap Coefficient.                                                                          |
+| databrix   | RAPIDS_PCA_demo_avro_read                | This notebooks purpose is to showcase RAPIDS on Databrix use thier sample datasets and show the CPU vs GPU comparison for the PCA algorithm. There is also an accompanying HTML file for easy Databricks import.                                                                                                                         |                                                                       
 
 #### Regression Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
