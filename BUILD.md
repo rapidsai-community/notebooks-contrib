@@ -1,6 +1,7 @@
-## Installation
 
-Please ensure you meet the [pre-requisites](https://rapids.ai/start.html#prerequisites)
+A Dockerfile is provided for installing pre-requisite packages & launching JupyterLab. Please ensure you meet the [pre-requisites](https://rapids.ai/start.html#prerequisites) requirements.
+
+## Installation
 
 Our container extends the base notebooks container. To build:
 ```bash
