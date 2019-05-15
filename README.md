@@ -69,19 +69,19 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 #### Regression Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| regression   | regression_blog_notebook.ipynb       | Demonstration of using cuGraph to compute the Weighted Jaccard Similarity metric on our training dataset.                                                                                                                     |
+| regression   | regression_blog_notebook.ipynb       | This notebook showcases an end to end notebook using the try_this dataset and cuML's implementation of ridge regression.                                                                                                                     |
 
 ### Example Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| examples   | DBSCAN_Demo_FULL               |                                                    |
-| examples   | Dask_with_cuDF_and_XGBoost                    | Demonstration of using cuGraph to computer the Bredth First Search space from a given vertex to all other in our training graph                                                                                               |
-| examples   | Dask_with_cuDF_and_XGBoost_Disk                   | Demonstration of using cuGraph to computer the The Shortest Path from a given vertex to all other in our training graph                                                                                                       |
-| examples   | One_Hot_Encoding    | Demonstration of using cuGraph to identify clusters in a test graph using Spectral Clustering using both the (A) Balance Cut and (B) the Modularity Maximization quality metrics                                              |
-| examples   | PCA_Demo_Full               | Demonstration of using both NetworkX and cuGraph to compute the PageRank of each vertex in our test dataset                                                                                                                   |
-| examples   | linear_regression_demo.ipynb     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset                                                                                                                  |
+| examples   | DBSCAN_Demo_FULL               |  This notebook shows how to use DBSCAN algorithm and its GPU accelerated implementation present in RAPIDS                                                  |
+| examples   | Dask_with_cuDF_and_XGBoost                    | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF.                                                                                                |
+| examples   | Dask_with_cuDF_and_XGBoost_Disk                   | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF and read the data from disk using cuIO                                                                                                      |
+| examples   | One_Hot_Encoding    | In this notebook we show how to use dask and cudf to use xgboost on a dataset.                                              |
+| examples   | PCA_Demo_Full               | In this notebook we will show how to use PCA and its GPU accelerated implementation present in RAPIDS.                                   |
+| examples   | linear_regression_demo.ipynb     |In this notebook we will show how to use linear regression and its GPU accelerated implementation present in RAPIDS.                                                                                                                |
 | examples   | ridge_regression_demo.ipynb     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset                                                                                                                  |
-| examples   | umap_demo.ipynb     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset                                                                                             
+| examples   | umap_demo.ipynb     | In this notebook we will show how to use UMAP and its GPU accelerated implementation present in RAPIDS.                                                                                             
 
 ## Additional Information
 * The `cuml` folder also includes a small subset of the Mortgage Dataset used in the notebooks and the full image set from the Fashion MNIST dataset.
