@@ -6,57 +6,89 @@ The purpose of this collection of notebooks is to help users understand what RAP
 
 Many of these notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please use the [core notebooks repo](https://github.com/rapidsai/notebooks).
 
+## Installation
+
+Please use the [BUILD.md](https://github.com/rapidsai/notebooks-extended/tree/master) to check the pre-requisite packages and installation steps.
+
+## Contributing
+
+Please see our [guide for contributing to notebooks-extended](https://github.com/rapidsai/notebooks-extended/blob/master/CONTRIBUTING.md).
+
 ## Exploring the Repo
+
 Notebooks live under two subfolders:
-- `cpu_comparisons` - these notebooks demonstrate "why RAPIDS" by directly comparing compute time between single and multi threaded CPU implementations vs GPU (RAPIDS library) implementations. Of note here is the similarity of RAPIDS APIs to common PyData ecosystem packages like Pandas and scikit-learn. Notebooks in here include: 
-    - DBScan Demo Full
-    - XGBoost
-    - Linear Regression
-    - Ridge Regression
-    - PCA
-- `tutorials` - contains notebooks showing “how [to master] RAPIDS”:
-    - `getting_started` - to help you quickly learn the basic RAPIDS APIs.  It contains these notebooks
+- `beginner` - contains notebooks showing “how [to master] RAPIDS”:
+    - `basics` - to help you quickly learn the basic RAPIDS APIs.  It contains these notebooks
         - Dask Hello World
         - Getting Started with cuDF
-    - `examples` - which will show you how to set up and implement your RAPIDS accelerated data science pipelines
-        - Dask with cuDF and XGBoost
-        - Dask with cuDF and XGBoost from Disk
-    - `advanced` - these notebooks show you the power of the RAPIDS libraries unleashed to solve real world problems.  
-        - PLASTICC 
+    - `tutorial` - which is a basic tutorial on all the libraries present in RAPIDS.
+    
+- `advanced` - these notebooks demonstrate "why RAPIDS" by directly comparing compute time between single and multi threaded CPU implementations vs GPU (RAPIDS library) implementations. Of note here is the similarity of RAPIDS APIs to common PyData ecosystem packages like Pandas and scikit-learn. This folder includes the following folders: 
+    - E2E: The E2E folder contains end to end notebooks which use the RAPIDS libraries
+    - benchmarks: The benchmarks folder contains notebooks which are used to benchmark the cuGraph and cuML algorithms
+    - blog notebooks: contains the notebooks mentioned and used in blogs written by RAPIDS
+    - conference notebooks
+    - examples: contains high level examples for users familiar with RAPIDS libraries
 
 `/data` contains small data samples used for purely functional demonstrations. Some notebooks include cells that download larger datasets from external websites.
 
 The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so you can browse it from JupyterLab's UI.
 
-Lastly, a Dockerfile is provided for installing pre-requisite packages & launching JupyterLab.
+# RAPIDS Notebooks-extended
 
-## Installation
+## Beginner Notebook
+| Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
+|-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| basics   | Dask_Hello_World           | This notebook shows how to quickly setup Dask and run a "Hello World" example.                                                                                                                                       |
+| basics   | Getting_Started_with_cuDF  | This notebook shows how to get started with GPU DataFrames using cuDF in RAPIDS.                                                                                                                                      |
+| tutorial   | 01_Introduction_to_RAPIDS  | This notebook shows at a high level what each of the packages in the RAPIDS are as well as what they do.                                                                                                                                      |
+## Advanced Notebooks:
+ 
+| Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
+|-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| E2E: mortgage      | mortgage_e2e            | This notebook showcases density-based spatial clustering of applications with noise (dbscan) algorithm using the `fit` and `predict` functions                                                                              |
+| E2E: mortgage      | mortgage_e2e_deep_learning               | This notebook showcases k-nearest neighbors (knn) algorithm using the `fit` and `kneighbors` functions                                                                                                                          |
+| E2E      | rapids_ml_workflow_demo | This notebook includes code example for linear regression algorithm and it showcases the `fit` and `predict` functions.                                                                                                                                             |
+| benchmarks      | cuml_benchmarks  | This notebook includes code examples of ridge regression and it showcases the `fit` and `predict` functions.                                                                                                                                          |
+| benchmarks: cugraph_benchmarks      | louvain_benchmark.ipynb   | This notebook includes code examples of lasso and elastic net models. These models are placed together so a comparison between the two can also be made in addition to their sklearn equivalent.                                                                                                                                                                |
+|  benchmarks: cugraph_benchmarks    |  pagerank_benchmark.ipynb             | This notebook showcases principal component analysis (PCA) algorithm where the model can be used for prediction (using `fit_transform`) as well as converting the transformed data into the original dataset (using `inverse_transform`).                                                                                                                |
 
-Please ensure you meet the [pre-requisites](https://rapids.ai/start.html#prerequisites)
+### Blog notebooks:
+#### Cyber notebooks:
+| Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
+|-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|flow_classification     | flow_classification_rapids              | This notebook showcases truncated singular value decomposition (tsvd) algorithm which like PCA performs both prediction and transformation of the converted dataset into the original data using `fit_transform` and `inverse_transform` functions respectively                                                                                                     |
+| network_mapping      | lanl_network_mapping_using_rapids               | The stochastic gradient descent algorithm is demostrated in the notebook using `fit` and `predict` functions                                                                        |
+| raw_data_generator      | run_raw_data_generator              | The uniform manifold approximation & projection algorithm is compared with the original author's equivalent non-GPU \Python implementation using `fit` and `transform` functions                       |
+| cuML      | umap_demo_graphed      | Demonstration of cuML uniform manifold approximation & projection algorithm's supervised approach against mortgage dataset and comparison of results against the original author's equivalent non-GPU \Python implementation. |
+| cuML      | umap_demo_supervised   | Demostration of UMAP supervised training.  Uses a set of labels to perform supervised dimensionality reduction. UMAP can also be trained on datasets with incomplete labels, by using a label of "-1" for unlabeled samples. |
 
-Our container extends the base notebooks container. To build:
-```bash
-git clone https://github.com/rapidsai/notebooks-extended
-cd notebooks-extended
-docker build -t notebooks-extended .
-```
+#### Databrix Notebooks
+| Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
+|-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| databrix   | RAPIDS_PCA_demo_avro_read                | Demonstration of using cuGraph to identify clusters in a test graph using the Louvain algorithm                                                                                                                               |
+| databrix   | spark_rapids_pca_demo      | Demonstration of using cuGraph to compute vertex similarity using both the Jaccard Similarity and the Overlap Coefficient.                                                                          
 
-To run:
-```bash
-docker run -p 8888:8888 -it notebooks-extended
-```
+#### Regression Notebooks
+| Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
+|-----------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| regression   | regression_blog_notebook.ipynb       | Demonstration of using cuGraph to compute the Weighted Jaccard Similarity metric on our training dataset.                                                                                                                     |
 
-To use previous versions of the notebooks, do a `git checkout` to the relevant commit.
+### Example Notebooks
+| Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
+|-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| examples   | DBSCAN_Demo_FULL               | Demonstrate of using the renumbering features to assigned new vertex IDs to the test graph.  This is useful for when the data sets is  non-contiguous or not integer values                                                   |
+| examples   | Dask_with_cuDF_and_XGBoost                    | Demonstration of using cuGraph to computer the Bredth First Search space from a given vertex to all other in our training graph                                                                                               |
+| examples   | Dask_with_cuDF_and_XGBoost_Disk                   | Demonstration of using cuGraph to computer the The Shortest Path from a given vertex to all other in our training graph                                                                                                       |
+| examples   | One_Hot_Encoding    | Demonstration of using cuGraph to identify clusters in a test graph using Spectral Clustering using both the (A) Balance Cut and (B) the Modularity Maximization quality metrics                                              |
+| examples   | PCA_Demo_Full               | Demonstration of using both NetworkX and cuGraph to compute the PageRank of each vertex in our test dataset                                                                                                                   |
+| examples   | linear_regression_demo.ipynb     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset                                                                                                                  |
+| examples   | ridge_regression_demo.ipynb     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset                                                                                                                  |
+| examples   | umap_demo.ipynb     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset                                                                                             
 
-## Contributing
-You can contribute to this repo in 5 ways:
-1. Finding bugs in existing notebooks:
-   Sometimes things unexpectedly break in our notebooks. Please raise an issue so we can fix it!
-2. Peer reviewing and benchmarking new and existing notebooks:
-   Both new and existing notebooks need to be checked against current and new RAPIDS library releases. Your help is truly appreciated in making sure that those notebooks not just work, but are efficient, effective and, well, run rapidly
-3. Suggesting notebook content that would interest you:
-   We create notebooks that we think are useful to you, but what do we know? You know what’s useful to you. Please tell us by suggesting a new notebook or upvoting an existing suggestion!
-4. Creating and submitting a new notebook:
-   A good notebooks takes time and effort so it would be great if you would share the load and enhance the community’s knowledge and capabilities
-5. Writing a tutorial blog:
-   Show your expertise in RAPIDS while teaching people how to use RAPIDS in their data science pipeline.
+## Additional Information
+* The `cuml` folder also includes a small subset of the Mortgage Dataset used in the notebooks and the full image set from the Fashion MNIST dataset.
+
+* `utils`: contains a set of useful scripts for interacting with RAPIDS
+
+* For additional, community driven notebooks, which will include our blogs, tutorials, workflows, and more intricate examples, please see the [Notebooks Extended Repo](https://github.com/rapidsai/notebooks-extended)
