@@ -1,0 +1,22 @@
+A new process has been created.
+
+Creator Subject:
+ Security ID:  SYSTEM
+ Account Name:  RFSH$
+ Account Domain:  LAB
+ Logon ID:  0x3E7
+
+Target Subject:
+ Security ID:  {{ DomainName }}\{{ UserName }}
+ Account Name:  {{ UserName }}
+ Account Domain:  {{ DomainName }}
+ Logon ID:  {{ LogonID }}
+
+Process Information:
+ New Process ID:  {{ ProcessID }}
+ New Process Name: {{ ProcessName }}
+ Token Elevation Type: %%1938
+ Mandatory Label:  Mandatory Label\Medium Mandatory Level
+ Creator Process ID: {{ ParentProcessID }}
+ Creator Process Name: {{ ParentProcessName }}
+ Process Command Line:
