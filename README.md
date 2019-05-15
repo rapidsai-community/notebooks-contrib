@@ -74,13 +74,13 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 ### Example Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| examples   | DBSCAN_Demo_FULL               |  This notebook shows how to use DBSCAN algorithm and its GPU accelerated implementation present in RAPIDS                                                  |
+| examples   | DBSCAN_Demo_FULL               |  This notebook shows how to use DBSCAN algorithm and its GPU accelerated implementation present in RAPIDS.                                                  |
 | examples   | Dask_with_cuDF_and_XGBoost                    | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF.                                                                                                |
-| examples   | Dask_with_cuDF_and_XGBoost_Disk                   | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF and read the data from disk using cuIO                                                                                                      |
+| examples   | Dask_with_cuDF_and_XGBoost_Disk                   | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF and read the data from disk using cuIO.                                                                                                      |
 | examples   | One_Hot_Encoding    | In this notebook we show how to use dask and cudf to use xgboost on a dataset.                                              |
 | examples   | PCA_Demo_Full               | In this notebook we will show how to use PCA and its GPU accelerated implementation present in RAPIDS.                                   |
 | examples   | linear_regression_demo.ipynb     |In this notebook we will show how to use linear regression and its GPU accelerated implementation present in RAPIDS.                                                                                                                |
-| examples   | ridge_regression_demo.ipynb     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset                                                                                                                  |
+| examples   | ridge_regression_demo.ipynb     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset.                                                                                                                  |
 | examples   | umap_demo.ipynb     | In this notebook we will show how to use UMAP and its GPU accelerated implementation present in RAPIDS.                                                                                             
 
 ## Additional Information
