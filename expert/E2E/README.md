@@ -4,8 +4,6 @@
 This repo contains rapids solutions for kaggle competitions and other real world, end to end (E2E) problems.
 1. plasticc: 8th place [Rapids.ai](https://rapids.ai) solution of [PLAsTiCC Astronomical Classification](https://www.kaggle.com/c/PLAsTiCC-2018).  
 2. malware: explorative analysis of [microsoft malware prediction](https://www.kaggle.com/c/microsoft-malware-prediction).
-3. weather: 
-4. mortgage: 
 
 # Build and Run with Docker or bare-metal 
 please find readme file in each folder.
