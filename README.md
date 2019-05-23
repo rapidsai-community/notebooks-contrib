@@ -42,6 +42,9 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 | basics   | Dask_Hello_World           | This notebook shows how to quickly setup Dask and run a "Hello World" example.                                                                                                                                       |
 | basics   | Getting_Started_with_cuDF  | This notebook shows how to get started with GPU DataFrames using cuDF in RAPIDS.                                                                                                                                      |
 | tutorial   | 01_Introduction_to_RAPIDS  | This notebook shows at a high level what each of the packages in the RAPIDS are as well as what they do.                                                                                                                                      |
+| tutorial   | 03_Introduction_to_Dask  | This notebook shows how to get started with Dask using basic Python primitives like integers and strings.                                                                                                                                      |
+| tutorial   | 04_Introduction_to_Dask_using_cuDF_DataFrames  | This notebook shows how to work with cuDF DataFrames using Dask.                                                                                                                                      |
+
 ## Advanced Notebooks:
  
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
@@ -89,3 +92,4 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 * `utils`: contains a set of useful scripts for interacting with RAPIDS
 
 * For additional, community driven notebooks, which will include our blogs, tutorials, workflows, and more intricate examples, please see the [Notebooks Extended Repo](https://github.com/rapidsai/notebooks-extended)
+
