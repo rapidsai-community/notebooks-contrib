@@ -5,12 +5,16 @@ RUN source activate rapids && conda install -y \
         matplotlib \
         scikit-learn \
         seaborn \
-        python-louvain
+        python-louvain \
         jinja2 \
         && pip install graphistry mockito
 
 RUN source activate rapids && conda install -c \
         nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba -c conda-forge -c defaults cugraph
+
+RUN apt update &&\
+    apt install -y graphviz &&\
+    source activate rapids && pip install graphviz
         
 # ToDo: let user supply kaggle creds
 RUN source activate rapids && pip install kaggle
