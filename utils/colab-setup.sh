@@ -3,7 +3,7 @@
 if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     echo "Removing existing dask & xgboost packages"
     # remove existing xgboost and dask installs
-    pip uninstall -y xgboost dask distributed
+    pip uninstall -y xgboost dask distributed dask-xgboost
 
     # intall miniconda
     echo "Installing conda"
