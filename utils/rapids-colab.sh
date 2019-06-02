@@ -2,8 +2,10 @@
 
 set -e
 
-wget https://github.com/randerzander/notebooks-extended/raw/master/utils/env-check.py
-
+if [ ! -f env-check.py ]; then
+    wget https://github.com/randerzander/notebooks-extended/raw/master/utils/env-check.py
+fi
+echo "Checking for GPU type:"
 python env-check.py
 
 if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
