@@ -35,3 +35,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     unzip ngrok-stable-linux-amd64.zip
     mv ngrok /usr/local/bin/ngrok
 fi
+
+export PATH=$PATH:/usr/local/lib/python3.6/site-packages
+export NUMBAPRO_NVVM=/usr/local/cuda/nvvm/lib64/libnvvm.so
+export NUMBAPRO_LIBDEVICE=/usr/local/cuda/nvvm/libdevice/
