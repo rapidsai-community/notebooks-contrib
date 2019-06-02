@@ -1,5 +1,11 @@
 #!/bin/bash
 
+set -e
+
+wget https://github.com/randerzander/notebooks-extended/raw/master/utils/env-check.py
+
+python env-check.py
+
 if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     echo "Removing existing dask & xgboost packages"
     # remove existing xgboost and dask installs
