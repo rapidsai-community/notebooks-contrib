@@ -45,6 +45,7 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 | tutorial   | 03_Introduction_to_Dask  | This notebook shows how to get started with Dask using basic Python primitives like integers and strings.                                                                                                                                      |
 | tutorial   | 04_Introduction_to_Dask_using_cuDF_DataFrames  | This notebook shows how to work with cuDF DataFrames using Dask.                                                                                                                                      |
 | tutorial   | 06_Introduction_to_XGBoost  | This notebook shows how to work with GPU accelerated XGBoost in RAPIDS.                                                                                                                                      |
+| tutorial   | 07_Introduction_to_Dask_XGBoost  | This notebook shows how to work with Dask XGBoost in RAPIDS.                                                                                                                                      |
 | tutorial   | 10_Introduction_to_Clustering  | This notebook shows how to work with GPU accelerated Clustering in RAPIDS.                                                                                                                                      |
 
 ## Advanced Notebooks:
