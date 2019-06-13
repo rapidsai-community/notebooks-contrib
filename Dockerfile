@@ -24,9 +24,9 @@ RUN mkdir -p /rapids/notebooks/extended
 # symlinked so users can browse the data directory inside JupyterLab
 RUN ln -s /data /rapids/notebooks/extended
 
-ADD cpu_comparisons /rapids/notebooks/extended/cpu_comparisons
-ADD tutorials /rapids/notebooks/extended/tutorials
-ADD cugraph_benchmark /rapids/notebooks/extended/cugraph_benchmark
+ADD beginner /rapids/notebooks/extended/beginner
+ADD advanced /rapids/notebooks/extended/advanced
+ADD expert /rapids/notebooks/extended/expert
 
 WORKDIR /rapids/notebooks/extended
 CMD source activate rapids && sh /rapids/notebooks/utils/start-jupyter.sh
