@@ -18,18 +18,23 @@ Coming soon!
 
 | Notebook Title | Description |
 |----------------|-------------|
-| 11_Predicting_Customer_Transactions | To be edited. |
-| 12_Introduction_to_Strings | To be edited. |
-| 13_Introduction_Data_Preprocessing | To be edited. |
-| 14_Introduction_to_Model_Evaluation_and_Hyperparameter_Tuning | To be edited. |
-| 15_Introduction_to_Graph_Analytics | To be edited. |
-| 16_Introduction_to_Collaborative_Filtering | To be edited. |
-| 17_Introduction_to_Time_Series | To be edited. |
-| 18_Introduction_to_Deep_Learning | To be edited. |
-| 19_Introduction_to_Exploratory_Data_Analysis | To be edited. |
-| 20_Introduction_to_Data_Visualization | To be edited. |
-| 21_Introduction_to_Profiling | To be edited. |
-| 22_Introduction_to_Scaling_to_Multiple_Nodes | To be edited. |
-| 23_Introduction_to_Spark | To be edited. |
-| 24_Advanced_Usage | To be edited. |
-| 25_Best_Practices | To be edited. |
+| 11_Introduction_to_Strings | To be edited. |
+| 12_Introduction_Data_Preprocessing | To be edited. |
+| 13_Introduction_to_Model_Evaluation_and_Hyperparameter_Tuning | To be edited. |
+| 14_Predicting_Customer_Transactions | To be edited. |
+| 15_Predicting_Market_Response | To be edited. |
+| 16_Predicting_Repeat_Buyers | To be edited. |
+| 17_Predicting_Store_Sales | To be edited. |
+| 18_Predicting_Store_Sales_in_Stormy_Weather | To be edited. |
+| 19_Classifying_Trip_Types | To be edited. |
+| 20_Introduction_to_Exploratory_Data_Analysis | To be edited. |
+| 21_Introduction_to_Data_Visualization | To be edited. |
+| 22_Introduction_to_Graph_Analytics | To be edited. |
+| 23_Introduction_to_Collaborative_Filtering | To be edited. |
+| 24_Introduction_to_Time_Series | To be edited. |
+| 25_Introduction_to_Deep_Learning | To be edited. |
+| 26_Introduction_to_Profiling | To be edited. |
+| 27_Introduction_to_Scaling_to_Multiple_Nodes | To be edited. |
+| 28_Introduction_to_Spark | To be edited. |
+| 29_Advanced_Usage | To be edited. |
+| 30_Best_Practices | To be edited. |
