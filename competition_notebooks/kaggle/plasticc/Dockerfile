@@ -18,7 +18,7 @@ SHELL ["/bin/bash", "-c"]
 RUN conda create --name cudf 
 RUN apt-get update -y && apt-get install -y curl unzip vim
 RUN source activate cudf && \
-  conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults cudf=0.5 python=3.6
+  conda install -c defaults -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge cudf=0.7 cuml=0.7 python=3.6 cudatoolkit=9.2
 RUN source activate cudf && \
   pip install xgboost seaborn scikit-learn termcolor kaggle
 
