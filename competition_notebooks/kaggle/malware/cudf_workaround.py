@@ -294,7 +294,7 @@ def groupby_median(df,idcol,col):
 def cudf_groupby_agg(df,idcol,col,func_name):
     # python trick to get named arguments
     if func_name in ['mean','max','min','sum','count']:
-        return df.groupby(idcol).agg({col:func_name})
+        return df.groupby(idcol,as_index=False).agg({col:func_name})
     outcol = '%s_%s'%(func_name,col)
     if func_name == 'median':
         df = groupby_median(df,idcol,col)
@@ -312,10 +312,8 @@ def cudf_groupby_agg(df,idcol,col,func_name):
                                   tpb=TPB)
     dg = df.groupby(idcol).agg({outcol:'mean'})
     df.drop_column(outcol)
-    dg = rename_col(dg,'mean_%s'%outcol,outcol)
-    #meancol = 'mean_%s'%outcol
-    #dg[outcol] = dg[meancol]
-    #dg.drop_column(meancol)
+    dg.columns = [outcol]
+    dg = dg.reset_index() 
     return dg
 
 def cudf_groupby_aggs(df,group_id_col,aggs):
@@ -341,6 +339,8 @@ def cudf_groupby_aggs(df,group_id_col,aggs):
                 dg = cudf_groupby_agg(df,group_id_col,col,func)
             else:
                 tmp = cudf_groupby_agg(df,group_id_col,col,func)
+                #print(tmp.columns)
+                #print(dg.columns)
                 dg = dg.merge(tmp,on=[group_id_col],how='left')
     return dg
 
