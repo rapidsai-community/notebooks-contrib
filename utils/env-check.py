@@ -19,4 +19,7 @@ if device_name != b'Tesla T4':
     If you get a K80 GPU, try Runtime -> Reset all runtimes...
   """)
 else:
+  print('***********************************')
   print('Woo! You got the right kind of GPU!')
+  print('***********************************')
+  print()
