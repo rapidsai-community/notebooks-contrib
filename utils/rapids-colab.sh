@@ -35,3 +35,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     cp /usr/local/lib/libxgboost.so /usr/lib/libxgboost.so
     cp /usr/local/lib/libnccl.so /usr/lib/libnccl.so
 fi
+
+echo "*********************************************"
+echo "Your Google Colab instance is RAPIDS ready!"
+echo "*********************************************"
