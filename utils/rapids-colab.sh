@@ -1,17 +1,15 @@
 #!/bin/bash
 
-set -e
+set -eu
 
-if [ ! -f env-check.py ]; then
-    wget https://github.com/randerzander/notebooks-extended/raw/master/utils/env-check.py
-fi
+wget -nc https://github.com/rapidsai/notebooks-extended/raw/master/utils/env-check.py
 echo "Checking for GPU type:"
 python env-check.py
 
 if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
-    echo "Removing existing dask & xgboost packages"
+    echo "Removing conflicting packages, will replace with RAPIDS compatible versions"
     # remove existing xgboost and dask installs
-    pip uninstall -y xgboost dask distributed dask-xgboost
+    pip uninstall -y xgboost dask distributed
 
     # intall miniconda
     echo "Installing conda"
@@ -20,6 +18,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     bash ./Miniconda3-4.5.4-Linux-x86_64.sh -b -f -p /usr/local
 
     echo "Installing RAPIDS packages"
+    echo "Please standby, this will take a few minutes..."
     # install RAPIDS packages
     conda install -y --prefix /usr/local \
       -c rapidsai-nightly/label/xgboost -c rapidsai-nightly -c nvidia -c conda-forge \
@@ -27,8 +26,8 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
       cudf dask-cudf \
       cuml dask-cuml \
       cugraph \
-      xgboost=>0.83 dask-xgboost=>0.2 \
-      gcsfs
+      xgboost=>0.90 dask-xgboost=>0.2 \
+      gcsfs pynvml
     
     echo "Copying shared object files to /usr/lib"
     # copy .so files to /usr/lib, where Colab's Python looks for libs
@@ -36,14 +35,9 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     cp /usr/local/lib/librmm.so /usr/lib/librmm.so
     cp /usr/local/lib/libxgboost.so /usr/lib/libxgboost.so
     cp /usr/local/lib/libnccl.so /usr/lib/libnccl.so
-
-    echo "Installing ngrok"
-    # expose Dask's status dashboard to a public URL
-    wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-    unzip ngrok-stable-linux-amd64.zip
-    mv ngrok /usr/local/bin/ngrok
 fi
 
-export PATH=$PATH:/usr/local/lib/python3.6/site-packages
-export NUMBAPRO_NVVM=/usr/local/cuda/nvvm/lib64/libnvvm.so
-export NUMBAPRO_LIBDEVICE=/usr/local/cuda/nvvm/libdevice/
+echo ""
+echo "*********************************************"
+echo "Your Google Colab instance is RAPIDS ready!"
+echo "*********************************************"
