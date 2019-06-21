@@ -19,14 +19,13 @@ RUN apt update &&\
 # ToDo: let user supply kaggle creds
 RUN source activate rapids && pip install kaggle
 
-ADD data /data
-RUN mkdir -p /rapids/notebooks/extended
-# symlinked so users can browse the data directory inside JupyterLab
-RUN ln -s /data /rapids/notebooks/extended
-
-ADD cpu_comparisons /rapids/notebooks/extended/cpu_comparisons
-ADD tutorials /rapids/notebooks/extended/tutorials
-ADD cugraph_benchmark /rapids/notebooks/extended/cugraph_benchmark
-
 WORKDIR /rapids/notebooks/extended
+
+# Add everthing from the local build context (incuding the data folder)
+ADD . .
+
+# move /rapids/notebooks/extended/data to /data, then symlink
+# so users can browse the data directory inside JupyterLab
+RUN mv data /data && ln -s /data /rapids/notebooks/extended/data
+
 CMD source activate rapids && sh /rapids/notebooks/utils/start-jupyter.sh
