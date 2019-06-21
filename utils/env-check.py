@@ -1,3 +1,9 @@
+import sys, os 
+
+sys.path.append('/usr/local/lib/python3.6/site-packages/')
+os.environ['NUMBAPRO_NVVM'] = '/usr/local/cuda/nvvm/lib64/libnvvm.so'
+os.environ['NUMBAPRO_LIBDEVICE'] = '/usr/local/cuda/nvvm/libdevice/'
+
 import pynvml
 
 pynvml.nvmlInit()
@@ -13,4 +19,7 @@ if device_name != b'Tesla T4':
     If you get a K80 GPU, try Runtime -> Reset all runtimes...
   """)
 else:
-  print('Woo! You got the right kind of GPU!')
+  print('*********************************************')
+  print('Woo! Your instance has the right kind of GPU!')
+  print('*********************************************')
+  print()
