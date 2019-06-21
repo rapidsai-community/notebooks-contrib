@@ -1,5 +1,3 @@
-import pynvml
-
 pynvml.nvmlInit()
 handle = pynvml.nvmlDeviceGetHandleByIndex(0)
 device_name = pynvml.nvmlDeviceGetName(handle)
