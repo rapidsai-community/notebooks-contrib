@@ -2,7 +2,7 @@
 
 set -eu
 
-wget -nc https://github.com/randerzander/notebooks-extended/raw/master/utils/env-check.py
+wget -nc https://github.com/rapidsai/notebooks-extended/raw/master/utils/env-check.py
 echo "Checking for GPU type:"
 python env-check.py
 
