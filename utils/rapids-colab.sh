@@ -18,6 +18,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     bash ./Miniconda3-4.5.4-Linux-x86_64.sh -b -f -p /usr/local
 
     echo "Installing RAPIDS packages"
+    echo "Please standby, this will take a few minutes..."
     # install RAPIDS packages
     conda install -y --prefix /usr/local \
       -c rapidsai-nightly/label/xgboost -c rapidsai-nightly -c nvidia -c conda-forge \
