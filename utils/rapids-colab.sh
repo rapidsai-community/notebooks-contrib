@@ -2,9 +2,7 @@
 
 set -eu
 
-if [ ! -f env-check.py ]; then
-    wget https://github.com/randerzander/notebooks-extended/raw/master/utils/env-check.py
-fi
+wget -nc https://github.com/randerzander/notebooks-extended/raw/master/utils/env-check.py
 echo "Checking for GPU type:"
 python env-check.py
 
@@ -28,7 +26,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
       cuml dask-cuml \
       cugraph \
       xgboost=>0.90 dask-xgboost=>0.2 \
-      gcsfs
+      gcsfs pynvml
     
     echo "Copying shared object files to /usr/lib"
     # copy .so files to /usr/lib, where Colab's Python looks for libs

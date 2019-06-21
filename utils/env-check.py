@@ -1,3 +1,9 @@
+import sys, os 
+
+sys.path.append('/usr/local/lib/python3.6/site-packages/')
+os.environ['NUMBAPRO_NVVM'] = '/usr/local/cuda/nvvm/lib64/libnvvm.so'
+os.environ['NUMBAPRO_LIBDEVICE'] = '/usr/local/cuda/nvvm/libdevice/'
+
 import pynvml
 
 pynvml.nvmlInit()
