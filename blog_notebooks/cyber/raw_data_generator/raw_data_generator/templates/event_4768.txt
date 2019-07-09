@@ -1,0 +1,34 @@
+A Kerberos authentication ticket (TGT) was requested.
+
+Account Information:
+
+   Account Name: {{ UserName }}
+   Supplied Realm Name: {{ DomainName}}
+   User ID: ACME-FR\administrator
+
+Service Information:
+
+   Service Name: krbtgt
+   Service ID: ACME-FR\krbtgt
+
+Network Information:
+
+   Client Address: {{ Source }}
+   Client Port: 0
+
+Additional Information:
+
+   Ticket Options: 0x40810010
+   Result Code: {{ Status }}
+   Ticket Encryption Type: 0x12
+   Pre-Authentication Type: 2
+
+Certificate Information:
+
+   Certificate Issuer Name:
+   Certificate Serial Number:
+   Certificate Thumbprint:
+
+Certificate information is only provided if a certificate was used for pre-authentication.
+
+Pre-authentication types, ticket options, encryption types and result codes are defined in RFC 4120.
