@@ -23,12 +23,10 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     conda install -y --prefix /usr/local \
       -c rapidsai-nightly/label/xgboost -c rapidsai-nightly -c nvidia -c conda-forge \
       python=3.6 cudatoolkit=10.0 \
-      cudf dask-cudf \
-      cuml dask-cuml \
-      cugraph \
-      xgboost=>0.90 dask-xgboost=>0.2 \
-      gcsfs pynvml
-    
+      cudf cuml cugraph gcsfs pynvml \
+      dask-cudf dask-cuml \
+      rapidsai/label/xgboost::xgboost=>0.9
+      
     echo "Copying shared object files to /usr/lib"
     # copy .so files to /usr/lib, where Colab's Python looks for libs
     cp /usr/local/lib/libcudf.so /usr/lib/libcudf.so
