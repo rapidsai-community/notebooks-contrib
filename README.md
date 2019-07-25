@@ -8,7 +8,7 @@ Many of these notebooks use additional PyData ecosystem packages, and include co
 
 ## Installation
 
-Please use the [BUILD.md](https://github.com/rapidsai/notebooks-extended/tree/master) to check the pre-requisite packages and installation steps.
+Please use the [BUILD.md](BUILD.md) to check the pre-requisite packages and installation steps.
 
 ## Contributing
 
