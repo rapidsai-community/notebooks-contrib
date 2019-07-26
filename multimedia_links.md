@@ -26,4 +26,5 @@
 ### Community Playlists
 | Playlist                                                                                                                               | Description | Topic               | Contributor                      | Date Created  | Last Date Update  |
 |-------------------------------------------------------------------------------------------------------------------------------------|-------------|---------------------|-------------------------------|---|---| 
+| [RAPIDS AI](https://youtube.com/playlist?list=PLe8uB6iJZSca7RdGIU52xKFyLCbEJhzAF) | Growing collection of videos related to RAPIDS AI | Presentations & Announcements | Winston Robson             | Jul 1, 2019  | Jul 16, 2019  |
 | Add your Playlist here! |             | </Playlist Topic>     | </Your Name>             |   |   |
