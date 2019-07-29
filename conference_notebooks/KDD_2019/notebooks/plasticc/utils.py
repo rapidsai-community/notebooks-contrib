@@ -101,3 +101,20 @@ def plot_confusion_matrix(y_true, y_pred, classes,
                     color="white" if cm[i, j] > thresh else "black")
     fig.tight_layout()
     return ax
+
+
+def minimize_test_data(path, gpu_memory = 16):
+    """
+    This function shrinks the test data set based on GPU memory size,
+    since the file is so large. 
+    """
+    PATH = path
+    GPU_MEMORY = gpu_memory # GB.
+    TEST_ROWS = 453653104 # number of rows in test data
+    # no skip if your gpu has 32 GB memory
+    # otherwise, skip rows porportionally
+    OVERHEAD = 1.2 # cudf 0.7 introduces 20% memory overhead comparing to cudf 0.4
+    SKIP_ROWS = int((1 - GPU_MEMORY/(32.0*OVERHEAD))*TEST_ROWS) 
+    ts_cols = ['object_id', 'mjd', 'passband', 'flux', 'flux_err', 'detected']
+    test_gd = gd.read_csv('%s/test_set.csv'%PATH, names=ts_cols,skiprows=1+SKIP_ROWS)
+    test_gd.to_csv("%s/test_set_minimal.csv"%PATH, index=False)
