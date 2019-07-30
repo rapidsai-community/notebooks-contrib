@@ -9,8 +9,26 @@ class PlasticcRNN:
     An attentional bi-directional RNN used in the PLASTiCC Challenge
     """
     
-    def __init__(self,**params):
-        self.params = params
+    def __init__(self, path, **params):
+        self.params = {
+            'load_path':path,
+            'hidden':64,
+            'bottleneck':True,
+            'classes':14,
+            'num_features':4,
+            'embedding_size':4,
+            'stratified':True,
+            'objective':'multiclassification',
+            'metric':'cross_entropy',
+            'save_path':'weights',      
+            'epochs':100,
+            'early_stopping_epochs':10,
+            'learning_rate':0.01,
+            'batch_size':2048,
+            'verbosity':1,
+        }
+        
+        self.params.update(params)
         self._reset()
         
     def _reset(self):

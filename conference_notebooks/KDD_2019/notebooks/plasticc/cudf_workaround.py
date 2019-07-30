@@ -4,11 +4,6 @@ from numba import cuda,jit,float32
 import math
 TPB = 32 # threads per block, multiples of 32 in general
 
-def rename_col(df, oldcol, newcol):
-    df[newcol] = df[oldcol]
-    df.drop_column(oldcol)
-    return df
-
 @cuda.jit(device=True) 
 def initialize(array,value,N):
     # N<=len(array)
@@ -352,5 +347,5 @@ def drop_duplicates(df,by,keep='first'):
     aggs = {i:['copy_%s'%keep] for i in cols}
     dg = cudf_groupby_aggs(df,group_id_col=by,aggs=aggs) 
     for i in cols:
-        dg = rename_col(dg,'copy_%s_%s'%(keep,i),i)
+        dg = dg.rename({'copy_%s_%s'%(keep,i):i})
     return dg
