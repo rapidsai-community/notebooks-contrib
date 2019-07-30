@@ -37,10 +37,6 @@ class PlasticcRNN:
         return loss
 
     def predict_bottleneck(self,X):
-        """
-        Feeds X through the RNN and extracts the 
-        """
-        
         self.X = X
         self.params['bottleneck'] = True
         self._reset()
