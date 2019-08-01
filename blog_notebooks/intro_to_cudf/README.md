@@ -2,7 +2,7 @@
 
 ## Goals
 
-In this notebook we outline an introduction into using basic functions of the cuDF library. We select a specific area in a housing dataset to generate the average number of bedrooms/rooms per household in that area.
+In this notebook we outline an introduction into using basic functions of the cuDF library. We select a specific area in a housing dataset to generate the average number of bedrooms/rooms per household in that area.  This is the companion notebook for my blog on [Getting Started with cuDF](https://medium.com/@darrenramsook/getting-started-with-cudf-rapids-48a4b5b09b00)
 
 The main _learning_ outcomes are defined as follows:
 
