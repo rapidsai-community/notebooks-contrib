@@ -85,6 +85,8 @@ Please view our [Industry Topics README]() to see which notebooks align with whi
 | cyber ->raw_data_generator      | [run_raw_data_generator](blog_notebooks/cyber/raw_data_generator/run_raw_data_generator.py)              | The notebook is used showcase how to generate raw logs from the parsed LANL 2017 json data. The intent is to use the raw data to demonstrate parsing capabilities using cuDF.                       |
 | databricks   | [RAPIDS_PCA_demo_avro_read](blog_notebooks/databricks/RAPIDS_PCA_demo_avro_read.ipynb)              | This notebooks purpose is to showcase RAPIDS on Databricks use thier sample datasets and show the CPU vs GPU comparison for the PCA algorithm. There is also an accompanying HTML file for easy Databricks import.                                                                       
 | regression   | [regression_blog_notebook](blog_notebooks/regression/regression_blog_notebook.ipynb)       | This notebook showcases an end to end notebook using the try_this dataset and cuML's implementation of ridge regression.
+| nlp->pre-processing   | [show_me_the_word_count_gutenberg](nlp_notebooks/show_me_the_word_count_gutenberg/show_me_the_word_count_gutenberg.ipynb)       | This notebook showcases nlp capabilties of nvstrings+cudf on the Gutenberg dataset .
+
 
 ## Conference Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
