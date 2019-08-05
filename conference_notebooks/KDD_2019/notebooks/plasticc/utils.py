@@ -1,3 +1,7 @@
+import pandas as pd
+
+import cudf as gd
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -116,3 +120,67 @@ def minimize_test_data(path, gpu_memory = 16):
     ts_cols = ['object_id', 'mjd', 'passband', 'flux', 'flux_err', 'detected']
     test_gd = gd.read_csv('%s/test_set.csv'%PATH, names=ts_cols,skiprows=1+SKIP_ROWS)
     test_gd.to_csv("%s/test_set_minimal.csv"%PATH, index=False)
+
+    
+    
+def cross_entropy(y_true, y_preds, classes):
+    """
+    Computes the weighted cross-entropy 
+    refactor from
+    @author olivier https://www.kaggle.com/ogrellier
+    multi logloss for PLAsTiCC challenge
+    """
+    y_p = y_preds.reshape(y_true.shape[0], len(classes), order='F')
+
+    # Trasform y_true in dummies
+    y_ohe = pd.get_dummies(y_true) # one-hot encodes y_true values
+    
+    # Normalize rows and limit y_preds to 1e-15, 1-1e-15
+    y_p = np.clip(a=y_p, a_min=1e-15, a_max=1 - 1e-15)
+
+    # Transform to log
+    y_p_log = np.log(y_p)
+    
+    # Get the log for ones, .values is used to drop the index of DataFrames
+    # Exclude class 99 for now, since there is no class99 in the training set
+    # we gave a special process for that class
+    y_log_ones = np.sum(y_ohe.values * y_p_log, axis=0)
+    
+    # Get the number of positives for each class
+    nb_pos = y_ohe.sum(axis=0).values.astype(float)
+    
+    class_weights = build_class_weights(classes)
+
+    # Weight average and divide by the number of positives
+    class_arr = np.array([class_weights[k] for k in sorted(class_weights.keys())])
+    y_w = y_log_ones * class_arr / nb_pos
+
+    loss = - np.sum(y_w) / np.sum(class_arr)
+    
+    return loss
+
+
+def xgb_multi_weighted_logloss(y_predicted, y_true, classes, class_weights):
+    class_weights = build_class_weights(classes)
+    
+    loss = cross_entropy(y_true.get_label(), y_predicted, 
+                                  classes)
+    return 'wloss', loss
+
+def build_class_weights(classes):
+    # Taken from Giba's topic : https://www.kaggle.com/titericz
+    # https://www.kaggle.com/c/PLAsTiCC-2018/discussion/67194
+    # with Kyle Boone's post https://www.kaggle.com/kyleboone
+    class_weights = {c: 1 for c in classes}
+    class_weights.update({c:2 for c in [64, 15]})
+    return class_weights
+
+
+def xgb_cross_entropy_loss(classes):
+    from functools import partial
+    
+    class_weights = build_class_weights(classes)
+
+    return partial(xgb_multi_weighted_logloss, 
+                        classes=classes, 
+                        class_weights=class_weights)
