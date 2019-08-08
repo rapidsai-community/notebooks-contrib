@@ -1,8 +1,8 @@
-# cuGraph intermediate example
+# cuGraph Multi-GPU example
 
 ## Step 1:  Get the Data Set
 
-This step involves downloading a `gz` file of 6GB. Once decompressed the file is 24GB.
+This step involves downloading a `gz` file of 6GB. Once decompressed the file is 26GB.
 
 Option 1 : Run the script
 ```bash
@@ -20,7 +20,7 @@ gunzip twitter.csv.gz
 
 | File Name    | Num of Vertices | Num of Edges    | File size  |
 | -------------| --------------: | -------------:  | ---------: |
-| twitter      |      41,652,230 | 1,468,365,182   |       24GB | 
+| twitter      |      41,652,230 | 1,468,365,182   |       26GB | 
 
 
 ## Step 2:  Open the notebook
