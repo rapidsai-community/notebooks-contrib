@@ -11,8 +11,8 @@ sh ./get_data.sh
 
 Option 2 : manually run
 ```bash
-wget https://s3.us-east-2.amazonaws.com/rapidsai-data/cugraph/benchmark/twitter.csv.gz
-gunzip twitter.csv.gz  
+wget https://s3.us-east-2.amazonaws.com/rapidsai-data/cugraph/benchmark/twitter-2010.csv.gz
+gunzip twitter-2010.csv.gz  
 ```
 
 
