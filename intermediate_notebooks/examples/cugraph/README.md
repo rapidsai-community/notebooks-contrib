@@ -1,4 +1,4 @@
-# cuGraph intermediate example
+# cuGraph Multi-GPU example
 
 ## Step 1:  Get the Data Set
 
