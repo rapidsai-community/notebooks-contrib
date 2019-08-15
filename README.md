@@ -1,10 +1,10 @@
-# RAPIDS Extended Notebooks
+# RAPIDS Notebooks-Contrib
 ## Intro
-Welcome to the extended notebooks repo!
+Welcome to the contributed notebooks repo! (formerly known as Notebooks-Extended)
 
-The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn why, how, and when including RAPIDS in a data science pipeline makes sense, and contain community contributions of RAPIDS knowledge. 
-
-Many of these notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please use the [core notebooks repo](https://github.com/rapidsai/notebooks).
+The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn why, how, and when including RAPIDS in a data science pipeline makes sense, and contain community contributions of RAPIDS knowledge. The difference between this repo and the [Notebooks Repo](https://github.com/rapidsai/notebooks) are
+1. These are vetted, community-contributed notebooks (includes RPAIDS team member contributions).  
+1. These notebooks won't run on airgapped systems, which is one of our container requirements.  Many RAPIDS notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please download all the data that you plan to use ahead of time or simply use the [core notebooks repo](https://github.com/rapidsai/notebooks).
 
 ## Installation
 
@@ -12,7 +12,7 @@ Please use the [BUILD.md](BUILD.md) to check the pre-requisite packages and inst
 
 ## Contributing
 
-Please see our [guide for contributing to notebooks-extended](CONTRIBUTING.md).
+Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 
 ## Exploring the Repo
 
@@ -32,7 +32,10 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 ## Industry Topical Notebooks
 Please view our [Industry Topics README]() to see which notebooks align with which industries (coming soon!)
 
+*Please note that archived notebooks won't show up in this list.  Notebooks are only archived when suitable replacements have been created.
+
 ## Getting Started Notebooks:
+
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | basics   | [Dask_Hello_World](getting_started_notebooks/basics/Dask_Hello_World.ipynb)           | This notebook shows how to quickly setup Dask and run a "Hello World" example.                                                                                                                                       |
