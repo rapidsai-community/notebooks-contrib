@@ -1,10 +1,10 @@
-# RAPIDS Extended Notebooks
+# RAPIDS Notebooks-Contrib
 ## Intro
-Welcome to the extended notebooks repo!
+Welcome to the contributed notebooks repo! (formerly known as Notebooks-Extended)
 
-The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn why, how, and when including RAPIDS in a data science pipeline makes sense, and contain community contributions of RAPIDS knowledge. 
-
-Many of these notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please use the [core notebooks repo](https://github.com/rapidsai/notebooks).
+The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn why, how, and when including RAPIDS in a data science pipeline makes sense, and contain community contributions of RAPIDS knowledge. The difference between this repo and the [Notebooks Repo](https://github.com/rapidsai/notebooks) are:
+1. These are vetted, community-contributed notebooks (includes RAPIDS team member contributions).  
+1. These notebooks won't run on airgapped systems, which is one of our container requirements.  Many RAPIDS notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please download all the data that you plan to use ahead of time or simply use the [core notebooks repo](https://github.com/rapidsai/notebooks).
 
 ## Installation
 
@@ -12,27 +12,31 @@ Please use the [BUILD.md](BUILD.md) to check the pre-requisite packages and inst
 
 ## Contributing
 
-Please see our [guide for contributing to notebooks-extended](CONTRIBUTING.md).
+Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 
 ## Exploring the Repo
 
 - `getting_started_notebooks` - “how to start using RAPIDS”.  Contains notebooks showing "hello worlds", getting started with RAPIDS libraries, and tutorials around RAPIDS concepts.   
-- `intermediate` - “how to accomplish your workflows with RAPIDS”.  Contains notebooks showing algorthim and workflow examples, benchmarking tools, and some complete end-to-end (E2E) workflows.
-- `advanced` - "how to master RAPIDS".  Contains notebooks showing kernal customization and advanced end-to-end workflows.
+- `intermediate_notebooks` - “how to accomplish your workflows with RAPIDS”.  Contains notebooks showing algorthim and workflow examples, benchmarking tools, and some complete end-to-end (E2E) workflows.
+- `advanced_notebooks` - "how to master RAPIDS".  Contains notebooks showing kernal customization and advanced end-to-end workflows.
 - `colab_notebooks` - contains colab versions of popular notebooks to quickly try out in browser
 - `blog notebooks` - contains shared notebooks mentioned and used in blogs that showcase RAPIDS workflows and capabilities
 - `conference notebooks` - contains notebooks used in conferences, such as GTC
 - `competition notebooks` - contains notebooks used in competitions, such as Kaggle
+- `archived_notebooks` - contains older notebooks that are now obsolete and were replaced.
 
 `/data` contains small data samples used for purely functional demonstrations. Some notebooks include cells that download larger datasets from external websites.
 
 The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so you can browse it from JupyterLab's UI.
 
-# RAPIDS Notebooks-extended
+# RAPIDS Notebooks-Contrib
 ## Industry Topical Notebooks
 Please view our [Industry Topics README]() to see which notebooks align with which industries (coming soon!)
 
+*Please note that archived notebooks won't show up in this list.  Notebooks are only archived when suitable replacements have been created.
+
 ## Getting Started Notebooks:
+
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | basics   | [Dask_Hello_World](getting_started_notebooks/basics/Dask_Hello_World.ipynb)           | This notebook shows how to quickly setup Dask and run a "Hello World" example.                                                                                                                                       |
@@ -54,7 +58,6 @@ Please view our [Industry Topics README]() to see which notebooks align with whi
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | examples   | [DBSCAN_Demo_FULL](intermediate_notebooks/examples/DBSCAN_Demo_FULL.ipynb)               |  This notebook shows how to use DBSCAN algorithm and its GPU accelerated implementation present in RAPIDS.                                                  |
-| examples   | [Dask_with_cuDF_and_XGBoost](intermediate_notebooks/examples/Dask_with_cuDF_and_XGBoost.ipynb)                    | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF.                                                                                                |
 | examples   | [Dask_with_cuDF_and_XGBoost_Disk](intermediate_notebooks/examples/Dask_with_cuDF_and_XGBoost_Disk.ipynb)                   | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF and read the data from disk using cuIO.                                                                                                      |
 | examples   | [One_Hot_Encoding](intermediate_notebooks/examples/One_Hot_Encoding.ipynb)    | In this notebook we show how to use dask and cudf to use xgboost on a dataset.                                              |
 | examples   | [PCA_Demo_Full](intermediate_notebooks/examples/PCA_Demo_Full.ipynb)               | In this notebook we will show how to use PCA and its GPU accelerated implementation present in RAPIDS.                                   |
@@ -106,10 +109,17 @@ Please view our [Industry Topics README]() to see which notebooks align with whi
 | kaggle-> santander   | [E2E_santander_pandas](competition_notebooks/kaggle/santander/E2E_santander_pandas.ipynb)               |  Description comming soon!   |
 | kaggle-> santander   | [E2E_santander](competition_notebooks/kaggle/santander/E2E_santander.ipynb)               |  Description comming soon!   
 
+## Archived Notebooks
+Kept here for posterity.  Please do not expect these notebooks to work with the latest code.  These notebooks will state which RAPIDS versions they work with and the new notebook that superceded them.
+
+| Folder    | Notebook Title         | Successor Notebook | Description |
+|-----------|------------------------|--------------------|-------------|
+| examples  |[Dask_with_cuDF_and_XGBoost.ipynb](archived_notebooks/examples/Dask_with_cuDF_and_XGBoost.ipynb ) | [08_Introduction_to_Dask_XGBoost.ipynb](getting_started_notebooks/intro_tutorials/08_Introduction_to_Dask_XGBoost.ipynb) | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF. |
+
 ## Additional Information
-* The `cuml` folder also includes a small subset of the Mortgage Dataset used in the notebooks and the full image set from the Fashion MNIST dataset.
+* The `intermediate_notebooks` folder also includes a small subset of the Mortgage Dataset used in the notebooks and the full image set from the Fashion MNIST dataset.
 
 * `utils`: contains a set of useful scripts for interacting with RAPIDS
 
-* For additional, community driven notebooks, which will include our blogs, tutorials, workflows, and more intricate examples, please see the [Notebooks Extended Repo](https://github.com/rapidsai/notebooks-extended)
+* For our notebook examples and tutorials found in our standard containers, please see the [Notebooks Repo](https://github.com/rapidsai/notebooks)
 
