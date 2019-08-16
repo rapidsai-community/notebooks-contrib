@@ -29,7 +29,7 @@ Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 
 The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so you can browse it from JupyterLab's UI.
 
-# RAPIDS Notebooks-extended
+# RAPIDS Notebooks-Contrib
 ## Industry Topical Notebooks
 Please view our [Industry Topics README]() to see which notebooks align with which industries (coming soon!)
 
@@ -115,9 +115,9 @@ Please view our [Industry Topics README]() to see which notebooks align with whi
 | examples  |[Dask_with_cuDF_and_XGBoost.ipynb](examples/Dask_with_cuDF_and_XGBoost.ipynb ) | [08_Introduction_to_Dask_XGBoost.ipynb](/notebooks-extended/getting_started_notebooks/intro_tutorials/08_Introduction_to_Dask_XGBoost.ipynb) | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF. |
 
 ## Additional Information
-* The `cuml` folder also includes a small subset of the Mortgage Dataset used in the notebooks and the full image set from the Fashion MNIST dataset.
+* The `intermediate_notebooks` folder also includes a small subset of the Mortgage Dataset used in the notebooks and the full image set from the Fashion MNIST dataset.
 
 * `utils`: contains a set of useful scripts for interacting with RAPIDS
 
-* For additional, community driven notebooks, which will include our blogs, tutorials, workflows, and more intricate examples, please see the [Notebooks Extended Repo](https://github.com/rapidsai/notebooks-extended)
+* For our notebook examples and tutorials found in our standard containers, please see the [Notebooks Repo](https://github.com/rapidsai/notebooks)
 
