@@ -17,8 +17,8 @@ Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 ## Exploring the Repo
 
 - `getting_started_notebooks` - “how to start using RAPIDS”.  Contains notebooks showing "hello worlds", getting started with RAPIDS libraries, and tutorials around RAPIDS concepts.   
-- `intermediate` - “how to accomplish your workflows with RAPIDS”.  Contains notebooks showing algorthim and workflow examples, benchmarking tools, and some complete end-to-end (E2E) workflows.
-- `advanced` - "how to master RAPIDS".  Contains notebooks showing kernal customization and advanced end-to-end workflows.
+- `intermediate_notebooks` - “how to accomplish your workflows with RAPIDS”.  Contains notebooks showing algorthim and workflow examples, benchmarking tools, and some complete end-to-end (E2E) workflows.
+- `advanced_notebooks` - "how to master RAPIDS".  Contains notebooks showing kernal customization and advanced end-to-end workflows.
 - `colab_notebooks` - contains colab versions of popular notebooks to quickly try out in browser
 - `blog notebooks` - contains shared notebooks mentioned and used in blogs that showcase RAPIDS workflows and capabilities
 - `conference notebooks` - contains notebooks used in conferences, such as GTC
