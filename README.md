@@ -29,11 +29,9 @@ Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 
 The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so you can browse it from JupyterLab's UI.
 
-# RAPIDS Notebooks-Contrib
+# Our Notebooks
 ## Industry Topical Notebooks
 Please view our [Industry Topics README]() to see which notebooks align with which industries (coming soon!)
-
-*Please note that archived notebooks won't show up in this list.  Notebooks are only archived when suitable replacements have been created.
 
 ## Getting Started Notebooks:
 
