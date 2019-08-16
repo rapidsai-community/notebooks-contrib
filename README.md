@@ -111,6 +111,7 @@ Please view our [Industry Topics README]() to see which notebooks align with whi
 
 ## Archived Notebooks
 Kept here for posterity.  Please do not expect these notebooks to work with the latest code.  These notebooks will state which RAPIDS versions they work with and the new notebook that superceded them.
+
 | Folder    | Notebook Title         | Successor Notebook | Description |
 |-----------|------------------------|--------------------|-------------|
 | examples  |[Dask_with_cuDF_and_XGBoost.ipynb](archived_notebooks/examples/Dask_with_cuDF_and_XGBoost.ipynb ) | [08_Introduction_to_Dask_XGBoost.ipynb](getting_started_notebooks/intro_tutorials/08_Introduction_to_Dask_XGBoost.ipynb) | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF. |
