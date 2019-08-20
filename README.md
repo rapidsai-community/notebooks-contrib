@@ -97,15 +97,16 @@ Please view our [Industry Topics README]() to see which notebooks align with whi
 ## Competition Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| kaggle-> landmark   | [cudf_stratifiedKfold_1000x_speedup](competition_notebooks/kaggle/landmark/cudf_stratifiedKfold_1000x_speedup.ipynb)               |  Description comming soon!    |
-| kaggle-> malware   | [malware_time_column_explore](competition_notebooks/kaggle/malware/malware_time_column_explore.ipynb)               |  Description comming soon!   |
-| kaggle-> malware   | [rapids_solution_gpu_only](competition_notebooks/kaggle/malware/rapids_solution_gpu_only.ipynb)               |  Description comming soon!   |
-| kaggle-> malware   | [rapids_solution_gpu_vs_cpu](competition_notebooks/kaggle/malware/rapids_solution_gpu_vs_cpu.ipynb)               |  Description comming soon!   |
-| kaggle-> plasticc-> notebooks   | [rapids_lsst_full_demo](competition_notebooks/kaggle/plasticc/notebooks/rapids_lsst_full_demo)               |  Description comming soon!   |
-| kaggle-> plasticc-> notebooks   | [rapids_lsst_gpu_only_demo](competition_notebooks/kaggle/plasticc/notebooks/rapids_lsst_gpu_only_demo.ipynb)               |  Description comming soon!   |
-| kaggle-> santander   | [cudf_tf_demo](competition_notebooks/kaggle/santander/cudf_tf_demo.ipynb)               |  Description comming soon!   |
-| kaggle-> santander   | [E2E_santander_pandas](competition_notebooks/kaggle/santander/E2E_santander_pandas.ipynb)               |  Description comming soon!   |
-| kaggle-> santander   | [E2E_santander](competition_notebooks/kaggle/santander/E2E_santander.ipynb)               |  Description comming soon!   
+| kaggle-> landmark   | [cudf_stratifiedKfold_1000x_speedup](competition_notebooks/kaggle/landmark/cudf_stratifiedKfold_1000x_speedup.ipynb)               |  This notebook demonstrates the cuDF implementation of a stratified kfold operation that achieved a 1000x speed up for the Google Landmark Recognition competition    |
+| kaggle-> malware   | [malware_time_column_explore](competition_notebooks/kaggle/malware/malware_time_column_explore.ipynb)               |  This notebook studies the difference between train and test datasets in order to develop a robust validation scheme.   |
+| kaggle-> malware   | [rapids_solution_gpu_only](competition_notebooks/kaggle/malware/rapids_solution_gpu_only.ipynb)               |  
+This notebook contains the GPU based RAPIDS solution to achieve 0.695 private LB in 12 minutes   |
+| kaggle-> malware   | [rapids_solution_gpu_vs_cpu](competition_notebooks/kaggle/malware/rapids_solution_gpu_vs_cpu.ipynb)               |  This notebook compares the CPU versus the GPU solution to achieve 0.695 private LB   |
+| kaggle-> plasticc-> notebooks   | [rapids_lsst_full_demo](competition_notebooks/kaggle/plasticc/notebooks/rapids_lsst_full_demo.ipynb)               |  This notebook demos the full CPU and GPU implementation of the RAPIDS.ai team's model that placed 8/1094 in the PLAsTiCC Astronomical Classification competition   |
+| kaggle-> plasticc-> notebooks   | [rapids_lsst_gpu_only_demo](competition_notebooks/kaggle/plasticc/notebooks/rapids_lsst_gpu_only_demo.ipynb)               |  This GPU only based notebook shows the RAPIDS speedup of the the RAPIDS.ai team's model that placed 8/1094 in the PLAsTiCC Astronomical Classification competition |
+| kaggle-> santander   | [cudf_tf_demo](competition_notebooks/kaggle/santander/cudf_tf_demo.ipynb)               |  This notebook is the cudf-tensorflow approach from the RAPIDS.ai team for Santander Customer Transaction Prediction   |
+| kaggle-> santander   | [E2E_santander_pandas](competition_notebooks/kaggle/santander/E2E_santander_pandas.ipynb)               |  This is the Pandas based notebook the RAPIDS.ai team's best single model for Santander Customer Transaction Prediction   |
+| kaggle-> santander   | [E2E_santander](competition_notebooks/kaggle/santander/E2E_santander.ipynb)               |  This is the comparison cuDF notebook version of the RAPIDS.ai team's best single model for Santander Customer Transaction Prediction, placing 17/8808 in the competition.   
 
 ## Archived Notebooks
 Kept here for posterity.  Please do not expect these notebooks to work with the latest code.  These notebooks will state which RAPIDS versions they work with and the new notebook that superceded them.
