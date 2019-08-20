@@ -30,9 +30,6 @@ Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so you can browse it from JupyterLab's UI.
 
 # Our Notebooks
-## Industry Topical Notebooks
-Please view our [Industry Topics README]() to see which notebooks align with which industries (coming soon!)
-
 ## Getting Started Notebooks:
 
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
