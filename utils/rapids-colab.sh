@@ -2,7 +2,7 @@
 
 set -eu
 
-RAPIDS_VERSION="${1:=-0.10}"
+RAPIDS_VERSION="${1:-0.10}"
 
 wget -nc https://github.com/rapidsai/notebooks-extended/raw/master/utils/env-check.py
 echo "Checking for GPU type:"
