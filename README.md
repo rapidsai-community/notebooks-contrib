@@ -6,15 +6,20 @@ The purpose of this collection of notebooks is to help users understand what RAP
 1. These are vetted, community-contributed notebooks (includes RAPIDS team member contributions).  
 1. These notebooks won't run on airgapped systems, which is one of our container requirements.  Many RAPIDS notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please download all the data that you plan to use ahead of time or simply use the [core notebooks repo](https://github.com/rapidsai/notebooks).
 
-## Installation
+## Important Docs
+### Installation
 
 Please use the [BUILD.md](BUILD.md) to check the pre-requisite packages and installation steps.
 
-## Contributing
+### Contributing
 
 Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 
-## Exploring the Repo
+### Multimedia
+[Multimedia_links](multimedia_links.md) contains a list of informative RAPIDS team and Community contributed videos and playlists.
+
+
+## Folder Overview
 
 - `getting_started_notebooks` - “how to start using RAPIDS”.  Contains notebooks showing "hello worlds", getting started with RAPIDS libraries, and tutorials around RAPIDS concepts.   
 - `intermediate_notebooks` - “how to accomplish your workflows with RAPIDS”.  Contains notebooks showing algorthim and workflow examples, benchmarking tools, and some complete end-to-end (E2E) workflows.
@@ -24,13 +29,10 @@ Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 - `conference notebooks` - contains notebooks used in conferences, such as GTC
 - `competition notebooks` - contains notebooks used in competitions, such as Kaggle
 - `archived_notebooks` - contains older notebooks that are now obsolete and were replaced.
+- `/data` contains small data samples used for purely functional demonstrations. Some notebooks include cells that download larger datasets from external websites.  The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so you can browse it from JupyterLab's UI.
 
-`/data` contains small data samples used for purely functional demonstrations. Some notebooks include cells that download larger datasets from external websites.
-
-The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so you can browse it from JupyterLab's UI.
-
-# Our Notebooks
-## Getting Started Notebooks:
+## Our Notebooks
+### Getting Started Notebooks:
 
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -49,7 +51,7 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 | intro_tutorials   | [09_Introduction_to_Dimensionality_Reduction](getting_started_notebooks/intro_tutorials/09_Introduction_to_Dimensionality_Reduction.ipynb)   | This notebook shows how to do GPU accelerated Dimensionality Reduction in RAPIDS.                                                                                                                                      |
 | intro_tutorials   | [10_Introduction_to_Clustering](getting_started_notebooks/intro_tutorials/10_Introduction_to_Clustering.ipynb)  | This notebook shows how to do GPU accelerated Clustering in RAPIDS.                                                                                                                                      |
 
-## Intermediate Notebooks:
+### Intermediate Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | examples   | [DBSCAN_Demo_FULL](intermediate_notebooks/examples/DBSCAN_Demo_FULL.ipynb)               |  This notebook shows how to use DBSCAN algorithm and its GPU accelerated implementation present in RAPIDS.                                                  |
@@ -70,12 +72,12 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 | benchmarks-> cugraph_benchmarks      | [louvain_benchmark](intermediate_notebooks/benchmarks/cugraph_benchmarks/louvain_benchmark.ipynb)   | This notebook benchmarks performance improvement of running the Louvain clustering algorithm within cuGraph against NetworkX.                                                                                                                                                                |
 |  benchmarks-> cugraph_benchmarks    |  [pagerank_benchmark](intermediate_notebooks/benchmarks/cugraph_benchmarks/pagerank_benchmark.ipynb)             | This notebook benchmarks performance improvement of running PageRank within cuGraph against NetworkX.
 
-## Advanced Notebooks:
+### Advanced Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | tutorials   | [rapids_customized_kernels](advanced_notebooks/tutorials/rapids_customized_kernels.ipynb)               |  This notebook shows how create customized kernels using CUDA to make your workflow in RAPIDS even faster.    
 
-## Blog Notebooks:
+### Blog Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | cyber -> flow_classification     | [flow_classification_rapids](blog_notebooks/cyber/flow_classification/flow_classification_rapids.ipynb)              | The `cyber` folder contains the associated companion files for the blog [GPU Accelerated Cyber Log Parsing with RAPIDS](https://medium.com/rapids-ai/gpu-accelerated-cyber-log-parsing-with-rapids-10896f57eee9), by Bianca Rhodes US, Bhargav Suryadevara, and Nick Becker.  This notebook demonstrates how to load netflow data into cuDF and create a multiclass classification model using XGBoost.                                                                                                     |
@@ -85,13 +87,13 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 | regression   | [regression_blog_notebook](blog_notebooks/regression/regression_blog_notebook.ipynb)       | This is the companion notebook for the blog [Essential Machine Learning with Linear Models in RAPIDS: part 1 of a series](https://medium.com/rapids-ai/essential-machine-learning-with-linear-models-in-rapids-part-1-of-a-series-992fab0240da) by Paul Mahler.  It showcases an end to end notebook using the try_this dataset and cuML's implementation of ridge regression.
 | nlp -> show_me_the_word_count_gutenberg   | [show_me_the_word_count_gutenberg](blog_notebooks/nlp/show_me_the_word_count_gutenberg/show_me_the_word_count_gutenberg.ipynb)       | This is the notebook for blog [Show Me The Word Count](https://medium.com/rapids-ai/show-me-the-word-count-3146e1173801) by Vibhu Jawa, Nick Becker, David Wendt, and Randy Gelhausen. This notebook showcases nlp pre-processing capabilties of nvstrings+cudf on the Gutenberg dataset. |
 
-## Conference Notebooks:
+### Conference Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GTC_SJ_2019   | [GTC_tutorial_instructor](conference_notebooks/GTC_SJ_2019/GTC_tutorial_instructor.ipynb)               |  This is the instructor notebook for the hands on RAPIDS tutorial presented at San Jose's GTC 2019.  It contains all the demonstrated solutions.    |
 | GTC_SJ_2019   | [GTC_tutorial_student](conference_notebooks/GTC_SJ_2019/GTC_tutorial_student.ipynb)               |  This is the exercise-filled student notebook for the hands on RAPIDS tutorial presented at San Jose's GTC 2019   |
 
-## Competition Notebooks:
+### Competition Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | kaggle-> landmark   | [cudf_stratifiedKfold_1000x_speedup](competition_notebooks/kaggle/landmark/cudf_stratifiedKfold_1000x_speedup.ipynb)               |  This notebook demonstrates the cuDF implementation of a stratified kfold operation that achieved a 1000x speed up for the Google Landmark Recognition competition    |
@@ -104,7 +106,7 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 | kaggle-> santander   | [E2E_santander_pandas](competition_notebooks/kaggle/santander/E2E_santander_pandas.ipynb)               |  This is the Pandas based notebook the RAPIDS.ai team's best single model for Santander Customer Transaction Prediction   |
 | kaggle-> santander   | [E2E_santander](competition_notebooks/kaggle/santander/E2E_santander.ipynb)               |  This is the comparison cuDF notebook version of the RAPIDS.ai team's best single model for Santander Customer Transaction Prediction, placing 17/8808 in the competition.   
 
-## Archived Notebooks
+### Archived Notebooks
 Kept here for posterity.  Please do not expect these notebooks to work with the latest code.  These notebooks will state which RAPIDS versions they work with and the new notebook that superceded them.
 
 | Folder    | Notebook Title         | Successor Notebook | Description |
