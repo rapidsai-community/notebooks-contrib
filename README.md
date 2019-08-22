@@ -1,10 +1,10 @@
-# RAPIDS Extended Notebooks
+# RAPIDS Notebooks-Contrib
 ## Intro
-Welcome to the extended notebooks repo!
+Welcome to the contributed notebooks repo! (formerly known as Notebooks-Extended)
 
-The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn why, how, and when including RAPIDS in a data science pipeline makes sense, and contain community contributions of RAPIDS knowledge. 
-
-Many of these notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please use the [core notebooks repo](https://github.com/rapidsai/notebooks).
+The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn why, how, and when including RAPIDS in a data science pipeline makes sense, and contain community contributions of RAPIDS knowledge. The difference between this repo and the [Notebooks Repo](https://github.com/rapidsai/notebooks) are:
+1. These are vetted, community-contributed notebooks (includes RAPIDS team member contributions).  
+1. These notebooks won't run on airgapped systems, which is one of our container requirements.  Many RAPIDS notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please download all the data that you plan to use ahead of time or simply use the [core notebooks repo](https://github.com/rapidsai/notebooks).
 
 ## Installation
 
@@ -12,27 +12,26 @@ Please use the [BUILD.md](BUILD.md) to check the pre-requisite packages and inst
 
 ## Contributing
 
-Please see our [guide for contributing to notebooks-extended](CONTRIBUTING.md).
+Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 
 ## Exploring the Repo
 
 - `getting_started_notebooks` - “how to start using RAPIDS”.  Contains notebooks showing "hello worlds", getting started with RAPIDS libraries, and tutorials around RAPIDS concepts.   
-- `intermediate` - “how to accomplish your workflows with RAPIDS”.  Contains notebooks showing algorthim and workflow examples, benchmarking tools, and some complete end-to-end (E2E) workflows.
-- `advanced` - "how to master RAPIDS".  Contains notebooks showing kernal customization and advanced end-to-end workflows.
+- `intermediate_notebooks` - “how to accomplish your workflows with RAPIDS”.  Contains notebooks showing algorthim and workflow examples, benchmarking tools, and some complete end-to-end (E2E) workflows.
+- `advanced_notebooks` - "how to master RAPIDS".  Contains notebooks showing kernal customization and advanced end-to-end workflows.
 - `colab_notebooks` - contains colab versions of popular notebooks to quickly try out in browser
 - `blog notebooks` - contains shared notebooks mentioned and used in blogs that showcase RAPIDS workflows and capabilities
 - `conference notebooks` - contains notebooks used in conferences, such as GTC
 - `competition notebooks` - contains notebooks used in competitions, such as Kaggle
+- `archived_notebooks` - contains older notebooks that are now obsolete and were replaced.
 
 `/data` contains small data samples used for purely functional demonstrations. Some notebooks include cells that download larger datasets from external websites.
 
 The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so you can browse it from JupyterLab's UI.
 
-# RAPIDS Notebooks-extended
-## Industry Topical Notebooks
-Please view our [Industry Topics README]() to see which notebooks align with which industries (coming soon!)
-
+# Our Notebooks
 ## Getting Started Notebooks:
+
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | basics   | [Dask_Hello_World](getting_started_notebooks/basics/Dask_Hello_World.ipynb)           | This notebook shows how to quickly setup Dask and run a "Hello World" example.                                                                                                                                       |
@@ -54,7 +53,6 @@ Please view our [Industry Topics README]() to see which notebooks align with whi
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | examples   | [DBSCAN_Demo_FULL](intermediate_notebooks/examples/DBSCAN_Demo_FULL.ipynb)               |  This notebook shows how to use DBSCAN algorithm and its GPU accelerated implementation present in RAPIDS.                                                  |
-| examples   | [Dask_with_cuDF_and_XGBoost](intermediate_notebooks/examples/Dask_with_cuDF_and_XGBoost.ipynb)                    | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF.                                                                                                |
 | examples   | [Dask_with_cuDF_and_XGBoost_Disk](intermediate_notebooks/examples/Dask_with_cuDF_and_XGBoost_Disk.ipynb)                   | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF and read the data from disk using cuIO.                                                                                                      |
 | examples   | [One_Hot_Encoding](intermediate_notebooks/examples/One_Hot_Encoding.ipynb)    | In this notebook we show how to use dask and cudf to use xgboost on a dataset.                                              |
 | examples   | [PCA_Demo_Full](intermediate_notebooks/examples/PCA_Demo_Full.ipynb)               | In this notebook we will show how to use PCA and its GPU accelerated implementation present in RAPIDS.                                   |
@@ -81,35 +79,42 @@ Please view our [Industry Topics README]() to see which notebooks align with whi
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | cyber -> flow_classification     | [flow_classification_rapids](blog_notebooks/cyber/flow_classification/flow_classification_rapids.ipynb)              | The `cyber` folder contains the associated companion files for the blog [GPU Accelerated Cyber Log Parsing with RAPIDS](https://medium.com/rapids-ai/gpu-accelerated-cyber-log-parsing-with-rapids-10896f57eee9), by Bianca Rhodes US, Bhargav Suryadevara, and Nick Becker.  This notebook demonstrates how to load netflow data into cuDF and create a multiclass classification model using XGBoost.                                                                                                     |
-| cyber ->network_mapping      | [lanl_network_mapping_using_rapids](blog_notebooks/cyber/network_mapping/lanl_network_mapping_using_rapids.ipynb)               | The `cyber` folder contains the associated companion files for the blog [GPU Accelerated Cyber Log Parsing with RAPIDS](https://medium.com/rapids-ai/gpu-accelerated-cyber-log-parsing-with-rapids-10896f57eee9), by Bianca Rhodes US, Bhargav Suryadevara, and Nick Becker.  This notebook demonstrates how to parse raw windows event logs using cudf and uses cuGraph's pagerank model to build a network graph.                                                                         |
-| cyber ->raw_data_generator      | [run_raw_data_generator](blog_notebooks/cyber/raw_data_generator/run_raw_data_generator.py)              | The `cyber` folder contains the associated companion files for the blog [GPU Accelerated Cyber Log Parsing with RAPIDS](https://medium.com/rapids-ai/gpu-accelerated-cyber-log-parsing-with-rapids-10896f57eee9), by Bianca Rhodes US, Bhargav Suryadevara, and Nick Becker.  The notebook is used showcase how to generate raw logs from the parsed LANL 2017 json data. The intent is to use the raw data to demonstrate parsing capabilities using cuDF.                       |
+| cyber -> network_mapping      | [lanl_network_mapping_using_rapids](blog_notebooks/cyber/network_mapping/lanl_network_mapping_using_rapids.ipynb)               | The `cyber` folder contains the associated companion files for the blog [GPU Accelerated Cyber Log Parsing with RAPIDS](https://medium.com/rapids-ai/gpu-accelerated-cyber-log-parsing-with-rapids-10896f57eee9), by Bianca Rhodes US, Bhargav Suryadevara, and Nick Becker.  This notebook demonstrates how to parse raw windows event logs using cudf and uses cuGraph's pagerank model to build a network graph.                                                                         |
+| cyber -> raw_data_generator      | [run_raw_data_generator](blog_notebooks/cyber/raw_data_generator/run_raw_data_generator.py)              | The `cyber` folder contains the associated companion files for the blog [GPU Accelerated Cyber Log Parsing with RAPIDS](https://medium.com/rapids-ai/gpu-accelerated-cyber-log-parsing-with-rapids-10896f57eee9), by Bianca Rhodes US, Bhargav Suryadevara, and Nick Becker.  The notebook is used showcase how to generate raw logs from the parsed LANL 2017 json data. The intent is to use the raw data to demonstrate parsing capabilities using cuDF.                       |
 | databricks   | [RAPIDS_PCA_demo_avro_read](blog_notebooks/databricks/RAPIDS_PCA_demo_avro_read.ipynb)              | The `databricks` folder is the companion file repository to the blog [RAPIDS can now be accessed on Databricks Unified Analytics Platform](https://medium.com/rapids-ai/rapids-can-now-be-accessed-on-databricks-unified-analytics-platform-666e42284bd1) by Ikroop Dhillon, Karthikeyan Rajendran, and Taurean Dyer.  This notebooks purpose is to showcase RAPIDS on Databricks use thier sample datasets and show the CPU vs GPU comparison for the PCA algorithm. There is also an accompanying HTML file for easy Databricks import.                                                                       
 | regression   | [regression_blog_notebook](blog_notebooks/regression/regression_blog_notebook.ipynb)       | This is the companion notebook for the blog [Essential Machine Learning with Linear Models in RAPIDS: part 1 of a series](https://medium.com/rapids-ai/essential-machine-learning-with-linear-models-in-rapids-part-1-of-a-series-992fab0240da) by Paul Mahler.  It showcases an end to end notebook using the try_this dataset and cuML's implementation of ridge regression.
-| nlp->show_me_the_word_count_gutenberg   | [show_me_the_word_count_gutenberg](blog_notebooks/nlp/show_me_the_word_count_gutenberg/show_me_the_word_count_gutenberg.ipynb)       | This is the notebook for blog [Show Me The Word Count](https://medium.com/rapids-ai/show-me-the-word-count-3146e1173801) by Vibhu Jawa, Nick Becker, David Wendt, and Randy Gelhausen. This notebook showcases nlp pre-processing capabilties of nvstrings+cudf on the Gutenberg dataset. |
+| nlp -> show_me_the_word_count_gutenberg   | [show_me_the_word_count_gutenberg](blog_notebooks/nlp/show_me_the_word_count_gutenberg/show_me_the_word_count_gutenberg.ipynb)       | This is the notebook for blog [Show Me The Word Count](https://medium.com/rapids-ai/show-me-the-word-count-3146e1173801) by Vibhu Jawa, Nick Becker, David Wendt, and Randy Gelhausen. This notebook showcases nlp pre-processing capabilties of nvstrings+cudf on the Gutenberg dataset. |
 
 ## Conference Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GTC_SJ_2019   | [GTC_tutorial_instructor](conference_notebooks/GTC_SJ_2019/GTC_tutorial_instructor.ipynb)               |  Description comming soon!   |
-| GTC_SJ_2019   | [GTC_tutorial_student](conference_notebooks/GTC_SJ_2019/GTC_tutorial_student.ipynb)               |  Description comming soon!   |
+| GTC_SJ_2019   | [GTC_tutorial_instructor](conference_notebooks/GTC_SJ_2019/GTC_tutorial_instructor.ipynb)               |  This is the instructor notebook for the hands on RAPIDS tutorial presented at San Jose's GTC 2019.  It contains all the demonstrated solutions.    |
+| GTC_SJ_2019   | [GTC_tutorial_student](conference_notebooks/GTC_SJ_2019/GTC_tutorial_student.ipynb)               |  This is the exercise-filled student notebook for the hands on RAPIDS tutorial presented at San Jose's GTC 2019   |
 
 ## Competition Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| kaggle-> landmark   | [cudf_stratifiedKfold_1000x_speedup](competition_notebooks/kaggle/landmark/cudf_stratifiedKfold_1000x_speedup.ipynb)               |  Description comming soon!    |
-| kaggle-> malware   | [malware_time_column_explore](competition_notebooks/kaggle/malware/malware_time_column_explore.ipynb)               |  Description comming soon!   |
-| kaggle-> malware   | [rapids_solution_gpu_only](competition_notebooks/kaggle/malware/rapids_solution_gpu_only.ipynb)               |  Description comming soon!   |
-| kaggle-> malware   | [rapids_solution_gpu_vs_cpu](competition_notebooks/kaggle/malware/rapids_solution_gpu_vs_cpu.ipynb)               |  Description comming soon!   |
-| kaggle-> plasticc-> notebooks   | [rapids_lsst_full_demo](competition_notebooks/kaggle/plasticc/notebooks/rapids_lsst_full_demo)               |  Description comming soon!   |
-| kaggle-> plasticc-> notebooks   | [rapids_lsst_gpu_only_demo](competition_notebooks/kaggle/plasticc/notebooks/rapids_lsst_gpu_only_demo.ipynb)               |  Description comming soon!   |
-| kaggle-> santander   | [cudf_tf_demo](competition_notebooks/kaggle/santander/cudf_tf_demo.ipynb)               |  Description comming soon!   |
-| kaggle-> santander   | [E2E_santander_pandas](competition_notebooks/kaggle/santander/E2E_santander_pandas.ipynb)               |  Description comming soon!   |
-| kaggle-> santander   | [E2E_santander](competition_notebooks/kaggle/santander/E2E_santander.ipynb)               |  Description comming soon!   
+| kaggle-> landmark   | [cudf_stratifiedKfold_1000x_speedup](competition_notebooks/kaggle/landmark/cudf_stratifiedKfold_1000x_speedup.ipynb)               |  This notebook demonstrates the cuDF implementation of a stratified kfold operation that achieved a 1000x speed up for the Google Landmark Recognition competition    |
+| kaggle-> malware   | [malware_time_column_explore](competition_notebooks/kaggle/malware/malware_time_column_explore.ipynb)  |  This notebook studies the difference between train and test datasets in order to develop a robust validation scheme.   |
+| kaggle-> malware   | [rapids_solution_gpu_only](competition_notebooks/kaggle/malware/rapids_solution_gpu_only.ipynb)   |This notebook contains the GPU based RAPIDS solution to achieve 0.695 private LB in 12 minutes   |
+| kaggle-> malware   | [rapids_solution_gpu_vs_cpu](competition_notebooks/kaggle/malware/rapids_solution_gpu_vs_cpu.ipynb)               |  This notebook compares the CPU versus the GPU solution to achieve 0.695 private LB   |
+| kaggle-> plasticc-> notebooks   | [rapids_lsst_full_demo](competition_notebooks/kaggle/plasticc/notebooks/rapids_lsst_full_demo.ipynb)               |  This notebook demos the full CPU and GPU implementation of the RAPIDS.ai team's model that placed 8/1094 in the PLAsTiCC Astronomical Classification competition   |
+| kaggle-> plasticc-> notebooks   | [rapids_lsst_gpu_only_demo](competition_notebooks/kaggle/plasticc/notebooks/rapids_lsst_gpu_only_demo.ipynb)               |  This GPU only based notebook shows the RAPIDS speedup of the the RAPIDS.ai team's model that placed 8/1094 in the PLAsTiCC Astronomical Classification competition |
+| kaggle-> santander   | [cudf_tf_demo](competition_notebooks/kaggle/santander/cudf_tf_demo.ipynb)               |  This notebook is the cudf-tensorflow approach from the RAPIDS.ai team for Santander Customer Transaction Prediction   |
+| kaggle-> santander   | [E2E_santander_pandas](competition_notebooks/kaggle/santander/E2E_santander_pandas.ipynb)               |  This is the Pandas based notebook the RAPIDS.ai team's best single model for Santander Customer Transaction Prediction   |
+| kaggle-> santander   | [E2E_santander](competition_notebooks/kaggle/santander/E2E_santander.ipynb)               |  This is the comparison cuDF notebook version of the RAPIDS.ai team's best single model for Santander Customer Transaction Prediction, placing 17/8808 in the competition.   
+
+## Archived Notebooks
+Kept here for posterity.  Please do not expect these notebooks to work with the latest code.  These notebooks will state which RAPIDS versions they work with and the new notebook that superceded them.
+
+| Folder    | Notebook Title         | Successor Notebook | Description |
+|-----------|------------------------|--------------------|-------------|
+| examples  |[Dask_with_cuDF_and_XGBoost.ipynb](archived_notebooks/examples/Dask_with_cuDF_and_XGBoost.ipynb ) | [08_Introduction_to_Dask_XGBoost.ipynb](getting_started_notebooks/intro_tutorials/08_Introduction_to_Dask_XGBoost.ipynb) | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF. |
 
 ## Additional Information
-* The `cuml` folder also includes a small subset of the Mortgage Dataset used in the notebooks and the full image set from the Fashion MNIST dataset.
+* The `intermediate_notebooks` folder also includes a small subset of the Mortgage Dataset used in the notebooks and the full image set from the Fashion MNIST dataset.
 
 * `utils`: contains a set of useful scripts for interacting with RAPIDS
 
-* For additional, community driven notebooks, which will include our blogs, tutorials, workflows, and more intricate examples, please see the [Notebooks Extended Repo](https://github.com/rapidsai/notebooks-extended)
+* For our notebook examples and tutorials found in our standard containers, please see the [Notebooks Repo](https://github.com/rapidsai/notebooks)
 
