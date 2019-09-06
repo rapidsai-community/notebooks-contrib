@@ -23,7 +23,6 @@ Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 - `blog notebooks` - contains shared notebooks mentioned and used in blogs that showcase RAPIDS workflows and capabilities
 - `conference notebooks` - contains notebooks used in conferences, such as GTC
 - `competition notebooks` - contains notebooks used in competitions, such as Kaggle
-- `archived_notebooks` - contains older notebooks that are now obsolete and were replaced.
 
 `/data` contains small data samples used for purely functional demonstrations. Some notebooks include cells that download larger datasets from external websites.
 
@@ -52,10 +51,6 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 ## Intermediate Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| examples   | [DBSCAN_Demo_FULL](intermediate_notebooks/examples/DBSCAN_Demo_FULL.ipynb)               |  This notebook shows how to use DBSCAN algorithm and its GPU accelerated implementation present in RAPIDS.                                                  |
-| examples   | [Dask_with_cuDF_and_XGBoost_Disk](intermediate_notebooks/examples/Dask_with_cuDF_and_XGBoost_Disk.ipynb)                   | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF and read the data from disk using cuIO.                                                                                                      |
-| examples   | [One_Hot_Encoding](intermediate_notebooks/examples/One_Hot_Encoding.ipynb)    | In this notebook we show how to use dask and cudf to use xgboost on a dataset.                                              |
-| examples   | [PCA_Demo_Full](intermediate_notebooks/examples/PCA_Demo_Full.ipynb)               | In this notebook we will show how to use PCA and its GPU accelerated implementation present in RAPIDS.                                   |
 | examples   | [linear_regression_demo.ipynb](intermediate_notebooks/examples/linear_regression_demo.ipynb)     |In this notebook we will show how to use linear regression and its GPU accelerated implementation present in RAPIDS.                                                                                                                |
 | examples   | [ridge_regression_demo](intermediate_notebooks/examples/ridge_regression_demo.ipynb)     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset.                                                                                                                  |
 | examples   | [umap_demo](intermediate_notebooks/examples/umap_demo.ipynb)     | In this notebook we will show how to use UMAP and its GPU accelerated implementation present in RAPIDS.   |
@@ -104,12 +99,6 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 | kaggle-> santander   | [E2E_santander_pandas](competition_notebooks/kaggle/santander/E2E_santander_pandas.ipynb)               |  This This financial data modelling notebook is the Pandas based version the RAPIDS.ai team's best single model for Santander Customer Transaction Prediction competition.  Placed 17/8808. [Blog](https://medium.com/rapids-ai/financial-data-modeling-with-rapids-5bca466f348)   |
 | kaggle-> santander   | [E2E_santander](competition_notebooks/kaggle/santander/E2E_santander.ipynb)               |  This financial data modelling notebook is the cuDF based version of the RAPIDS.ai team's best single model for Santander Customer Transaction Prediction competition.  It allows you to compare cuDF performance to the Pandas version.  Placed 17/8808. [Blog](https://medium.com/rapids-ai/financial-data-modeling-with-rapids-5bca466f348).   
 
-## Archived Notebooks
-Kept here for posterity.  Please do not expect these notebooks to work with the latest code.  These notebooks will state which RAPIDS versions they work with and the new notebook that superceded them.
-
-| Folder    | Notebook Title         | Successor Notebook | Description |
-|-----------|------------------------|--------------------|-------------|
-| examples  |[Dask_with_cuDF_and_XGBoost.ipynb](archived_notebooks/examples/Dask_with_cuDF_and_XGBoost.ipynb ) | [08_Introduction_to_Dask_XGBoost.ipynb](getting_started_notebooks/intro_tutorials/08_Introduction_to_Dask_XGBoost.ipynb) | In this notebook we show how to quickly setup Dask and train an XGBoost model using cuDF. |
 
 ## Additional Information
 * The `intermediate_notebooks` folder also includes a small subset of the Mortgage Dataset used in the notebooks and the full image set from the Fashion MNIST dataset.
