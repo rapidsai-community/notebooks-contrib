@@ -8,6 +8,129 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 from sklearn.utils.multiclass import unique_labels
 
+import cudf as gd
+import numpy as np
+from numba import cuda,jit,float32
+import math
+TPB = 32 # threads per block, multiples of 32 in general
+
+@cuda.jit(device=True) 
+def initialize(array,value,N):
+    # N<=len(array)
+    for i in range(cuda.threadIdx.x, N, cuda.blockDim.x):
+        array[i] = value
+
+@cuda.jit(device=True)
+def reduction_sum_SM(array):
+    # array is in shared memory
+    # len(array) == TPB 
+    # the final result is in array[0]
+    tid = cuda.threadIdx.x
+    j = TPB//2 #16
+    while j>0:
+       if tid<j:
+           array[tid] += array[tid+j]
+       j = j//2
+       cuda.syncthreads()
+
+@cuda.jit(device=True)            
+def compute_mean(array,mean): 
+    # mean is a shared memory array
+    # the kernel has only one TB
+    # the final result is in mean[0]
+    tid = cuda.threadIdx.x
+    initialize(mean,0,TPB)
+    cuda.syncthreads()
+   
+    tid = cuda.threadIdx.x 
+    for i in range(cuda.threadIdx.x, len(array), cuda.blockDim.x):
+        mean[tid] += array[i]
+    cuda.syncthreads()
+
+    reduction_sum_SM(mean)
+    if tid == 0: 
+        mean[0]/=len(array)
+    cuda.syncthreads()
+
+@cuda.jit(device=True)
+def compute_skew_with_mean(array,skew,mean):
+    # skew is a shared memory array
+    # mean is a scaler, the mean value of array
+    # len(skew) == TPB
+    # the kernel has only one TB
+    # the final result is in skew[0]
+    tid = cuda.threadIdx.x
+    initialize(skew,0,len(skew))
+    cuda.syncthreads()
+
+    m2 = 0 # 2nd moment
+
+    tid = cuda.threadIdx.x
+    for i in range(cuda.threadIdx.x, len(array), cuda.blockDim.x):
+        skew[tid] += (array[i]-mean)**2
+    cuda.syncthreads()
+
+    reduction_sum_SM(skew)
+    if tid == 0:
+        m2 = skew[0]/(len(array))
+    cuda.syncthreads()
+
+    initialize(skew,0,len(skew))
+    cuda.syncthreads()
+
+    for i in range(cuda.threadIdx.x, len(array), cuda.blockDim.x):
+        skew[tid] += (array[i]-mean)**3
+    cuda.syncthreads()
+
+    reduction_sum_SM(skew)
+    if tid == 0:
+        n = len(array)
+        m3 = skew[0]/(len(array))
+        if m2>0 and n>2:
+            skew[0] = math.sqrt((n-1.0)*n)/(n-2.0)*m3/m2**1.5
+        else:
+            skew[0] = 0
+    cuda.syncthreads()
+
+
+@cuda.jit(device=True)
+def compute_skew(array,skew):
+    # std is a shared memory array
+    # len(std) == TPB
+    # the kernel has only one TB
+    # the final result is in std[0]
+    compute_mean(array,skew)
+    mean = skew[0]
+    #cuda.syncthreads()
+    compute_skew_with_mean(array,skew,mean)
+
+
+@cuda.jit
+def compute_mean_kernel(array,out):
+    mean = cuda.shared.array(shape=(TPB), dtype=float32)
+    compute_mean(array,mean)
+    if cuda.threadIdx.x==0:
+        out[0] = mean[0]
+    cuda.syncthreads()
+
+    
+@cuda.jit
+def compute_skew_kernel(array,out):
+    skew = cuda.shared.array(shape=(TPB), dtype=float32)
+    compute_skew(array,skew)
+    if cuda.threadIdx.x==0:
+        out[0] = skew[0]
+    cuda.syncthreads()
+
+
+@cuda.jit(device=True)
+def gd_group_apply_skew(ds_in,ds_out):
+    skew = cuda.shared.array(shape=(TPB), dtype=float32)
+    compute_skew(ds_in,skew)
+    for i in range(cuda.threadIdx.x, len(ds_in), cuda.blockDim.x):
+        ds_out[i] = skew[0]
+
+        
 def scatter(x,y,values,xlabel='x',ylabel='y',title=None,xlim=None):
     """
     Builds a scatter plot specific to the LSST data format by plotting 
@@ -34,23 +157,6 @@ def scatter(x,y,values,xlabel='x',ylabel='y',title=None,xlim=None):
         plt.xlim(xlim)
     plt.ylabel('y: %s'%ylabel)
     plt.xlabel('x: %s'%xlabel)
-    
-    
-def groupby_aggs(df,aggs,col = "object_id"):
-    """
-    Given a Dataframe and a dict of {"field":"["agg", "agg"]"}, perform the 
-    given aggregations using the given column as the groupby key. The original
-    (non-aggregated) field is dropped from the dataframe. 
-    """
-
-    res = None
-    for i,j in aggs.items():
-        for k in j:
-            tmp = df.groupby(col,as_index=False).agg({i:[k]})
-            tmp.columns = [col,'%s_%s'%(k,i)]
-            res = tmp if res is None else  res.merge(tmp,on=[col],how='left')
-        df.drop_column(i)
-    return res
 
 
 def plot_confusion_matrix(y_true, y_pred, classes,
@@ -184,3 +290,26 @@ def xgb_cross_entropy_loss(classes):
     return partial(xgb_multi_weighted_logloss, 
                         classes=classes, 
                         class_weights=class_weights)
+
+
+def skew_agg_func(col):
+    outcol = "%s_skew"%col
+    func = \
+    '''def skew(%s, %s):\n
+           gd_group_apply_skew(%s, %s)
+    '''%(col, outcol, col, outcol)
+    exec(func)
+    return outcol, eval("skew")
+
+def groupby_skew(df,idcol,col):
+    outcol, skew = skew_agg_func(col)
+    df = df.groupby(idcol,method='cudf').apply_grouped(
+                              skew,
+                              incols=[col],
+                              outcols={outcol: np.float32},
+                              tpb=TPB)
+    dg = df.groupby(idcol).agg({outcol:'mean'})
+    df.drop_column(outcol)
+    dg.columns = [outcol]
+    dg = dg.reset_index() 
+    return dg
