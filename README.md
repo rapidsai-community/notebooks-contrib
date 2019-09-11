@@ -18,7 +18,7 @@ Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 
 - `getting_started_notebooks` - “how to start using RAPIDS”.  Contains notebooks showing "hello worlds", getting started with RAPIDS libraries, and tutorials around RAPIDS concepts.   
 - `intermediate_notebooks` - “how to accomplish your workflows with RAPIDS”.  Contains notebooks showing algorthim and workflow examples, benchmarking tools, and some complete end-to-end (E2E) workflows.
-- `advanced_notebooks` - "how to master RAPIDS".  Contains notebooks showing kernal customization and advanced end-to-end workflows.
+- `advanced_notebooks` - "how to master RAPIDS".  Contains notebooks showing kernel customization and advanced end-to-end workflows.
 - `colab_notebooks` - contains colab versions of popular notebooks to quickly try out in browser
 - `blog notebooks` - contains shared notebooks mentioned and used in blogs that showcase RAPIDS workflows and capabilities
 - `conference notebooks` - contains notebooks used in conferences, such as GTC
@@ -55,6 +55,7 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 | examples   | [ridge_regression_demo](intermediate_notebooks/examples/ridge_regression_demo.ipynb)     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset.                                                                                                                  |
 | examples   | [umap_demo](intermediate_notebooks/examples/umap_demo.ipynb)     | In this notebook we will show how to use UMAP and its GPU accelerated implementation present in RAPIDS.   |
 | examples   | [rf_demo](intermediate_notebooks/examples/rf_demo.ipynb)     | Demonstration of using both cuml and sklearn to train a RandomForestClassifier on the Higgs dataset.   |
+| examples   | [weather](intermediate_notebooks/examples/weather.ipynb)     | Demonstration of using Dask and cuDF to process and analyze weather history |
 | E2E-> mortgage      | [mortgage_e2e](intermediate_notebooks/E2E/mortgage/mortgage_e2e.ipynb)            | This is an end to end notebook consisting of `ETL`, `data conversion` and `machine learning for training` operations performed on the mortgage dataset.      |
 | E2E-> mortgage      | [mortgage_e2e_deep_learning](intermediate_notebooks/E2E/mortgage/mortgage_e2e_deep_learning.ipynb)     | This notebook combines the RAPIDS GPU data processing with a PyTorch deep learning neural network to predict mortgage loan delinquency.                                                                                                                          |
 | E2E-> taxi      | [NYCTaxi](intermediate_notebooks/E2E/taxi/NYCTaxi-E2E.ipynb)     | Demonstrates multi-node ETL for cleanup of raw data into cleaned train and test dataframes. Shows how to run multi-node XGBoost training with dask-xgboost.  [Blog](https://medium.com/rapids-ai/scale-out-rapids-on-google-cloud-dataproc-8a873233258f) |
