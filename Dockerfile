@@ -10,7 +10,7 @@ RUN source activate rapids && conda install -y \
         && pip install graphistry mockito
 
 RUN source activate rapids && conda install -c \
-        nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba -c conda-forge -c defaults cugraph
+        nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba -c conda-forge -c defaults cugraph python-confluent-kafka
 
 RUN apt update &&\
     apt install -y graphviz &&\
