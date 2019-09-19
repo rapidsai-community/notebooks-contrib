@@ -64,7 +64,8 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 | E2E-> gdelt    | [Ridge_regression_with_feature_encoding](intermediate_notebooks/E2E/gdelt/Ridge_regression_with_feature_encoding.ipynb)    | An end to end example using ridge regression on the gdelt dataset. Includes ETL with `cuDF`, feature scaling/encoding, and model training and evaluation with `cuML` |
 | benchmarks      | [cuml_benchmarks](intermediate_notebooks/benchmarks/cuml_benchmarks.ipynb)  | The purpose of this notebook is to benchmark all of the single GPU cuML algorithms against their skLearn counterparts, while also providing the ability to find and verify upper bounds.                                                                                                                                          |
 | benchmarks-> cugraph_benchmarks      | [louvain_benchmark](intermediate_notebooks/benchmarks/cugraph_benchmarks/louvain_benchmark.ipynb)   | This notebook benchmarks performance improvement of running the Louvain clustering algorithm within cuGraph against NetworkX.                                                                                                                                                                |
-|  benchmarks-> cugraph_benchmarks    |  [pagerank_benchmark](intermediate_notebooks/benchmarks/cugraph_benchmarks/pagerank_benchmark.ipynb)             | This notebook benchmarks performance improvement of running PageRank within cuGraph against NetworkX.
+| benchmarks-> cugraph_benchmarks | [pagerank_benchmark](intermediate_notebooks/benchmarks/cugraph_benchmarks/pagerank_benchmark.ipynb) | This notebook benchmarks performance improvement of running PageRank within cuGraph against NetworkX, including the SciPy version in NetworkX |
+
 
 ## Advanced Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
@@ -86,6 +87,8 @@ The `/data` folder is also symlinked into `/rapids/notebooks/extended/data` so y
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GTC_SJ_2019   | [GTC_tutorial_instructor](conference_notebooks/GTC_SJ_2019/GTC_tutorial_instructor.ipynb)               |  This is the instructor notebook for the hands on RAPIDS tutorial presented at San Jose's GTC 2019.  It contains all the demonstrated solutions.    |
 | GTC_SJ_2019   | [GTC_tutorial_student](conference_notebooks/GTC_SJ_2019/GTC_tutorial_student.ipynb)               |  This is the exercise-filled student notebook for the hands on RAPIDS tutorial presented at San Jose's GTC 2019   |
+| KDD 2019 |  | Material from the hands-on tutorial presented at KDD 2019 |
+| ASONAM 2019 |  | Material form the hands-on tutorial presented at ASONAM 2019 |
 
 ## Competition Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   |
