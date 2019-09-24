@@ -1,4 +1,4 @@
-FROM rapidsai/rapidsai:cuda9.2-runtime-ubuntu16.04
+FROM rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
 
 SHELL ["/bin/bash", "-c"]
 RUN source activate rapids && conda install -y \
@@ -10,7 +10,7 @@ RUN source activate rapids && conda install -y \
         && pip install graphistry mockito
 
 RUN source activate rapids && conda install -c \
-        nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba -c conda-forge -c defaults cugraph
+        nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba -c conda-forge -c defaults cugraph python-confluent-kafka
 
 RUN apt update &&\
     apt install -y graphviz &&\
