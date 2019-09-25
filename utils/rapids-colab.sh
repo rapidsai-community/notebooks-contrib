@@ -27,7 +27,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
       -c rapidsai-nightly/label/xgboost -c rapidsai-nightly -c nvidia -c conda-forge \
       python=3.6 cudatoolkit=10.0 \
       cudf=$RAPIDS_VERSION cuml cugraph gcsfs pynvml \
-      dask-cudf dask-cuml
+      dask-cudf
 
     pip install https://xgboost-ci.net/job/xgboost/job/master/lastSuccessfulBuild/artifact/python-package/dist/xgboost-$XGBOOST_VERSION-py2.py3-none-any.whl
       
