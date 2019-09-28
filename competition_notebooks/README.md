@@ -1,2 +1,0 @@
-# DISCLAIMER
-The notebooks in this folder are **NOT MAINTAINED**. They are competition achievesments, frozen in time.  Please **do not** expect them to run in the latest RAPIDS release.  If you would like to update the notebooks, please do, and I'll link your update in the [competition_notebooks.md](ccompetition_notebooks.md)
