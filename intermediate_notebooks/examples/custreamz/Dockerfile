@@ -32,4 +32,4 @@ RUN wget -q https://archive.apache.org/dist/kafka/"$KAFKA_VERSION"/kafka_"$SCALA
         tar xfz /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz -C /opt && \
         rm /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz
 
-CMD ["/rapids/notebooks/contrib/docker-utils/scripts/entry.sh"]
+CMD ["/rapids/notebooks/contrib/scripts/entry.sh"]
