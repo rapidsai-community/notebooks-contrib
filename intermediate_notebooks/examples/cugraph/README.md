@@ -1,6 +1,21 @@
 # cuGraph Multi-GPU example
 
-## Step 1:  Get the Data Set
+## Dependencies
+Multi-GPU notebooks have the following dependencies: 
+
+      cugraph>=0.10      
+      cudf>=0.10
+      rmm>=0.10
+      dask-cudf>=0.10
+      dask-cuda>=0.10
+      cudatoolkit>=9.2
+      dask>=2.1.0 
+      distributed>=2.1.0 
+
+The simplest way to get all dependencies is through conda, by following the [instructions](https://github.com/rapidsai/cugraph/blob/master/CONTRIBUTING.md) to get the `cugraph_dev` environment.
+
+
+## Get the Data Set
 
 This step involves downloading a `gz` file of 6GB. Once decompressed the file is 26GB.
 
