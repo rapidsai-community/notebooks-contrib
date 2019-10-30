@@ -1,0 +1,34 @@
+name: rapids-0.9
+channels:
+  - defaults
+  - conda-forge
+  - nvidia 
+  - rapidsai 
+  - rapidsai/label/xgboost
+    
+dependencies:
+  - pip
+  - mpi4py
+  - gcsfs
+  - fs-gcsfs
+  - jupyterlab
+  - jupyter-server-proxy
+  - python=3.7
+  - numba=>0.45.1
+  - cudatoolkit
+  - pynvml
+  - nodejs
+  - cudf=0.9.*
+  - cuml=0.9.*
+  - cugraph=0.9.*
+  - bokeh
+  - dask=2.3.*
+  - distributed=2.3.*
+  - dask-cuda=0.9.*
+  - dask-cudf=0.9.*
+  - nvidia::nccl=2.4.*
+  - rapidsai/label/xgboost::dask-xgboost=0.2.*
+  - rapidsai-nightly/label/xgboost::xgboost=1.0.*
+  - dill
+  - pip:
+    - azureml-sdk[automl,explain,notebooks]
