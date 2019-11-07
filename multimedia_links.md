@@ -17,6 +17,12 @@
 |-------------------------------------------------------------------------------------------------------------------------------------|-------------|---------------------|-------------------------------|---|---| 
 | [End to End Data Science with RAPIDS](https://youtu.be/8PcyqzKHmnI) |             | PyData Meetup 2     | Aproov Agnihotri              |   |   |
 
+
+## Tutorial Recordings
+| Video                                                                                                                               | Description | Group               | Creator                      | Topic  | Date Added  |
+|-------------------------------------------------------------------------------------------------------------------------------------|-------------|---------------------|-------------------------------|---|---| 
+| [GPU Accelerated Data Analytics & Machine Learning [Tutorial]](https://www.youtube.com/watch?v=9Wey2c5Lx18) |             | [Towards Data Science]( https://towardsdatascience.com/@pierpaoloippolito28 )     | [Pier Paolo](https://pierpaolo28.github.io/)              | [Getting Started Tutorials]()  |  11/07/2019 |
+
 ## Playlists
 ### NVIDIA Playlists
 | Playlist                                                                                                                               | Description | Topic               | Contributor                      | Date Created  | Last Date Update  |
