@@ -11,9 +11,9 @@ handle = pynvml.nvmlDeviceGetHandleByIndex(0)
 device_name = pynvml.nvmlDeviceGetName(handle)
 
 if (device_name == b'Tesla T4') or (device_name == b'Tesla P100-PCIE-16GB'):
-  print('*********************************************')
+  print('***********************************************************************')
   print('Woo! Your instance has the right kind of GPU, a '+ str(device_name)[1:]+'!')
-  print('*********************************************')
+  print('***********************************************************************')
   print()
 else:
   raise Exception("""
