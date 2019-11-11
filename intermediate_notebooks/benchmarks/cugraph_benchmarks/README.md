@@ -62,19 +62,18 @@ rm -rf tmp
 
 
 
-
-** About the Test files**
+**About the Test files**
 
 | File Name              | Num of Vertices | Num of Edges | Format |  Graph Type               | Symmetric   |
 | ---------------------- | --------------: | -----------: |--------|---------------------------|-------------|
-| preferentialAttachment |         100,000 |      999,970 | MTX    | Random Undirected Graph   | Yes         | 
-| caidaRouterLevel       |         192,244 |    1,218,132 | MTX    | Undirected Graph          | Yes         | 
-| coAuthorsDBLP          |         299,067 |    1,955,352  |MTX    | Undirected Graph          | Yes         | 
-| dblp-2010              |         326,186 |    1,615,400 | MTX    | Undirected Graph          | Yes         | 
-| citationCiteseer       |         268,495 |    2,313,294 | MTX    | Undirected Graph          | Yes         | 
-| coPapersDBLP           |         540,486 |   30,491,458 | MTX    | Undirected Graph          | Yes         | 
-| coPapersCiteseer       |         434,102 |   32,073,440 | MTX    | Undirected Graph          | Yes         | 
-| as-Skitter             |       1,696,415 |   22,190,596 | MTX    | Undirected Graph          | Yes         | 
+| preferentialAttachment |         100,000 |      999,970 | MTX    | Random Undirected Graph   | Yes         |
+| caidaRouterLevel       |         192,244 |    1,218,132 | MTX    | Undirected Graph          | Yes         |
+| coAuthorsDBLP          |         299,067 |    1,955,352  |MTX    | Undirected Graph          | Yes         |
+| dblp-2010              |         326,186 |    1,615,400 | MTX    | Undirected Graph          | Yes         |
+| citationCiteseer       |         268,495 |    2,313,294 | MTX    | Undirected Graph          | Yes         |
+| coPapersDBLP           |         540,486 |   30,491,458 | MTX    | Undirected Graph          | Yes         |
+| coPapersCiteseer       |         434,102 |   32,073,440 | MTX    | Undirected Graph          | Yes         |
+| as-Skitter             |       1,696,415 |   22,190,596 | MTX    | Undirected Graph          | Yes         |
 
 
 
@@ -102,28 +101,3 @@ The Collection is hosted here, and also mirrored at the University of Florida at
 
 
 
-#### preferentialAttachment
-DIMACS10 set: clustering/preferentialAttachment                    
-source: http://www.cc.gatech.edu/dimacs10/archive/clustering.shtml 
-                                                                   
-This graph has been generated following a preferential attachment  
-process (see Barabási and Albert, "Emergence of scaling in random  
-networks", Science, 1999). Starting with a clique of five vertices,
-the vertices are successively added to the graph. Each new vertex  
-chooses exactly five neighbors among the existing vertices, such   
-that the probability of choosing a particular vertex is            
-proportional to its degree. In our implementation, a vertex can    
-choose a neighbour only once, such that the resulting random graph 
-is guaranteed to be simple.
-
-
-
-#### aidaRouterLevel
-coAuthorsDBLP.tar.gz
-
-
-wget https://sparse.tamu.edu/MM/LAW/dblp-2010.tar.gz
-citationCiteseer.tar.gz
-coPapersDBLP.tar.gz
-coPapersCiteseer.tar.gz
-wget https://sparse.tamu.edu/MM/SNAP/as-Skitter.tar.gz
