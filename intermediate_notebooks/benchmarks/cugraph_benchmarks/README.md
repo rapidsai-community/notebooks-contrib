@@ -22,6 +22,15 @@ sh ./dataPrep.sh
 
 
 
+The benchmark does not include data reading time, but does include:
+
+- Creating the Graph object
+- Running the analytic
+
+
+
+
+
 
 #### The data prep script  
 By default, each files would be created in its own directory.  The goal here is to have all the MTX files in a single directory.
