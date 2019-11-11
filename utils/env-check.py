@@ -10,7 +10,7 @@ pynvml.nvmlInit()
 handle = pynvml.nvmlDeviceGetHandleByIndex(0)
 device_name = pynvml.nvmlDeviceGetName(handle)
 
-if device_name != b'Tesla T4':
+if device_name != (b'Tesla T4' or b'Tesla P100-PCIE-16GB'):
   raise Exception("""
     Unfortunately Colab didn't give you a T4 GPU.
     
