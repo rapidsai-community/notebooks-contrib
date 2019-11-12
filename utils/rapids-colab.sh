@@ -2,7 +2,7 @@
 
 set -eu
 
-RAPIDS_VERSION="${1:-0.10}"
+RAPIDS_VERSION="${1:-0.11}"
 XGBOOST_VERSION="${2:-1.0.0_SNAPSHOT}"
 
 wget -nc https://github.com/rapidsai/notebooks-extended/raw/master/utils/env-check.py
