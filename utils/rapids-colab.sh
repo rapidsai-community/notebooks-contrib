@@ -28,7 +28,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
       python=3.6 cudatoolkit=10.1 \
       cudf=$RAPIDS_VERSION cuml cugraph gcsfs pynvml \
       dask-cudf \
-      rapidsai/label/xgboost::xgboost=>0.9
+      xgboost
 
     #pip install https://xgboost-ci.net/job/xgboost/job/master/lastSuccessfulBuild/artifact/python-package/dist/xgboost-$XGBOOST_VERSION-py2.py3-none-any.whl
       
