@@ -27,9 +27,10 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
       -c rapidsai-nightly/label/xgboost -c rapidsai-nightly -c nvidia -c conda-forge \
       python=3.6 cudatoolkit=10.1 \
       cudf=$RAPIDS_VERSION cuml cugraph gcsfs pynvml \
-      dask-cudf
+      dask-cudf \
+      rapidsai/label/xgboost::xgboost=>0.9
 
-    pip install https://xgboost-ci.net/job/xgboost/job/master/lastSuccessfulBuild/artifact/python-package/dist/xgboost-$XGBOOST_VERSION-py2.py3-none-any.whl
+    #pip install https://xgboost-ci.net/job/xgboost/job/master/lastSuccessfulBuild/artifact/python-package/dist/xgboost-$XGBOOST_VERSION-py2.py3-none-any.whl
       
     echo "Copying shared object files to /usr/lib"
     # copy .so files to /usr/lib, where Colab's Python looks for libs
