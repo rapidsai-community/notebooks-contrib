@@ -24,13 +24,15 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     echo "Please standby, this will take a few minutes..."
     # install RAPIDS packages
     conda install -y --prefix /usr/local \
-      -c rapidsai-nightly/label/xgboost -c rapidsai-nightly -c nvidia -c conda-forge \
+    if RAPIDS_VERSION < 0.11 ; then
+        -c rapidsai/label/xgboost -c rapidsai -c nvidia -c conda-forge \
+    else
+        -c rapidsai-nightly/label/xgboost -c rapidsai-nightly -c nvidia -c conda-forge \
+    fi
       python=3.6 cudatoolkit=10.1 \
       cudf=$RAPIDS_VERSION cuml cugraph gcsfs pynvml \
       dask-cudf \
       xgboost
-
-    #pip install https://xgboost-ci.net/job/xgboost/job/master/lastSuccessfulBuild/artifact/python-package/dist/xgboost-$XGBOOST_VERSION-py2.py3-none-any.whl
       
     echo "Copying shared object files to /usr/lib"
     # copy .so files to /usr/lib, where Colab's Python looks for libs
