@@ -22,13 +22,23 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     echo "Installing BlazingSQL and RAPIDS $RAPIDS_VERSION packages from the stable release channel"
     echo "Please standby, this will take a few minutes..."
     # install RAPIDS packages
+    echo "*****************"
+    echo "Installing RAPIDS"
+    echo "*****************"    
     conda install -y --prefix /usr/local \
         -c rapidsai/label/xgboost -c rapidsai -c nvidia -c conda-forge \
-        -c blazingsql/label/cuda10.0 -c blazingsql -c defaults \
-        cudatoolkit=10.1 \
+        python=3.6 cudatoolkit=10.1 \
         cudf=$RAPIDS_VERSION cuml cugraph gcsfs pynvml \
         dask-cudf \
-        xgboost \
+        xgboost
+        
+    #Install BlazingSQL
+    echo ""
+    echo "*********************"
+    echo "Installing BlazingSQL"
+    echo "*********************"    
+    conda install -y --prefix /usr/local \
+        -c blazingsql/label/cuda10.0 -c blazingsql -c defaults \
         blazingsql-calcite blazingsql-orchestrator blazingsql-ral blazingsql-python
     
     pip install flatbuffers
