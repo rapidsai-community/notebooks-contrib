@@ -24,7 +24,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     # install RAPIDS packages
     
     if [ $RAPIDS_VERSION == "0.11" ] ;then
-    echo "Installing RAPIDS $RAPIDS_VERSION packages form the nightly release channel"
+    echo "Installing RAPIDS $RAPIDS_VERSION packages from the nightly release channel"
     echo "Please standby, this will take a few minutes..."
     # install RAPIDS packages
         conda install -y --prefix /usr/local \
