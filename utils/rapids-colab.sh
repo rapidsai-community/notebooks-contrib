@@ -24,7 +24,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     echo "Please standby, this will take a few minutes..."
     # install RAPIDS packages
     conda install -y --prefix /usr/local \
-    if RAPIDS_VERSION < 0.11 ; then
+    if [$RAPIDS_VERSION -lt 0.11] ; then
         -c rapidsai/label/xgboost -c rapidsai -c nvidia -c conda-forge \
     else
         -c rapidsai-nightly/label/xgboost -c rapidsai-nightly -c nvidia -c conda-forge \
