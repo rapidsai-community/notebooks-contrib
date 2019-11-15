@@ -24,11 +24,12 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     # install RAPIDS packages
     conda install -y --prefix /usr/local \
         -c rapidsai/label/xgboost -c rapidsai -c nvidia -c conda-forge \
-        -c blazingsql/label/cuda10.0 -c blazingsql -c defaults blazingsql-calcite blazingsql-orchestrator blazingsql-ral blazingsql-python \
-        python=3.6 cudatoolkit=10.1 \
+        -c blazingsql/label/cuda10.0 -c blazingsql -c defaults \
+        cudatoolkit=10.1 \
         cudf=$RAPIDS_VERSION cuml cugraph gcsfs pynvml \
         dask-cudf \
-        xgboost
+        xgboost \
+        blazingsql-calcite blazingsql-orchestrator blazingsql-ral blazingsql-python
     
     pip install flatbuffers
     
