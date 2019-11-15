@@ -1,7 +1,6 @@
 # Colab Notebooks
-Ready to experience the speed of RAPIDS (for free) through Google Colab? Each notebook in this folder is ready to launch, modifiable for your experiments, and up to date with the latest RAPIDS AI suite. 
+Ready to experience the speed of RAPIDS (for free) through Google Colab? Each notebook in this folder is ready to launch, modifiable for your experiments, and up to date with the latest RAPIDS AI suite. [How to Install RAPIDS in Google Colab](https://link.medium.com/BRm4oW2pD1).
 
-## Layout
 | Notebook Title | Description | Launch in Colab|
 |----------------|----------------|----------------|
 | cuML (Directory) | Collection of `cuML` demos (pca, ridge, sgd, umap, umap_supervised - further desc in folder) like those in `intermediate_notebooks/examples` |[cuML](https://github.com/rapidsai/notebooks-contrib/tree/master/colab_notebooks/cuml)|
