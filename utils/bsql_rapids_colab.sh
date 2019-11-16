@@ -8,16 +8,16 @@ wget -nc https://github.com/gumdropsteve/bsql-demos/raw/feature/utils/utils/cola
 echo "Checking for GPU type:"
 python colab_env.py
 
-if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
+if [ ! -f Miniconda3-4.7.12-Linux-x86_64.sh ]; then
     echo "Removing conflicting packages, will replace with BlazingSQL and RAPIDS compatible versions"
     # remove existing xgboost and dask installs
     pip uninstall -y xgboost dask distributed
 
     # intall miniconda
     echo "Installing conda"
-    wget https://repo.continuum.io/miniconda/Miniconda3-4.5.4-Linux-x86_64.sh
-    chmod +x Miniconda3-4.5.4-Linux-x86_64.sh
-    bash ./Miniconda3-4.5.4-Linux-x86_64.sh -b -f -p /usr/local
+    wget https://repo.continuum.io/miniconda/Miniconda3-4.7.12-Linux-x86_64.sh
+    chmod +x Miniconda3-4.7.12-Linux-x86_64.sh
+    bash ./Miniconda3-4.7.12-Linux-x86_64.sh -b -f -p /usr/local
     
     echo "Installing BlazingSQL and RAPIDS $RAPIDS_VERSION packages from the stable release channel"
     echo "Please standby, this will take a few minutes..."
@@ -38,7 +38,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     echo "Installing BlazingSQL"
     echo "*********************"    
     conda install -y --prefix /usr/local \
-        -c blazingsql/label/cuda10.0 -c blazingsql -c defaults \
+        conda install -y --prefix /usr/local -c blazingsql/label/cuda10.0 -c blazingsql -c rapidsai -c conda-forge -c defaults \
         blazingsql-calcite blazingsql-orchestrator blazingsql-ral blazingsql-python
     
     pip install flatbuffers
