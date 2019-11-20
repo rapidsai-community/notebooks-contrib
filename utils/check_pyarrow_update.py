@@ -1,4 +1,4 @@
-import re
+import re, sys, os
 if 'pyarrow' in sys.modules.keys():
   pyarrow_version = sys.modules['pyarrow'].__version__
   f = re.search("0.15.+", pyarrow_version)
