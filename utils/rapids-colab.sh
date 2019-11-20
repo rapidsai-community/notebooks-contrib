@@ -36,7 +36,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
         #TODO: make sure that you change back to master branch before final commit
         # check to mak sure that pyarrow is running the right version of v0.11
         wget -nc https://github.com/rapidsai/notebooks-contrib/raw/taureandyernv-colab-p100/utils/check_pyarrow_update.py
-        python check_pyarrow_update.py
+        # python check_pyarrow_update.py
     else
         echo "Installing RAPIDS $RAPIDS_VERSION packages from the stable release channel"
         echo "Please standby, this will take a few minutes..."
