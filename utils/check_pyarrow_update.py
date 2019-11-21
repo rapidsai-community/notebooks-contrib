@@ -7,11 +7,11 @@ print('Let us check on that pyarrow version...')
 print('***********************************************************************')
 print()
 
-pyarrow_version = sys.modules[pyarrow].__version__
+pyarrow_version = sys.modules["pyarrow"].__version__
 f = re.search("0.15.+", pyarrow_version)
 if(f == None):
   for key in list(sys.modules.keys()):
-    if key.startswith('pyarrow'):
+    if key.startswith("pyarrow"):
       del sys.modules[key]
       print(f"unloaded pyarrow {pyarrow_version}")
   import pyarrow
