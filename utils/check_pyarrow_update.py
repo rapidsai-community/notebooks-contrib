@@ -1,8 +1,16 @@
-import re, sys, os
+import re
+import sys
+import os
+
+print('***********************************************************************')
+print('Let us check on that pyarrow version...')
+print('***********************************************************************')
+print()
+
 if 'pyarrow' in sys.modules.keys():
   pyarrow_version = sys.modules['pyarrow'].__version__
   f = re.search("0.15.+", pyarrow_version)
-  if f == None:
+  if(f == None):
     for key in list(sys.modules.keys()):
       if key.startswith('pyarrow'):
         del sys.modules[key]
