@@ -17,6 +17,7 @@ comment on the issue to notify the team
     [issue](https://github.com/rapidsai/notebooks-extended/issues/new/choose)
     - Describe the intended feature and discuss the design & implementation with the community
     - Once the team agrees that the plan looks good, implement it using the [code contributions](#code-contributions) guide below
+    - Be sure that your PR includes an update the notebooks-contrib REAMDE with your notbeook(s)'s title, location, description, and link.  Failure to do so will delay your PR's merg until completion.
 ### 4. Create a tutorial or code walk through:
 - Show your expertise in RAPIDS while teaching people how to use RAPIDS in their data science pipeline
 
