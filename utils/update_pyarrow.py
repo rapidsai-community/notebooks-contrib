@@ -17,8 +17,8 @@ if(f == None):
   import pyarrow
   pyarrow_version = sys.modules['pyarrow'].__version__
   print(f"loaded pyarrow {pyarrow_version}")
-  del(pyarrow_version)
   print(f"You're now running pyarrow {pyarrow_version} and are good to go!")
+  del(pyarrow_version)
 
 else: 
   print(f"You're running pyarrow {pyarrow_version} and are good to go!")
