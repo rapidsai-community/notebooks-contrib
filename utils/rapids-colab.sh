@@ -19,7 +19,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     chmod +x Miniconda3-4.5.4-Linux-x86_64.sh
     bash ./Miniconda3-4.5.4-Linux-x86_64.sh -b -f -p /usr/local
     
-    if [ $RAPIDS_VERSION == "0.11" ] ;then
+    if [ $RAPIDS_VERSION >= "0.11" ] ;then
     echo "Installing RAPIDS $RAPIDS_VERSION packages from the nightly release channel"
     echo "Please standby, this will take a few minutes..."
     # install RAPIDS packages
