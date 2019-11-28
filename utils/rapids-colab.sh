@@ -14,7 +14,7 @@ echo " "
 echo "Please enter in the box your desired RAPIDS version (ex: '0.10' or '0.11', between 0.9 to 0.11, without the quotes) and hit Enter. "
 read RAPIDS_VERSION
 if [ $RAPIDS_VERSION == "0.11" ] ;then
-  echo "Please COMPARE the \"SCRIPT TO COPY\" with the code in the above cell.  If they are the same, just type any key.  If not, do steps 2-4. 
+  echo "Please COMPARE the \"SCRIPT TO COPY\" with the code in the above cell.  If they are the same, just type any key.  If not, do steps 2-4." 
   echo " "
   echo "SCRIPT TO COPY:"
   echo "!wget -nc https://raw.githubusercontent.com/rapidsai/notebooks-contrib/master/utils/rapids-colab.sh"
