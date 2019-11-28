@@ -1,35 +1,58 @@
 #!/bin/bash
 
 set -eu
-
-
-RAPIDS_VERSION="${1:-0.11}"
+latest = 
 echo "PLEASE READ"
 echo "********************************************************************************************************"
-echo "Colab v0.11 Migration Bulletin:"
+echo "Colab v0.11+ Migration Notice:"
 echo " "
-echo "There has been a NECESSARY Colab script code change that MAY REQUIRE an update how we install RAPIDS into Colab!  "
+echo "There has been a NECESSARY Colab script code change for VERSION 0.11+ that MAY REQUIRE an update how you install RAPIDS into Colab!  "
 echo "Not all Colab notebooks are updated (like personal Colabs) and while the script will install RAPIDS correctly, "
 echo "a neccessary script to update pyarrow to v0.15.x to be compatible with RAPIDS v0.11+ may not run, and your RAPIDS instance"
 echo "will BREAK"
 echo " "
-echo "The code in that update is below.  If your code does not look like the snippet below, "
-echo "Please:"
-echo "1. STOP cell execution" 
-echo "2. CUT and PASTE the script below into the cell you just ran "
-echo "3. Reset All Runtimes, get a compatible GPU, and rerun your Colab Notebook."
-echo " "
-echo "SCRIPT TO COPY:"
-echo "!wget -nc https://raw.githubusercontent.com/rapidsai/notebooks-contrib/master/utils/rapids-colab.sh"
-echo "!bash rapids-colab.sh"
-echo "import sys, os"
-echo "dist_package_index = sys.path.index('/usr/local/lib/python3.6/dist-packages')"
-echo "sys.path = sys.path[:dist_package_index] + ['/usr/local/lib/python3.6/site-packages'] + sys.path[dist_package_index:]"
-echo "sys.path"
-echo "if os.path.exists('update_pyarrow.py'): ## Only exists if RAPIDS version is 0.11 or higher"
-echo "  exec(open('update_pyarrow.py').read(), globals())"
-echo "********************************************************************************************************"
-echo " "
+echo "Please enter in the box your desired RAPIDS version (ex: '0.10' or '0.11', between 0.9 to 0.11, without the quotes) and hit Enter. "
+read RAPIDS_VERSION
+if [ $RAPIDS_VERSION == "0.11" ] ;then
+  echo "Please COMPARE the \"SCRIPT TO COPY\" with the code in the above cell.  If they are the same, just type any key.  If not, do steps 2-4. 
+  echo " "
+  echo "SCRIPT TO COPY:"
+  echo "!wget -nc https://raw.githubusercontent.com/rapidsai/notebooks-contrib/master/utils/rapids-colab.sh"
+  echo "!bash rapids-colab.sh"
+  echo "import sys, os"
+  echo "dist_package_index = sys.path.index\('/usr/local/lib/python3.6/dist-packages'\)"
+  echo "sys.path = sys.path[:dist_package_index] + ['/usr/local/lib/python3.6/site-packages'] + sys.path[dist_package_index:]"
+  echo "sys.path"
+  echo "if os.path.exists\('update_pyarrow.py'\): ## Only exists if RAPIDS version is 0.11 or higher"
+  echo "  exec\(open\('update_pyarrow.py'\).read\(\), globals\(\)\)"
+  echo "********************************************************************************************************"
+  echo "Do you have the above version of the script running in your cell? (Y/N)"
+  read response
+  if [ $response == "Y" ] || [ $response == "y" ] ;then
+    echo "Continuing with RAPIDS install"
+  else
+    echo "Please do the following:"
+    echo "1. STOP cell execution" 
+    echo "2. CUT and PASTE the script below into the cell you just ran "
+    echo "3. RERUN the cell"
+    echo " "
+    echo "SCRIPT TO COPY:"
+    echo "!wget -nc https://raw.githubusercontent.com/rapidsai/notebooks-contrib/master/utils/rapids-colab.sh"
+    echo "!bash rapids-colab.sh"
+    echo "import sys, os"
+    echo "dist_package_index = sys.path.index\('/usr/local/lib/python3.6/dist-packages'\)"
+    echo "sys.path = sys.path[:dist_package_index] + ['/usr/local/lib/python3.6/site-packages'] + sys.path[dist_package_index:]"
+    echo "sys.path"
+    echo "if os.path.exists\('update_pyarrow.py'\): ## Only exists if RAPIDS version is 0.11 or higher"
+    echo "  exec\(open\('update_pyarrow.py'\).read\(\), globals\(\)\)"
+    echo "********************************************************************************************************"
+    rm rc2.sh
+    echo "Please COPY the above code and RERUN the cell"
+    exit 0
+  fi
+else
+  echo "You may not have to change anything.  All versions of our script should work with this version of Colab"
+fi
 
 wget -nc https://github.com/rapidsai/notebooks-contrib/raw/master/utils/env-check.py
 echo "Checking for GPU type:"
@@ -46,7 +69,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     chmod +x Miniconda3-4.5.4-Linux-x86_64.sh
     bash ./Miniconda3-4.5.4-Linux-x86_64.sh -b -f -p /usr/local
     
-    if [ $RAPIDS_VERSION == "0.11" ] ;then
+    if [ $RAPIDS_VERSION == 0.11 ] ;then
     echo "Installing RAPIDS $RAPIDS_VERSION packages from the nightly release channel"
     echo "Please standby, this will take a few minutes..."
     # install RAPIDS packages
@@ -83,30 +106,3 @@ echo ""
 echo "*********************************************"
 echo "Your Google Colab instance is RAPIDS ready!"
 echo "*********************************************"
-echo "IF YOUR RAPIDS INSTALL DOESN'T WORK, please read the Migration Notice below.  You may have missed it when the script first ran! "
-echo "PLEASE READ"
-echo "********************************************************************************************************"
-echo "Colab v0.11 Migration Bulletin:"
-echo " "
-echo "There has been a NECESSARY Colab script code change that MAY REQUIRE an update how we install RAPIDS into Colab!  "
-echo "Not all Colab notebooks are updated (like personal Colabs) and while the script will install RAPIDS correctly, "
-echo "a neccessary script to update pyarrow to v0.15.x to be compatible with RAPIDS v0.11+ may not run, and your RAPIDS instance"
-echo "will BREAK"
-echo " "
-echo "The code in that update is below.  If your code does not look like the snippet below, "
-echo "Please:"
-echo "1. STOP cell execution" 
-echo "2. CUT and PASTE this script into the cell you just ran "
-echo "3. Reset All Runtimes, get a compatible GPU, and rerun your Colab Notebook."
-echo " "
-echo "SCRIPT TO COPY:"
-echo "!wget -nc https://raw.githubusercontent.com/rapidsai/notebooks-contrib/master/utils/rapids-colab.sh"
-echo "!bash rapids-colab.sh"
-echo "import sys, os"
-echo "dist_package_index = sys.path.index('/usr/local/lib/python3.6/dist-packages')"
-echo "sys.path = sys.path[:dist_package_index] + ['/usr/local/lib/python3.6/site-packages'] + sys.path[dist_package_index:]"
-echo "sys.path"
-echo "if os.path.exists('update_pyarrow.py'): ## Only exists if RAPIDS version is 0.11 or higher"
-echo "  exec(open('update_pyarrow.py').read(), globals())"
-echo "********************************************************************************************************"
-echo " "
