@@ -54,6 +54,7 @@ else
   echo "You may not have to change anything.  All versions of our script should work with this version of Colab"
 fi
 
+
 wget -nc https://github.com/rapidsai/notebooks-contrib/raw/master/utils/env-check.py
 echo "Checking for GPU type:"
 python env-check.py
