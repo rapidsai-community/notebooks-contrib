@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -eu
-latest = 
+
 echo "PLEASE READ"
 echo "********************************************************************************************************"
 echo "Colab v0.11+ Migration Notice:"
