@@ -1,0 +1,40 @@
+name: azureml-rapids-0.10
+channels:
+  - defaults
+  - conda-forge
+  - nvidia 
+  - rapidsai 
+    
+dependencies:
+  - pip
+  - mpi4py
+  - gcsfs
+  - fs-gcsfs
+  - jupyterlab
+  - jupyter-server-proxy
+  - python=3.7
+  - numba=>0.45.1
+  - cudatoolkit=10.0
+  - pynvml
+  - nodejs
+  - pandas>=0.24.2,<0.25
+  - pyarrow=0.14.1
+  - rmm=0.10.*  
+  - cudf=0.10.0=py37_0
+  - cuml=0.10.0=cuda10.0_py37_0  
+  - bokeh
+  - distributed=2.6.0=py_0
+  - dask=2.6.0=py_0
+  - dask-cuda=0.10.0=py37_0
+  - dask-cudf=0.10.0=py37_0
+  - dill
+  - matplotlib
+  - nvidia::nccl=2.4.*
+  - libxgboost=1.0.0.SNAPSHOT=cuda10.0_1
+  - py-xgboost=1.0.0.SNAPSHOT=cuda10.0py37_1
+  - rapids-xgboost=0.10.0=cuda10.0_py37_0
+  - xgboost=1.0.0.SNAPSHOT=cuda10.0py37_1
+  - dask-xgboost=0.2.*
+  - pip:
+    - azureml-sdk[notebooks]
+    - dask-labextension==1.0.3

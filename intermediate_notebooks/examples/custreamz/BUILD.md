@@ -4,11 +4,11 @@ A Dockerfile is provided for installing pre-requisite packages & launching Jupyt
 # Installation
 
 ## 
-Our container extends the base notebooks container. Unlike our Notebooks repo, which comes with the container, Notebooks Contrib is meant to be a constantly updating source of community contributions. You can run Notebooks Contrib in a container with 4 steps:
+The custreamz container has all necessary dependencies for running the examples installed (on a GPU enabled host of course). You can run Notebooks Contrib in a container with 4 simple steps:
 
 Step 1: Clone the Notebooks Contrib repo
 ```bash
-git clone https://github.com/rapidsai/notebooks-contrib
+git clone https://github.com/rapidsai/notebooks-contrib && cd notebooks-contrib/intermediate_notebooks/examples/custreamz
 ```
 
 Step 2: Build the Docker container
@@ -25,3 +25,4 @@ Step 4: Access the running Jupyter notebook instance at
 ```text
 http://localhost:8888
 ```
+

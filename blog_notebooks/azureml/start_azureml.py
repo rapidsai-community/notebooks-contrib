@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
   parser.add_argument("--config", default="./config.json")
   parser.add_argument("--cluster_name", default="RAPIDS")
-  parser.add_argument("--experiment_name", default="RAPIDS090")
+  parser.add_argument("--experiment_name", default="RAPIDS0100")
   parser.add_argument("--vm_size", default=azure_gpu_vm_names[4])
   parser.add_argument("--node_count", default=1)
   parser.add_argument("--min_nodes", default=0)
@@ -76,6 +76,7 @@ if __name__ == '__main__':
   parser.add_argument("--nyctaxi_years", default="2015")
   parser.add_argument("--nyctaxi_src_path", default=os.getcwd())
   parser.add_argument("--nyctaxi_dst_path", default="data")
+  parser.add_argument("--timeout-minutes", type=int, default=120)
 
   args = parser.parse_args()
 
@@ -155,7 +156,7 @@ if __name__ == '__main__':
                         distributed_training=Mpi(process_count_per_node=1),
                         node_count=int(args.node_count),
                         use_gpu=True,
-                        conda_dependencies_file='rapids-0.9.yml')
+                        conda_dependencies_file='rapids-0.10.yml')
 
   print("Starting experiment run ...")
   
@@ -163,17 +164,41 @@ if __name__ == '__main__':
   
   print(" ... waiting for headnode ...")
   print(" ... this may take several minutes ...")
-  
+  print("(For updated results, see: ", experiment.get_portal_url(), ")")
+  rep = 0
   done = False
+  prev_status = ""
   spinning_thread = threading.Thread(target=spinner)
   spinning_thread.start()
+  start_time = time.time()
+  timeout_sec = args.timeout_minutes * 60
   while not "headnode" in experiment.get_metrics():
+    rep += 1
+    time.sleep(5)
+    status = experiment.get_status()
+    if status != prev_status:
+      print("Status now: ", status)
+      prev_status = status
+
+    if status == "Failed":
+      details = experiment.get_details()
+      print("Failed to create head node (see the portal for more details):")
+      print(details)
+      done = True
+      raise ValueError("Failed to create head node")
+
+    elapsed = (time.time() - start_time)
+    if elapsed > timeout_sec:
+      done = True
+      raise AssertionError("Creating head node timed out after %5.2f min" %
+                           (elapsed/60))
+
     continue
   done = True
   spinning_thread.join()
 
   headnode = experiment.get_metrics()["headnode"]
-  
+
   print(" ... headnode ready ...")
   print(" ... headnode has ip: ", headnode)
 
@@ -205,10 +230,12 @@ if __name__ == '__main__':
   print(" ... navigate to the Microsoft Azure Portal where the Experiment is running ...")
   print(" ... when Tracked Metrics include both a `jupyter` and `jupyter-token` entry ...")
   print(" ... the lab environment will be accessible on this machine ...")
-  print(" ... INFO ... to access the jupyter lab environment, point your web-browser to {ip}:{port}/?token={token} ...".format(ip=socket.gethostbyname(socket.gethostname()),
-                                                                                                                               port=args.local_notebook_port,
-                                                                                                                               token=args.jupyter_token))
-  print(" ... INFO ... to view the Dask Dashboard, point your web-browser to {ip}:{port} ...".format(ip=socket.gethostbyname(socket.gethostname()),
+  print(""" ... INFO ... to access the jupyter lab environment, point your browser to:
+             http://{ip}:{port}/?token={token} ...""".format(
+               ip=socket.gethostbyname(socket.gethostname()),
+               port=args.local_notebook_port,
+               token=args.jupyter_token))
+  print(" ... INFO ... to view the Dask Dashboard, point your web-browser to http://{ip}:{port} ...".format(ip=socket.gethostbyname(socket.gethostname()),
                                                                                                      port=args.local_dashboard_port))
   print(" ... INFO ... to acquire the path to your default datastore, inspect the Tracked Metrics from the Microsoft Azure Portal ...")
   print(" ... cancelling this script by using Control-C will not decommission the compute resources ...")
