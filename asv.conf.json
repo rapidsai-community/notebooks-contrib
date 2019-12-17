@@ -1,0 +1,31 @@
+{
+    "version": 1,
+    "project": "notebooks-contrib-benchmark",
+    "project_url": "https://github.com/rapidsai/notebooks-contrib",
+    "repo": "https://anaconda.org/rapidsai-nightly/label/cuda10.0/*",
+    "repo_subdir": "",
+    "build_command": [],
+    "install_command": [ "pip install pyproj datashader ipython scikit-learn s3fs umap"],
+    "uninstall_command": [],
+
+    "branches": ["0.11.*","0.12*"],
+    "dvcs": "condarepo",
+    "environment_type": "conda",
+    "show_commit_url": "https://anaconda.org/rapidsai-nightly",
+    "pythons": ["3.6","3.7"],
+    "conda_channels": ["rapidsai-nightly/label/cuda10.0","rapidsai-nightly","nvidia","conda-forge", "defaults"],
+    "matrix": {
+	    "cuspatial": [ "0.12.*"],
+            "cudf": ["0.12.*"],
+            "cuml": [],
+	    "dask-cudf": ["0.12.*"],
+            "dask-cuda":[]
+    },
+    "exclude": [],
+    "benchmark_dir": "intermediate_notebooks/examples",
+    "env_dir": ".asv/env",
+    "results_dir": ".asv/results",
+    "html_dir": ".asv/html",
+    "plugins":["condarepo.asvplugin"],
+    "hash_length":128
+}

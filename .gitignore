@@ -1,2 +1,9 @@
 .DS_Store
 .ipynb_checkpoints
+.asv
+intermediate_notebooks/examples/cuDatashader.py
+intermediate_notebooks/examples/linear_regression_demo.py
+intermediate_notebooks/examples/rf_demo.py
+intermediate_notebooks/examples/ridge_regression_demo.py
+intermediate_notebooks/examples/umap_demo_full.py
+intermediate_notebooks/examples/weather.py

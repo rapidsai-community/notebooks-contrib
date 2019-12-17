@@ -1,0 +1,15 @@
+name: rapidsai_nb_benchmark
+channels:
+- rapidsai-nightly/label/cuda10.0
+- rapidsai
+- nvidia
+- conda-forge
+- defaults
+dependencies:
+- python=3.6.*
+- pip
+- compilers
+- git
+- ipython>=7.3,<=7.4
+- nbconvert
+- asv
