@@ -18,7 +18,7 @@ def bsql_start():
     """
     # is BlazingSQL installed?
     try:
-        # from blazingsql import BlazingContext
+        from blazingsql import BlazingContext
         print("You've got BlazingSQL set up perfectly! Let's get started with SQL in RAPIDS AI!")
     # BlazingSQL not found
     except ModuleNotFoundError:
