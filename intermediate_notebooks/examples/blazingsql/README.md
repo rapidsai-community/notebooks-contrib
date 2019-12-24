@@ -9,17 +9,24 @@ Demo Python notebooks using BlazingSQL with the RAPIDS AI ecoystem.
 
 ## Getting Started with BlazingSQL
 
-You can install BlazingSQL simply by running the [shell script](https://github.com/rapidsai/notebooks-contrib/tree/branch-0.12/utils) `now_were_blazing.sh` found in the `notebooks-contrib/utils/` directory.
+You can install BlazingSQL simply by running the [python script](https://github.com/rapidsai/notebooks-contrib/tree/branch-0.12/utils/sql_check.py) `sql_check.py` found in the `notebooks-contrib/utils/` directory.
 
-#### Nightly (Recommended) Version
+#### Stable (v0.11)
 
-We are undergoing an architecture transition that has made the engine more stable and performant. For that reason we recommend our *Nightly* release over our stable, *Stable* will be updated with the latest cuDF v0.11 release. Find the latest install script [in our docs here](https://docs.blazingdb.com/docs/install-via-conda).
+You can find the latest install scripts [in our docs here](https://docs.blazingdb.com/docs/install-via-conda) or just below.
 
 ```bash
-# for CUDA 9.2
-conda install -c blazingsql-nightly/label/cuda9.2 -c blazingsql-nightly -c rapidsai-nightly -c conda-forge -c defaults blazingsql python=3.7
+# for CUDA 9.2 & Python 3.7
+conda install -c blazingsql/label/cuda9.2 -c blazingsql -c rapidsai -c nvidia -c conda-forge -c defaults blazingsql python=3.7 cudatoolkit=9.2
 
-# for CUDA 10.0
-conda install -c blazingsql-nightly/label/cuda10.0 -c blazingsql-nightly -c rapidsai-nightly -c conda-forge -c defaults blazingsql python=3.7
+# for CUDA 10.0 & Python 3.7
+conda install -c blazingsql/label/cuda10.0 -c blazingsql -c rapidsai -c nvidia -c conda-forge -c defaults blazingsql python=3.7 cudatoolkit=10.0
 ```
-Note: BlazingSQL-Nightly is supported only on Linux, and with Python versions 3.6 or 3.7.
+
+#### Nightly 
+
+```bash
+conda install -c blazingsql-nightly/label/cuda10.0 -c blazingsql-nightly -c rapidsai-nightly -c conda-forge -c defaults blazingsql
+```
+
+Note: BlazingSQL-Nightly is supported only on Linux, with CUDA 9.2 or 10 and Python 3.6 or 3.7.
