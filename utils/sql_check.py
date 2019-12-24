@@ -19,34 +19,39 @@ def bsql_start():
     # is BlazingSQL installed?
     try:
         from blazingsql import BlazingContext
-        print("You've got BlazingSQL set up perfectly! Let's get started with SQL in RAPIDS AI!")
+        # yes, indicate success
+        return "You've got BlazingSQL set up perfectly! Let's get started with SQL in RAPIDS AI!"
     # BlazingSQL not found
     except ModuleNotFoundError:
-        # install BlazingSQL?
-        ask = input('Unable to locate BlazingSQL, would you like to install it now? [y/n]')
+        # do we want to install BlazingSQL?
+        ask = input('Unable to locate BlazingSQL, would you like to install it now? [y/n] ')
         # account for input error (extra spaces or CAPS)
         ask = ask.strip().lower()
-        # yes install now (account for error input w/ strip & lower)
+        # yes install now (accept full yes)
         if (ask == 'y') or (ask == 'yes'):      
             # tag BlazingSQL conda install script
             b = "conda install -c blazingsql/label/cuda10.0 -c blazingsql" 
             b += ' -c rapidsai -c nvidia -c conda-forge -c defaults '
             b += "blazingsql python=3.7 cudatoolkit=10.0"  # CUDA 10, Python 3.7 (BlazingSQL also supports CUDA 9.2)
-            # check python version
-            py = sys.version.split('.')[1]
+            # tag python version
+            py = sys.version.split('.')  # e.g. output: ['3', '6', '7 | packaged by cond...
+            if py[0] == '3':  # make sure we're in 3
+                py = py[1]  # focus mid version (3.?)
             # are we on python 3.6?
             if py == '6':
                 # adjust to 3.6 install script
                 b = b.replace('python=3.7', 'python=3.6')
-            # what's going on?
+            # lmk what's going on?
             print('Installing BlazingSQL, this may take a few minutes.')
-            # install BlazingSQL
+            # install BlazingSQL 
             os.system(b)
+            # indicate completion
+            return f"Let's get started with SQL in RAPIDS AI!"
         # no, don't install now
         else:
-            # indicate so
             docs = 'https://docs.blazingdb.com/docs/install-via-conda'
-            print(f'Ok, not installing now.\nTo download later simply rerun this script or go to {docs}')
+            # indicate so
+            return f'Ok, not installing now.\nTo download later simply rerun this script or go to {docs}'
             
             
 if __name__=='__main__':
