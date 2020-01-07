@@ -13,10 +13,26 @@ echo "will BREAK"
 echo " "
 echo "Please enter in the box your desired RAPIDS version (ex: '0.10' or '0.11', between 0.9 to 0.11, without the quotes) and hit Enter. "
 read RAPIDS_VERSION
-if [ $RAPIDS_VERSION == "0.11" ] ;then
-  echo "Please COMPARE the \"SCRIPT TO COPY\" with the code in the above cell.  If they are the same, just type any key.  If not, do steps 2-4." 
+MULT="100"
+
+#conditions accidental inputs
+RAPIDS_RESULT=$(awk '{print $1*$2}' <<<"${RAPIDS_VERSION} ${MULT}")
+#echo $RAPIDS_RESULT
+if (( $RAPIDS_RESULT >=11 )) ;then
+  RAPIDS_VERSION="0.11"
+  RAPIDS_RESULT=11
+  # echo "RAPIDS Version modified to 0.12 nightlies"
+  echo "RAPIDS Version modified to 0.11 stable"
+elif (( $RAPIDS_RESULT <= 9 )) ;then
+  RAPIDS_VERSION="0.9"
+  RAPIDS_RESULT=9
+  echo "RAPIDS Version modified to 0.9 stable"
+fi
+#echo $RAPIDS_VERSION
+if (( $RAPIDS_RESULT >= 11 )) ;then
+  echo "Please COMPARE the \"SCRIPT TO COPY\" with the code in the above cell.  If they are the same, just type any key.  If not, do steps 2-4. "
   echo " "
-  echo "SCRIPT TO COPY:"
+  echo "SCRIPT TO COPY: "
   echo "!wget -nc https://raw.githubusercontent.com/rapidsai/notebooks-contrib/master/utils/rapids-colab.sh"
   echo "!bash rapids-colab.sh"
   echo "import sys, os"
@@ -54,7 +70,6 @@ else
   echo "You may not have to change anything.  All versions of our script should work with this version of Colab"
 fi
 
-
 wget -nc https://github.com/rapidsai/notebooks-contrib/raw/master/utils/env-check.py
 echo "Checking for GPU type:"
 python env-check.py
@@ -70,30 +85,37 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
     chmod +x Miniconda3-4.5.4-Linux-x86_64.sh
     bash ./Miniconda3-4.5.4-Linux-x86_64.sh -b -f -p /usr/local
     
-    if [ $RAPIDS_VERSION == 0.11 ] ;then
+    if (( $RAPIDS_RESULT == 12 )) ;then #Newest nightly packages.  UPDATE EACH RELEASE!
     echo "Installing RAPIDS $RAPIDS_VERSION packages from the nightly release channel"
     echo "Please standby, this will take a few minutes..."
     # install RAPIDS packages
         conda install -y --prefix /usr/local \
                 -c rapidsai-nightly/label/xgboost -c rapidsai-nightly -c nvidia -c conda-forge \
-                python=3.6 cudatoolkit=10.1 \
-                cudf=$RAPIDS_VERSION cuml cugraph gcsfs pynvml cuspatial \
-                dask-cudf \
-                xgboost
+                python=3.6 cudatoolkit=10.0 \
+                cudf=$RAPIDS_VERSION cuml cugraph gcsfs pynvml cuspatial xgboost\
+                dask-cudf
         # check to make sure that pyarrow is running the right version (0.15) for v0.11 or later
         wget -nc https://github.com/rapidsai/notebooks-contrib/raw/master/utils/update_pyarrow.py
-
+    elif (( $RAPIDS_RESULT >= 11 )) ;then #Stable packages requiring PyArrow 0.15
+        echo "Installing RAPIDS $RAPIDS_VERSION packages from the stable release channel"
+        echo "Please standby, this will take a few minutes..."
+        # install RAPIDS packages
+        conda install -y --prefix /usr/local \
+            -c rapidsai/label/xgboost -c rapidsai -c nvidia -c conda-forge \
+            python=3.6 cudatoolkit=10.0 \
+            cudf=$RAPIDS_VERSION cuml cugraph cuspatial gcsfs pynvml xgboost\
+            dask-cudf
+        # check to make sure that pyarrow is running the right version (0.15) for v0.11 or later
+        wget -nc https://github.com/rapidsai/notebooks-contrib/raw/master/utils/update_pyarrow.py
     else
         echo "Installing RAPIDS $RAPIDS_VERSION packages from the stable release channel"
         echo "Please standby, this will take a few minutes..."
         # install RAPIDS packages
         conda install -y --prefix /usr/local \
             -c rapidsai/label/xgboost -c rapidsai -c nvidia -c conda-forge \
-            python=3.6 cudatoolkit=10.1 \
-            cudf=$RAPIDS_VERSION cuml cugraph cuspatial gcsfs pynvml \
-
-            dask-cudf \
-            xgboost
+            python=3.6 cudatoolkit=10.0 \
+            cudf=$RAPIDS_VERSION cuml cugraph cuspatial gcsfs pynvml xgboost\
+            dask-cudf
     fi
       
     echo "Copying shared object files to /usr/lib"
