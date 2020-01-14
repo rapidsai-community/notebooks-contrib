@@ -23,12 +23,11 @@ def bsql_start():
         return "You've got BlazingSQL set up perfectly! Let's get started with SQL in RAPIDS AI!"
     # BlazingSQL not found
     except ModuleNotFoundError:
-        # do we want to install BlazingSQL?
-        ask = input('Unable to locate BlazingSQL, would you like to install it now? [y/n] ')
-        # account for input error (extra spaces or CAPS)
-        ask = ask.strip().lower()
-        # yes install now (accept full yes)
-        if (ask == 'y') or (ask == 'yes'):      
+            # do we want to install BlazingSQL?
+            print("Unable to locate BlazingSQL.  We'll install it now")
+            # Install JRE first
+            os.system("apt-get update")
+            os.system("apt-get -y install default-jre")
             # tag BlazingSQL conda install script
             b = "conda install -c blazingsql/label/cuda10.0 -c blazingsql" 
             b += ' -c rapidsai -c nvidia -c conda-forge -c defaults '
@@ -42,16 +41,11 @@ def bsql_start():
                 # adjust to 3.6 install script
                 b = b.replace('python=3.7', 'python=3.6')
             # lmk what's going on?
-            print('Installing BlazingSQL, this may take a few minutes.')
+            print('Installing BlazingSQL, this should take some time.  This is only need to be done once')
             # install BlazingSQL 
             os.system(b)
             # indicate completion
             return f"Let's get started with SQL in RAPIDS AI!"
-        # no, don't install now
-        else:
-            docs = 'https://docs.blazingdb.com/docs/install-via-conda'
-            # indicate so
-            return f'Ok, not installing now.\nTo download later simply rerun this script or go to {docs}'
             
             
 if __name__=='__main__':
