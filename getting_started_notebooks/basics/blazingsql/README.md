@@ -29,3 +29,15 @@ conda install -c blazingsql-nightly/label/cuda10.0 -c blazingsql-nightly -c rapi
 ```
 
 Note: BlazingSQL-Nightly is supported only on Linux, with CUDA 9.2 or 10 and Python 3.6 or 3.7.
+
+## Troubleshooting
+
+### On RAPIDS Docker
+**Can't locate "/usr/lib/jvm" error when running `bsql_start()` or `import blazingsql`**
+
+1. Run the comands below in teminal
+```
+apt-get update
+apt-get install default-jre
+```
+2. Retry
