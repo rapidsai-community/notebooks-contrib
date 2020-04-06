@@ -14,7 +14,7 @@ Please use the [BUILD.md](BUILD.md) to check the pre-requisite packages and inst
 
 Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 
-Once you've followed our guide, please don't forget to [test your notebooks!](TESTING.md)
+Once you've followed our guide, please don't forget to [test your notebooks!](TESTING.md) before making a PR.
 
 ## Exploring the Repo
 ### Folders
@@ -46,7 +46,7 @@ Below is a listing of the notebooks in this repository.  Each row will tell you 
 | basics   | [Dask_Hello_World](getting_started_notebooks/basics/Dask_Hello_World.ipynb)           | This notebook shows how to quickly setup Dask and run a "Hello World" example.                                                                                                                                       | MG | Self Generated |
 | basics   | [Getting_Started_with_Dask](getting_started_notebooks/basics/Getting_Started_with_Dask.ipynb)  | This notebook shows how to get started with multi-GPU DataFrames using Dask and cuDF in RAPIDS.                                                                                                                                      | MG | Self Generated |
 | basics   | [hello_streamz](getting_started_notebooks/basics/hello_streamz.ipynb)  | This notebook demonstrates use of cuDF to perform streaming word-count using a small portion of the Streamz API. | SG | Self Generated |     
-|basics -> blazingsql| [Getting Started with BlazingSQL](getting_started_notebooks/basics/blazingsql/blazingsql_demo.ipynb) | How to set up and get started with BlazingSQL and the RAPIDS AI suite. | SG | [Music Dataset](https://github.com/BlazingDB/bsql-demos/blob/master/data/Music.csv) |
+|basics -> blazingsql| [Getting Started with BlazingSQL](getting_started_notebooks/basics/blazingsql/getting_started_with_blazingsql.ipynb) | How to set up and get started with BlazingSQL and the RAPIDS AI suite. | SG | [Music Dataset](https://github.com/BlazingDB/bsql-demos/blob/master/data/Music.csv) |
 |basics -> blazingsql| [Federated Query Demo](getting_started_notebooks/basics/blazingsql/federated_query_demo.ipynb) | In a single query, join an Apache Parquet file, a CSV file, and a GPU DataFrame (GDF) in GPU memory. | SG | [Breast Cancer Diagnostic](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29) |
 | intro_tutorials   | [01_Introduction_to_RAPIDS](getting_started_notebooks/intro_tutorials/01_Introduction_to_RAPIDS.ipynb)  | This notebook shows at a high level what each of the packages in RAPIDS are as well as what they do.                                                                                                                                      |  MG | Self Generated |
 | intro_tutorials   | [02_Introduction_to_cuDF](getting_started_notebooks/intro_tutorials/02_Introduction_to_cuDF.ipynb)  | This notebook shows how to work with cuDF DataFrames in RAPIDS.                                                                                                                                      | SG | Self Generated |
@@ -62,7 +62,6 @@ Below is a listing of the notebooks in this repository.  Each row will tell you 
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   | GPU  | Dataset Used
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----|----|
 | examples   | [linear_regression_demo.ipynb](intermediate_notebooks/examples/linear_regression_demo.ipynb)     |This notebook demos how to implement simple and multiple linear regression with cuML to predict median housing price on sklearn's Boston Housing dataset. With corresponding [Medium Story](http://bit.ly/cuml_lin_reg_friend). |  SG | [SKLearn Boston Housing](https://scikit-learn.org/stable/datasets/index.html#boston-dataset)|
-| examples   | [ridge_regression_demo](intermediate_notebooks/examples/ridge_regression_demo.ipynb)     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset.                                                                                                                  | SG | [Preprocessed Mortgage Data](https://s3.us-east-2.amazonaws.com/rapidsai-data/datasets/mortgage/mortgage.npy.gz)|
 | examples   | [umap_demo_full](intermediate_notebooks/examples/umap_demo_full.ipynb)     | In this notebook we will show how to use UMAP and its GPU accelerated implementation present in RAPIDS.   | SG | [Fashion MNIST](https://github.com/zalandoresearch/fashion-mnist)|
 | examples   | [rf_demo](intermediate_notebooks/examples/rf_demo.ipynb)     | Demonstration of using both cuml and sklearn to train a RandomForestClassifier on the Higgs dataset.   | SG | [Higgs Boson](https://archive.ics.uci.edu/ml/machine-learning-databases/00280/HIGGS.csv.gz)
 | examples   | [weather](intermediate_notebooks/examples/weather.ipynb)     | Demonstration of using Dask and cuDF to process and analyze weather history | MG | [NOAA Annual Weather Data](ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/) |
@@ -122,8 +121,8 @@ Below is a listing of the notebooks in this repository.  Each row will tell you 
 | ASONAM 2019 | [Weighted Link Prediction](conference_notebooks/ASONAM_2019/Weighted_Link_Prediction.ipynb) | This notebook uses cuGraph for Weighted Link Prediction to mitigate uncertainty on the Epinions Trust Network Dataset to predict the likelihood of trust or distrust between vertices. **Note: this dataset requires an independent user download and cannot be pulled from the notebook**| SG | Epinions Trust Network Dataset |
 
 ## Additional Information
-* The `intermediate_notebooks` folder also includes a small subset of the Mortgage Dataset used in the notebooks and the full image set from the Fashion MNIST dataset.
+* The `data` folder also includes the full image set from the [Fashion MNIST dataset](https://github.com/zalandoresearch/fashion-mnist).
 
-* `utils`: contains a set of useful scripts for interacting with RAPIDS
+* `utils`: contains a set of useful scripts for interacting with RAPIDS Notebooks-Contrib
 
 * For our notebook examples and tutorials found in our standard containers, please see the [Notebooks Repo](https://github.com/rapidsai/notebooks)
