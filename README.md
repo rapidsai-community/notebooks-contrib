@@ -14,7 +14,7 @@ Please use the [BUILD.md](BUILD.md) to check the pre-requisite packages and inst
 
 Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
 
-Please don't forget to [test your notebooks!](TESTING.md)
+Once you've followed our guide, please don't forget to [test your notebooks!](TESTING.md)
 
 ## Exploring the Repo
 ### Folders
@@ -27,8 +27,8 @@ Please don't forget to [test your notebooks!](TESTING.md)
 - `data` - contains small data samples used for purely functional demonstrations. Some notebooks include cells that download larger datasets from external websites.
 
 ### Lists
-`multimedia_links.md` is a [list of videos](multimedia_links.md) by RAPIDS or our community talking about or showing how to use RAPIDS.  Feel free to contribute your videos and RAPIDS themed playlists as well!
-`competition_notebooks.md` - contains archived notebooks that were used in competitions, such as Kaggle.  Some of these notebooks were blogged about and can also be found in our `blog notebooks` folder.
+- `multimedia_links.md` is a [list of videos](multimedia_links.md) by RAPIDS or our community talking about or showing how to use RAPIDS.  Feel free to contribute your videos and RAPIDS themed playlists as well!
+- `competition_notebooks.md` - contains archived notebooks that were used in competitions, such as Kaggle.  Some of these notebooks were blogged about and can also be found in our `blog notebooks` folder.
 
 # Our Notebooks
 Below is a listing of the notebooks in this repository.  Each row will tell you the notebook's 
@@ -61,7 +61,7 @@ Below is a listing of the notebooks in this repository.  Each row will tell you 
 ## Intermediate Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   | GPU  | Dataset Used
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----|----|
-| examples   | [linear_regression_demo.ipynb](intermediate_notebooks/examples/linear_regression_boston_demo.ipynb)     |This notebook demos how to implement simple and multiple linear regression with cuML to predict median housing price on sklearn's Boston Housing dataset. With corresponding [Medium Story](http://bit.ly/cuml_lin_reg_friend). |  SG | [Boston Housing](https://scikit-learn.org/stable/datasets/index.html#boston-dataset)|
+| examples   | [linear_regression_demo.ipynb](intermediate_notebooks/examples/linear_regression_demo.ipynb)     |This notebook demos how to implement simple and multiple linear regression with cuML to predict median housing price on sklearn's Boston Housing dataset. With corresponding [Medium Story](http://bit.ly/cuml_lin_reg_friend). |  SG | [SKLearn Boston Housing](https://scikit-learn.org/stable/datasets/index.html#boston-dataset)|
 | examples   | [ridge_regression_demo](intermediate_notebooks/examples/ridge_regression_demo.ipynb)     | Demonstration of using both NetworkX and cuGraph  to compute the the number of Triangles in our test dataset.                                                                                                                  | SG | [Preprocessed Mortgage Data](https://s3.us-east-2.amazonaws.com/rapidsai-data/datasets/mortgage/mortgage.npy.gz)|
 | examples   | [umap_demo_full](intermediate_notebooks/examples/umap_demo_full.ipynb)     | In this notebook we will show how to use UMAP and its GPU accelerated implementation present in RAPIDS.   | SG | [Fashion MNIST](https://github.com/zalandoresearch/fashion-mnist)|
 | examples   | [rf_demo](intermediate_notebooks/examples/rf_demo.ipynb)     | Demonstration of using both cuml and sklearn to train a RandomForestClassifier on the Higgs dataset.   | SG | [Higgs Boson](https://archive.ics.uci.edu/ml/machine-learning-databases/00280/HIGGS.csv.gz)
