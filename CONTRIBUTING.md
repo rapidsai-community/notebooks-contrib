@@ -55,7 +55,3 @@ implementation of the issue, ask them in the issue instead of the PR.
 ## Setting Up Your Build Environment
 
 The following instructions are for developers and contributors to cuDF OSS development. These instructions are tested on Linux Ubuntu 16.04 & 18.04. Use these instructions to build cuDF from source and contribute to its development.  Other operating systems may be compatible, but are not currently tested.
-
-### Code Formatting
-
-TODO with the [new branding](https://rapids.ai/branding.html)
