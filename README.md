@@ -1,6 +1,6 @@
 # RAPIDS Notebooks-Contrib
 ## Intro
-Welcome to the contributed notebooks repo! (formerly known as Notebooks-Extended)
+Welcome to the community contributed notebooks repo! (formerly known as Notebooks-Extended)
 
 The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn why, how, and when including RAPIDS in a data science pipeline makes sense, and contain community contributions of RAPIDS knowledge. The difference between this repo and the [Notebooks Repo](https://github.com/rapidsai/notebooks) are:
 1. These are vetted, community-contributed notebooks (includes RAPIDS team member contributions).  
