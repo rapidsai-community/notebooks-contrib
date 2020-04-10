@@ -1,0 +1,40 @@
+{
+    "SpecInfo": 
+    [
+        {
+            "Total_Mem" : 511e9,
+            "Start_Year" : 2000,
+            "End_Year" : 2016,
+            "Part_Count" : [48, 96]
+        },
+
+        {
+            "Total_Mem" : 255e9,
+            "Start_Year" : 2000,
+            "End_Year" : 2016,
+            "Part_Count" : [24, 48]
+        },
+        
+        {
+            "Total_Mem" : 127e9,
+            "Start_Year" : 2000,
+            "End_Year" : 2007,
+            "Part_Count" : [16, 32]
+        },
+        
+        {
+            "Total_Mem" : 47e9,
+            "Start_Year" : 2000,
+            "End_Year" : 2004,
+            "Part_Count" : [8, 16]
+        },
+        
+        {
+            "Total_Mem" : 15e9,
+            "Start_Year" : 2000,
+            "End_Year" : 2000,
+            "Part_Count" : [2, 4]
+        }
+
+    ]
+}
