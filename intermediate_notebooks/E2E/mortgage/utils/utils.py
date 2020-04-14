@@ -15,6 +15,11 @@ MORTGAGE_YEARLY_2GB_SPLITS_URL = "https://rapidsai-data.s3.us-east-2.amazonaws.c
 
 
 def get_data(data_dir, start_year, end_year, use_1GB_splits):
+    """
+    Utility to download and extract mortgage data to specied data_dir.
+    Only specific years of data between `start_year` and `end_year` will be downloaded
+    to the specified directory
+    """
     if use_1GB_splits:
         data_url = MORTGAGE_YEARLY_1GB_SPLITS_URL
     else:
