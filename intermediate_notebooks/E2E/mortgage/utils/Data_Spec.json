@@ -19,7 +19,7 @@
             "Total_Mem" : 127e9,
             "Start_Year" : 2000,
             "End_Year" : 2007,
-            "Part_Count" : [16, 32]
+            "Part_Count" : [16, 24]
         },
         
         {
@@ -33,7 +33,7 @@
             "Total_Mem" : 15e9,
             "Start_Year" : 2000,
             "End_Year" : 2000,
-            "Part_Count" : [2, 4]
+            "Part_Count" : [2, 3]
         }
 
     ]
