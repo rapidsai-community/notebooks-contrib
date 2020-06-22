@@ -12,7 +12,7 @@ Interoperability Using RAPIDS
 
 ## KDD 2020 Tutorial
 The lines between data science (DS), machine learning (ML), deep learning (DL), and data mining continue to be blurred and removed. This is great as it ushers in vast amounts of capabilities, but it brings increased complexity and a vast number of tools/techniques. It’s not uncommon for DL engineers to use one set of tools for data extraction/cleaning and then pivot to another library for training their models. After training and inference, it’s common to then move data yet again by another set of tools for post-processing. The ​RAPIDS​ suite of open source libraries not only provides a method to execute and accelerate these tasks using GPUs with familiar APIs, but it also provides interoperability with the broader open source community and DL tools while removing unnecessary serializations that slow down workflows. GPUs provide massive parallelization that DL has leveraged for some time, and RAPIDS provides the missing pieces that extend this computing power to more traditional yet important DS and ML tasks (e.g., ETL, modeling). Complete pipelines can be built that encompass everything, including ETL, feature engineering, ML/DL modeling, inference, and visualization, all while removing typical serialization costs and affording seamless interoperability between libraries. All
- 
+
 experiments using RAPIDS can effortlessly be scheduled, logged and reviewed using existing public cloud options.
 Join our engineers and data scientists as they walk through a collection of DS and ML/DL engineering problems that show how RAPIDS running on Azure ML can be used for end-to-end, entirely GPU pipelines. This tutorial includes specifics on how to use RAPIDS for feature engineering, interoperability with common ML/DL packages, and creating GPU native visualizations using ​cuxfilter​. The use cases presented here give attendees a hands-on approach to using RAPIDS components as part of a larger workflow, seamlessly integrating with other libraries (e.g., PyTorch) and visualization packages.
 
@@ -44,3 +44,9 @@ Join our engineers and data scientists as they walk through a collection of DS a
 3. Conclusions (not hands-on) [15 min]
 	1. Future Improvements / Roadmap
 	2. Any Additional Questions
+
+
+
+## Presenters
+
+[Presenters](Presenters.md)
