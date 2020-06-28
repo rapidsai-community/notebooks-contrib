@@ -1,0 +1,37 @@
+channels:
+  - rapidsai-nightly
+  - nvidia
+  - conda-forge
+  - facebook
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.7
+  - cudatoolkit=10.2
+  - cudf
+  - dask-cuda
+  - dask-cudf
+  - cuml
+  - cugraph
+  - opencv
+  - scikit-image
+  - chainer
+  - scipy
+  - gensim
+  - ucx-py
+  - joblib
+  - matplotlib
+  - umap-learn
+  - numba
+  - ucx-proc=*=gpu
+  - scikit-learn
+  - cupy
+  - ipykernel
+  - jupyterlab
+  - pip
+  - pip:
+      - jupyter-server-proxy
+      - git+https://github.com/dask/dask.git
+      - git+https://github.com/dask/distributed.git
+      - git+https://github.com/overshiki/datasets.git
+      - wget

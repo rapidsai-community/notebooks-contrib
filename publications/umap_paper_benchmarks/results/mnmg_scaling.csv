@@ -1,0 +1,5 @@
+number of GPUs,transformation runtime (s)
+1,25.3
+2,13.38
+4,7.34
+8,4.5
