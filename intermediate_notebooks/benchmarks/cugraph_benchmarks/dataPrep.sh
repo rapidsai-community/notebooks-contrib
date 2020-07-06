@@ -25,7 +25,6 @@ tar xvzf as-Skitter.tar.gz
 
 cd ..
 
-find . -name *.mtx -exec mv {} . \;
+find ./tmp -name *.mtx -exec mv {} . \;
 
 rm -rf tmp
-

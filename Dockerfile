@@ -15,7 +15,7 @@ RUN source activate rapids && conda install -c \
 RUN apt update &&\
     apt install -y graphviz &&\
     source activate rapids && pip install graphviz
-        
+
 # ToDo: let user supply kaggle creds
 RUN source activate rapids && pip install kaggle
 
