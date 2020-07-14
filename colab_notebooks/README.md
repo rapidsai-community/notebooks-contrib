@@ -3,7 +3,7 @@ Ready to experience the speed of RAPIDS (for free) through Google Colab? Each no
 
 | Notebook Title | Description | Launch in Colab|
 |----------------|----------------|----------------|
-| cuML (Directory) | Collection of `cuML` demos (pca, ridge, sgd, umap, umap_supervised - further desc in folder) like those in `intermediate_notebooks/examples` |[cuML](https://github.com/rapidsai/notebooks-contrib/tree/master/colab_notebooks/cuml)|
+| cuML (Directory) | Collection of `cuML` demos (pca, ridge, sgd, umap, umap_supervised - further desc in folder) like those in `intermediate_notebooks/examples` |[cuML](https://github.com/rapidsai/notebooks-contrib/tree/main/colab_notebooks/cuml)|
 | DBScan_colab_nightlies | Demonstration of `cuML` DBSCAN (clustering) algorithm on mortgage (or random) data in compairson to `sklearn` DBSCAN|[![Google Colab Badge](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rapidsai/notebooks-contrib/blob/master/colab_notebooks/DBScan_colab_nightlies.ipynb)|
 | Louvain_Colab | Implement Louvain method of community detection (greedy hierarchical clustering algorithm) with cuDF; w/ Dask pending |[![Google Colab Badge](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rapidsai/notebooks-contrib/blob/master/colab_notebooks/Louvain_Colab.ipynb)|
 | Vertex_Similarity_Colab | Use `cuGraph` to compute vertex similarity with both the Jaccard Similarity and the Overlap Coefficient |[![Google Colab Badge](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rapidsai/notebooks-contrib/blob/master/colab_notebooks/Vertex_Similarity_Colab.ipynb)|
