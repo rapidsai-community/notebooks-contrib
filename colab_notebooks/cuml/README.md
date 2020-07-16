@@ -10,4 +10,4 @@
 
 ## Contributing 
 - WE NEED HELP!
-  - Find out more [here](https://github.com/rapidsai/notebooks-contrib/blob/master/CONTRIBUTING.md)
+  - Find out more [here](https://github.com/rapidsai/notebooks-contrib/blob/main/CONTRIBUTING.md)

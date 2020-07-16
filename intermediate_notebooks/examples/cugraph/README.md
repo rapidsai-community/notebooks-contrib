@@ -12,7 +12,7 @@ Multi-GPU notebooks have the following dependencies:
       dask>=2.1.0 
       distributed>=2.1.0 
 
-The simplest way to get all dependencies is through conda, by following the [instructions](https://github.com/rapidsai/cugraph/blob/master/CONTRIBUTING.md) to get the `cugraph_dev` environment.
+The simplest way to get all dependencies is through conda, by following the [instructions](https://github.com/rapidsai/cugraph/blob/main/CONTRIBUTING.md) to get the `cugraph_dev` environment.
 
 
 ## Get the Data Set
