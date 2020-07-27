@@ -6,20 +6,22 @@
 
 Notebooks:
 * [Getting Started](#get_started)
-* [Intermideate](#Intermediate Notebooks)
+* [Intermideate](#middle)
 * [Advanced](#advanced)
 * [BLOGS](#blogs)
 * [Conference](#conference)
+  
 ---
-< a name="intro"  />
-## Introduction
+
+## Introduction <a name="intro"></a>
+
 Welcome to the community contributed notebooks repo! (formerly known as Notebooks-Extended)
 
 The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn why, how, and when including RAPIDS in a data science pipeline makes sense, and contain community contributions of RAPIDS knowledge. The difference between this repo and the [Notebooks Repo](https://github.com/rapidsai/notebooks) are:
 1. These are vetted, community-contributed notebooks (includes RAPIDS team member contributions).  
 1. These notebooks won't run on air gapped systems, which is one of our container requirements.  Many RAPIDS notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please download all the data that you plan to use ahead of time or simply use the [core notebooks repo](https://github.com/rapidsai/notebooks).
 
-<a name="install" />
+<a name="install"></a>
 ## Installation
 
 Please use the [BUILD.md](BUILD.md) to check the pre-requisite packages and installation steps.
@@ -55,32 +57,32 @@ Below is a listing of the notebooks in this repository.  Each row will tell you 
 <a name="get_started" />
 ## Getting Started Notebooks:
 
-| Folder    | Notebook Title         | Description                                                                                                                                                                                                                   | GPU  | Dataset Used
-|-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----|----|
-| basics   | [Getting_Started_with_cuDF](getting_started_notebooks/basics/Getting_Started_with_cuDF.ipynb)  | This notebook shows how to get started with GPU DataFrames (single GPU only) using cuDF in RAPIDS.                                                                                                                                      | SG | Self Generated |
-| basics   | [Dask_Hello_World](getting_started_notebooks/basics/Dask_Hello_World.ipynb)           | This notebook shows how to quickly setup Dask and run a "Hello World" example.                                                                                                                                       | MG | Self Generated |
-| basics   | [Getting_Started_with_Dask](getting_started_notebooks/basics/Getting_Started_with_Dask.ipynb)  | This notebook shows how to get started with multi-GPU DataFrames using Dask and cuDF in RAPIDS.                                                                                                                                      | MG | Self Generated |
+| Folder    | Notebook Title         | Description                                                                                                                                      | GPU  | Dataset Used |
+|-----------|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|------|--------------|
+| basics   | [Getting_Started_with_cuDF](getting_started_notebooks/basics/Getting_Started_with_cuDF.ipynb)  | This notebook shows how to get started with GPU DataFrames (single GPU only) using cuDF in RAPIDS.  | SG | Self Generated |
+| basics   | [Dask_Hello_World](getting_started_notebooks/basics/Dask_Hello_World.ipynb)           | This notebook shows how to quickly setup Dask and run a "Hello World" example.   | MG | Self Generated |
+| basics   | [Getting_Started_with_Dask](getting_started_notebooks/basics/Getting_Started_with_Dask.ipynb)  | This notebook shows how to get started with multi-GPU DataFrames using Dask and cuDF in RAPIDS.    | MG | Self Generated |
 | basics   | [hello_streamz](getting_started_notebooks/basics/hello_streamz.ipynb)  | This notebook demonstrates use of cuDF to perform streaming word-count using a small portion of the Streamz API. | SG | Self Generated |     
 |basics -> blazingsql| [Getting Started with BlazingSQL](getting_started_notebooks/basics/blazingsql/getting_started_with_blazingsql.ipynb) | How to set up and get started with BlazingSQL and the RAPIDS AI suite. | SG | [Music Dataset](https://github.com/BlazingDB/bsql-demos/blob/master/data/Music.csv) |
 |basics -> blazingsql| [Federated Query Demo](getting_started_notebooks/basics/blazingsql/federated_query_demo.ipynb) | In a single query, join an Apache Parquet file, a CSV file, and a GPU DataFrame (GDF) in GPU memory. | SG | [Breast Cancer Diagnostic](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29) |
-| intro_tutorials   | [01_Introduction_to_RAPIDS](getting_started_notebooks/intro_tutorials/01_Introduction_to_RAPIDS.ipynb)  | This notebook shows at a high level what each of the packages in RAPIDS are as well as what they do.                                                                                                                                      |  MG | Self Generated |
-| intro_tutorials   | [02_Introduction_to_cuDF](getting_started_notebooks/intro_tutorials/02_Introduction_to_cuDF.ipynb)  | This notebook shows how to work with cuDF DataFrames in RAPIDS.                                                                                                                                      | SG | Self Generated |
-| intro_tutorials   | [03_Introduction_to_Dask](getting_started_notebooks/intro_tutorials/03_Introduction_to_Dask.ipynb)   | This notebook shows how to work with Dask using basic Python primitives like integers and strings.                                                                                                                                      |  MG | Self Generated |
-| intro_tutorials   | [04_Introduction_to_Dask_using_cuDF_DataFrames](getting_started_notebooks/intro_tutorials/04_Introduction_to_Dask_using_cuDF_DataFrames.ipynb)   | This notebook shows how to work with cuDF DataFrames using Dask.                                                                                                                                      | MG | Self Generated | 
-| intro_tutorials   | [06_Introduction_to_Supervised_Learning](getting_started_notebooks/intro_tutorials/06_Introduction_to_Supervised_Learning.ipynb)   | This notebook shows how to do GPU accelerated Supervised Learning in RAPIDS.                                                                                                                                      |  SG | Self Generated |
-| intro_tutorials   | [07_Introduction_to_XGBoost](getting_started_notebooks/intro_tutorials/07_Introduction_to_XGBoost.ipynb)   | This notebook shows how to work with GPU accelerated XGBoost in RAPIDS.                                                                                                                                      |  SG | Self Generated |
-| intro_tutorials   | [08_Introduction_to_Dask_XGBoost](getting_started_notebooks/intro_tutorials/08_Introduction_to_Dask_XGBoost.ipynb)   | This notebook shows how to work with Dask XGBoost in RAPIDS.                                                                                                                                      | MG | Self Generated |
-| intro_tutorials   | [09_Introduction_to_Dimensionality_Reduction](getting_started_notebooks/intro_tutorials/09_Introduction_to_Dimensionality_Reduction.ipynb)   | This notebook shows how to do GPU accelerated Dimensionality Reduction in RAPIDS.                                                                                                                                      | SG | Self Generated |
-| intro_tutorials   | [10_Introduction_to_Clustering](getting_started_notebooks/intro_tutorials/10_Introduction_to_Clustering.ipynb)  | This notebook shows how to do GPU accelerated Clustering in RAPIDS.                                                                                                                                      |  SG | Self Generated |
+| intro_tutorials   | [01_Introduction_to_RAPIDS](getting_started_notebooks/intro_tutorials/01_Introduction_to_RAPIDS.ipynb)  | This notebook shows at a high level what each of the packages in RAPIDS are as well as what they do.   |  MG | Self Generated |
+| intro_tutorials   | [02_Introduction_to_cuDF](getting_started_notebooks/intro_tutorials/02_Introduction_to_cuDF.ipynb)  | This notebook shows how to work with cuDF DataFrames in RAPIDS.  | SG | Self Generated |
+| intro_tutorials   | [03_Introduction_to_Dask](getting_started_notebooks/intro_tutorials/03_Introduction_to_Dask.ipynb)   | This notebook shows how to work with Dask using basic Python primitives like integers and strings.   |  MG | Self Generated |
+| intro_tutorials   | [04_Introduction_to_Dask_using_cuDF_DataFrames](getting_started_notebooks/intro_tutorials/04_Introduction_to_Dask_using_cuDF_DataFrames.ipynb)   | This notebook shows how to work with cuDF DataFrames using Dask.   | MG | Self Generated | 
+| intro_tutorials   | [06_Introduction_to_Supervised_Learning](getting_started_notebooks/intro_tutorials/06_Introduction_to_Supervised_Learning.ipynb)   | This notebook shows how to do GPU accelerated Supervised Learning in RAPIDS.  |  SG | Self Generated |
+| intro_tutorials   | [07_Introduction_to_XGBoost](getting_started_notebooks/intro_tutorials/07_Introduction_to_XGBoost.ipynb)   | This notebook shows how to work with GPU accelerated XGBoost in RAPIDS.   |  SG | Self Generated |
+| intro_tutorials   | [08_Introduction_to_Dask_XGBoost](getting_started_notebooks/intro_tutorials/08_Introduction_to_Dask_XGBoost.ipynb)   | This notebook shows how to work with Dask XGBoost in RAPIDS.   | MG | Self Generated |
+| intro_tutorials   | [09_Introduction_to_Dimensionality_Reduction](getting_started_notebooks/intro_tutorials/09_Introduction_to_Dimensionality_Reduction.ipynb)   | This notebook shows how to do GPU accelerated Dimensionality Reduction in RAPIDS.  | SG | Self Generated |
+| intro_tutorials   | [10_Introduction_to_Clustering](getting_started_notebooks/intro_tutorials/10_Introduction_to_Clustering.ipynb)  | This notebook shows how to do GPU accelerated Clustering in RAPIDS.     |  SG | Self Generated |
 
 <a name="middle" />
 ## Intermediate Notebooks:
-| Folder    | Notebook Title         | Description                                                                                                                                                                                                                   | GPU  | Dataset Used
-|-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----|----|
-| examples   | [linear_regression_demo.ipynb](intermediate_notebooks/examples/linear_regression_demo.ipynb)     |This notebook demos how to implement simple and multiple linear regression with cuML to predict median housing price on sklearn's Boston Housing dataset. With corresponding [Medium Story](http://bit.ly/cuml_lin_reg_friend). |  SG | [SKLearn Boston Housing](https://scikit-learn.org/stable/datasets/index.html#boston-dataset)|
-| examples   | [umap_demo_full](intermediate_notebooks/examples/umap_demo_full.ipynb)     | In this notebook we will show how to use UMAP and its GPU accelerated implementation present in RAPIDS.   | SG | [Fashion MNIST](https://github.com/zalandoresearch/fashion-mnist)|
-| examples   | [rf_demo](intermediate_notebooks/examples/rf_demo.ipynb)     | Demonstration of using both cuml and sklearn to train a RandomForestClassifier on the Higgs dataset.   | SG | [Higgs Boson](https://archive.ics.uci.edu/ml/machine-learning-databases/00280/HIGGS.csv.gz)
-| examples   | [weather](intermediate_notebooks/examples/weather.ipynb)     | Demonstration of using Dask and cuDF to process and analyze weather history | MG | [NOAA Annual Weather Data](ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/) |
+| Folder    | Notebook Title         | Description                                                                                                                                                                          | GPU  | Dataset Used |
+|-----------|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|--------------|
+| examples  | [linear_regression_demo.ipynb](intermediate_notebooks/examples/linear_regression_demo.ipynb)    | This notebook demos how to implement simple and multiple linear regression with cuML to predict median housing price on sklearn's Boston Housing dataset. With corresponding [Medium Story](http://bit.ly/cuml_lin_reg_friend). |  SG | [SKLearn Boston Housing](https://scikit-learn.org/stable/datasets/index.html#boston-dataset)|
+| examples  | [umap_demo_full](intermediate_notebooks/examples/umap_demo_full.ipynb)     | In this notebook we will show how to use UMAP and its GPU accelerated implementation present in RAPIDS.   | SG | [Fashion MNIST](https://github.com/zalandoresearch/fashion-mnist)|
+| examples  | [rf_demo](intermediate_notebooks/examples/rf_demo.ipynb)     | Demonstration of using both cuml and sklearn to train a RandomForestClassifier on the Higgs dataset.   | SG | [Higgs Boson](https://archive.ics.uci.edu/ml/machine-learning-databases/00280/HIGGS.csv.gz)
+| examples  | [weather](intermediate_notebooks/examples/weather.ipynb)     | Demonstration of using Dask and cuDF to process and analyze weather history | MG | [NOAA Annual Weather Data](ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/) |
 | examples -> blazingsql| [BlazingSQL vs Spark](intermediate_notebooks/examples/blazingsql/vs_pyspark_netflow.ipynb) | Analyze 73 million rows of net flow data. Compare BlazingSQL and Apache Spark timings for the same workload.  | SG | [University of New South Wales LanL Dataset](https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-NB15-Datasets/) |
 | examples -> blazingsql| [Taxi Fare Prediction](intermediate_notebooks/examples/blazingsql/taxi_fare_prediction.ipynb) | Build & test a cuML Linear Regression model to predict the cost of a ride from 20 million rows of NYC Taxi data. | SG | [NYC Taxi Dataset](https://blazingsql-colab.s3.amazonaws.com/taxi_data/taxi_00.csv) |
 | examples-> custreamz   | [parsing_haproxy_logs](intermediate_notebooks/examples/custreamz/parsing_haproxy_logs.ipynb) | This notebook builds upon the weblogs streaming notebook and demonstrates more advanced features for parsing HAProxy logs. | SG | Self Generated
