@@ -1,11 +1,25 @@
 # RAPIDS Notebooks-Contrib
-## Intro
+---
+## Table of Contents
+* [Intro](#intro)
+* [Installation](#install)
+
+Notebooks:
+* [Getting Started](#get_started)
+* [Intermideate](#Intermediate Notebooks)
+* [Advanced](#advanced)
+* [BLOGS](#blogs)
+* [Conference](#conference)
+---
+< a name="intro"  />
+## Introduction
 Welcome to the community contributed notebooks repo! (formerly known as Notebooks-Extended)
 
 The purpose of this collection of notebooks is to help users understand what RAPIDS has to offer, learn why, how, and when including RAPIDS in a data science pipeline makes sense, and contain community contributions of RAPIDS knowledge. The difference between this repo and the [Notebooks Repo](https://github.com/rapidsai/notebooks) are:
 1. These are vetted, community-contributed notebooks (includes RAPIDS team member contributions).  
 1. These notebooks won't run on air gapped systems, which is one of our container requirements.  Many RAPIDS notebooks use additional PyData ecosystem packages, and include code for downloading datasets, thus they require network connectivity. If running on a system with no network access, please download all the data that you plan to use ahead of time or simply use the [core notebooks repo](https://github.com/rapidsai/notebooks).
 
+<a name="install" />
 ## Installation
 
 Please use the [BUILD.md](BUILD.md) to check the pre-requisite packages and installation steps.
@@ -38,6 +52,7 @@ Below is a listing of the notebooks in this repository.  Each row will tell you 
 - Design is for a `Single GPU`(SG) or `Multiple GPUs`(MG) in **GPU** (don't worry, you can still run the multi-GPU notebooks with a single GPU)
 - Data can be found in **Dataset Used**
 
+<a name="get_started" />
 ## Getting Started Notebooks:
 
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   | GPU  | Dataset Used
@@ -58,6 +73,7 @@ Below is a listing of the notebooks in this repository.  Each row will tell you 
 | intro_tutorials   | [09_Introduction_to_Dimensionality_Reduction](getting_started_notebooks/intro_tutorials/09_Introduction_to_Dimensionality_Reduction.ipynb)   | This notebook shows how to do GPU accelerated Dimensionality Reduction in RAPIDS.                                                                                                                                      | SG | Self Generated |
 | intro_tutorials   | [10_Introduction_to_Clustering](getting_started_notebooks/intro_tutorials/10_Introduction_to_Clustering.ipynb)  | This notebook shows how to do GPU accelerated Clustering in RAPIDS.                                                                                                                                      |  SG | Self Generated |
 
+<a name="middle" />
 ## Intermediate Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   | GPU  | Dataset Used
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----|----|
@@ -81,11 +97,13 @@ Below is a listing of the notebooks in this repository.  Each row will tell you 
 |  benchmarks-> cugraph_benchmarks    |  [SSSP_benchmark](intermediate_notebooks/benchmarks/cugraph_benchmarks/sssp_benchmark.ipynb)             | This notebook benchmarks performance improvement of running SSSP within cuGraph against NetworkX. |  SG | Sparse collection   |
 |  benchmarks-> cugraph_mg_hibench    |  [MG pagerank_benchmark](intermediate_notebooks/benchmarks/cugraph_mg_hibench/multi_gpu_pagerank.ipynb)             | This notebook runs cuGraph's multi-GPU PageRank on a dataset of 300GB. It designed for DGX-2 machines. | MG | [HiBench](https://rapidsai-data.s3.us-east-2.amazonaws.com/cugraph/benchmark/hibench/HiBench_300GB.tar.gz) |
 
+<a name="advanced" />
 ## Advanced Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   | GPU  | Dataset Used
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----|----|
 | tutorials   | [rapids_customized_kernels](advanced_notebooks/tutorials/rapids_customized_kernels.ipynb)               |  **Archive Only.**  This notebook shows how create customized kernels using CUDA to make your workflow in RAPIDS even faster.    | SG | Self Generated |
 
+<a name="blogs" />
 ## Blog Notebooks:
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   | GPU  | Dataset Used
 |-----------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----|----|
@@ -105,7 +123,7 @@ Below is a listing of the notebooks in this repository.  Each row will tell you 
 | mortgage_deep_learning      | [mortgage_e2e_deep_learning](blog_notebooks/mortgage_deep_learning/mortgage_e2e_deep_learning.ipynb)     | **Archive Only.** This end to end notebook for the blog, [Using RAPIDS with PyTorch](https://medium.com/rapids-ai/using-rapids-with-pytorch-e602da018285), by Even Oldridge, combines the RAPIDS GPU data processing with a PyTorch deep learning neural network to predict mortgage loan delinquency.   | MG | [Fannie Mae Mortgage Dataset](https://rapidsai.github.io/demos/datasets/mortgage-data)
 | svm   | [svc_covertype](blog_notebooks/svm/svc_covertype.ipynb)       | This notebook provides supplementary information for the Benchmark section of the [RAPIDS cuML SVC blog](https://nvda.ws/3c3Qy8H) post. | SG | [UCI Forest covertype dataset](https://archive.ics.uci.edu/ml/datasets/covertype)
 
-
+<a name="conference" />
 ## Conference Notebooks:
 
 | Folder    | Notebook Title         | Description                                                                                                                                                                                                                   | GPU  | Dataset Used
