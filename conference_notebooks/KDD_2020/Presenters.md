@@ -29,3 +29,8 @@ Joshua Patterson is the senior director of applied solutions engineering at NVID
 
 ### Tom Drabas - Senior Data Scientist, Microsoft
 Tom Drabas is a Senior Data Scientist at Microsoft in the Azure Machine Learning group. His research interests include parallel computing, deep learning, and ML algorithms and their applications. During his time at Microsoft, Tom has published multiple books and authored a video series on data science, machine learning, and distributed computing in Spark. He has over 17 years of international experience working in the airline, telecommunication and technology industries. Tom holds a Ph.D. in the airline Operations Research field from the University of New South Wales.
+
+---
+
+### Corey Nolet - Senior Data Scientist, NVIDIA
+Corey Nolet is a Senior Data Scientist and Engineer on the RAPIDS cuML team at NVIDIA, where he focuses on building and scaling machine learning algorithms to support extreme data loads at light-speed. Prior to working at NVIDIA, Corey spent over a decade building massive-scale exploratory data science & real-time analytics platforms for HPC environments in the defense industry. Corey holds Bs. & Ms. degrees in Computer Science. He is also working towards his PhD in the same discipline, focused on scaling machine learning algorithms for decentralized architectures. Corey has a passion for using data to make better sense of the world.   
