@@ -22,28 +22,24 @@ Join our engineers and data scientists as they walk through a collection of DS a
 	2. Getting Connected to the VM Instances
 	3. Why RAPIDS, and How RAPIDS Connects to the Larger Ecosystem
 2. Tutorial (hands-on) [2 hours 20 min]
-	1. Deep Learning for Tabular Data (use case)
-		1. Introduction to data ingest with RAPIDS cuDF
-		2. Using the GPU data loader for DL libraries
-		3. PyTorch model on tabular data
-		4. Post-processing with cuDF
-		5. Visualization with cuxfilter
-	2. Log Parsing using Neural Networks and a Language Based Model (use case)
-		1. Introduction to log parsing and why it matters
-		2. Building a BERT model for log parsing (training / fine-tuning)
-		3. Inferencing with the BERT model
-		4. Wrapping the inference with RAPIDS pre-processing and post-processing
-	3. Graph Analysis and Visualization (use case)
-		1. Introduction to cuGraph
-		2. Presentation of a large dataset suitable for graph analytics
-		3. Preprocessing with cuDF and cuGraph
-		4. Graph analytics, enriching the dataset/graph
-		5. Post-processing with cuDF
-		6. Interactive visualization with cuxfilter
-		7. Iterating data filtering, graph processing, and visualization in real-time
+	1. New York Taxi Data
+      	1. In troduction to RAPIDS via an analysis of the New York City taxi data set
+      	2. Key Libraries: cuDF, cuML, cuGraph, cuXfilter​
+	2. Deep Learning for Tabular Data
+		1. Perform store sales prediction using tabular deep learning​
+		2. Key Libraries: NVTabular, cuDF, TensorFlow​
+	3. Single-Cell RNA Sequencing Analysis
+		1. Analyzing gene expression from a population of cells from a human lung​
+		2. Key Libraries: scanpy, cuDF, cuML, cuGraph​
+	4. Where to Park​
+		1. Analyzing Seattle Parking data and determining the best parking spot within a walkable distance from Space Needle​
+		2. Key Libraries: cuSpatial, cuDF, cuGraph​
+    5. CyBERT
+       1. Cyber Log Parsing using Neural Networks and Language Based Model​
+       2. Key Libraries: CLX, cuDF, PyTorch​
 3. Conclusions (not hands-on) [15 min]
-	1. Future Improvements / Roadmap
-	2. Any Additional Questions
+	5. Future Improvements / Roadmap
+	6. Any Additional Questions
 
 
 
