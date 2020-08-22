@@ -95,6 +95,8 @@ Jupyter Lab is running on port 8888. An example running on your local machine wo
 127.0.0.1:8888
 ```
 
+You should now see the KDD 2020 content in your Web browser.
+
 ## Presenters
 
 [Presenters](Presenters.md)
