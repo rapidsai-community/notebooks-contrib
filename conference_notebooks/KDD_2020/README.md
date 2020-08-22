@@ -39,7 +39,61 @@ Join our engineers and data scientists as they walk through a collection of DS a
 	5. Future Improvements / Roadmap
 	6. Any Additional Questions
 
+## Configuring Your Environment
+This tutorial requires RAPIDS and a modern GPU (Pascal architecture or newer). It makes use of multiple GPU packages and CUDA 10.2. In order to make this process as simple as possible, we've created detailed instructions to get a RAPIDS nightly container modified for the notebooks in this repo. Follow the steps outlined below. For the purposes of these instructions, we assume usage of Ubuntu 18.04, CUDA 10.2, and Python 3.7.
 
+#### 1. Pull the RAPIDS nightly container for your environment by visiting the [Getting Started](https://rapids.ai/start.html) page
+
+```
+docker pull rapidsai/rapidsai-nightly:cuda10.2-runtime-ubuntu18.04-py3.7
+```
+
+#### 2. Start the container
+
+```
+docker run --gpus all -it -p 8888:8888 -p 8787:8787 -p 8786:8786 --name kdd_rapids \
+	rapidsai/rapidsai-nightly:cuda10.2-runtime-ubuntu18.04-py3.7
+```
+
+You should now be at a prompt inside the container that looks like this:
+
+```
+(rapids) root@aa3f80497e9c:/rapids/notebooks#
+```
+
+If it does not, attach to the container you just created by running:
+
+```
+docker attach kdd_rapids
+```
+
+#### 3. Clone this Git repo
+
+```
+git clone https://github.com/rapidsai-community/notebooks-contrib.git
+```
+
+#### 4. Change directories to the KDD 2020 directory
+
+```
+cd /rapids/notebooks/notebooks-contrib/conference_notebooks/KDD_2020/
+```
+
+#### 5. Run the KDD initial setup script
+
+```
+sh kdd_initial_setup
+```
+
+#### 6. Wait for the script to finish, then visit Jupyter Lab in your Web browser
+
+Once the script finishes, use your favorite Web browser and navigate to your Jupyter Lab instance. You'll need to know the IP address of the machine where your container is running. If this is your local machine, you can often use `127.0.0.1` or `localhost`.
+
+Jupyter Lab is running on port 8888. An example running on your local machine would be:
+
+```
+127.0.0.1:8888
+```
 
 ## Presenters
 
