@@ -29,7 +29,7 @@ Join our engineers and data scientists as they walk through a collection of DS a
 	3. [Single-Cell RNA Sequencing Analysis](notebooks/Lungs/hlca_lung_gpu_analysis.ipynb)
 		1. Analyzing gene expression from a population of cells from a human lung​
 		2. Key Libraries: scanpy, cuDF, cuML, cuGraph​
-	4. Where to Park​
+	4. [Where to Park](./notebooks/parking/codes/)
 		1. Analyzing Seattle Parking data and determining the best parking spot within a walkable distance from Space Needle​
 		2. Key Libraries: cuSpatial, cuDF, cuGraph​
     5. CyBERT
