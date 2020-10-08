@@ -24,12 +24,12 @@ RAPIDS works on a broad range of GPUs, including NVIDIA GeForce, TITAN, Quadro, 
 
 
 
-##Questions?
+## Questions?
 There are a few channels to ask questions or start a discussion:
 - [GoAI Slack](https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTJiN2FkNTFkYmQ2YjY1OGI4NTc5Y2NlODQ3ZDdiODEwYmRiNTFhMzNlNTU5ZWJhZjA3NTg4NDZkMThkNTkxMGQ) to discuss issues and troubleshoot with the RAPIDS community
 - [RAPIDS GitHub](https://github.com/rapidsai) to submit feature requests and report bugs
 
-#**Getting Started**
+# **Getting Started**
 There are 3 steps to installing RAPIDS
 1. Provisioning a GPU enabled workspace
 1. Installing RAPIDS Prerequisites
