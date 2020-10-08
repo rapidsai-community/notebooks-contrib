@@ -109,7 +109,7 @@ Let's get started with a couple videos!
 
 | Video Title         | Description |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Video- Getting Started with RAPIDS](https://www.youtube.com/watch?v=T2AU0iVbY5A).  | Walks through the [01_Introduction_to_RAPIDS](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/getting_started_notebooks/intro_tutorials/01_Introduction_to_RAPIDS.ipynb) notebook which shows, at a high level, what each of the packages in RAPIDS are as well as what they do. |
+| [Video- Getting Started with RAPIDS](https://www.youtube.com/watch?v=T2AU0iVbY5A).  | Walks through the [01_Introduction_to_RAPIDS](intro_tutorials_and_guides/01_Introduction_to_RAPIDS.ipynb) notebook which shows, at a high level, what each of the packages in RAPIDS are as well as what they do. |
 | [Video - RAPIDS: Dask and cuDF NYCTaxi Screencast](https://www.youtube.com/watch?v=gV0cykgsTPM) | Shows you have you can use RAPIDS and Dask to easily ingest and model a large dataset (1 year's worth of NYCTaxi data) and then create a model around the question "when do you get the best tips".  This same workload can be done on any GPU. |
 
 ### Learning Notebooks
@@ -117,20 +117,20 @@ Let's get started with a couple videos!
 
 | Notebook Title         | Description |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [01_Introduction_to_RAPIDS](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/getting_started_notebooks/intro_tutorials/01_Introduction_to_RAPIDS.ipynb)  | This notebook shows at a high level what each of the packages in RAPIDS are as well as what they do.  |                                                                                                                                    
-| [02_Introduction_to_cuDF](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/getting_started_notebooks/intro_tutorials/02_Introduction_to_cuDF.ipynb)  | This notebook shows how to work with cuDF DataFrames in RAPIDS.                                                                                                                                      |
-| [03_Introduction_to_Dask](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/getting_started_notebooks/intro_tutorials/03_Introduction_to_Dask.ipynb)   | This notebook shows how to work with Dask using basic Python primitives like integers and strings.                                                                                                                                      |
-| [04_Introduction_to_Dask_using_cuDF_DataFrames](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/getting_started_notebooks/intro_tutorials/04_Introduction_to_Dask_using_cuDF_DataFrames.ipynb)   | This notebook shows how to work with cuDF DataFrames using Dask.                                                                                                                                      |
-| [Guide to UDFs](https://github.com/rapidsai/cudf/blob/branch-0.12/docs/cudf/source/guide-to-udfs.ipynb) | This notebook provides and overview of User Defined Functions with cuDF |
+| [01_Introduction_to_RAPIDS](intro_tutorials_and_guides/01_Introduction_to_RAPIDS.ipynb)  | This notebook shows at a high level what each of the packages in RAPIDS are as well as what they do.  |                                                                                                                                    
+| [02_Introduction_to_cuDF](intro_tutorials_and_guides/02_Introduction_to_cuDF.ipynb)  | This notebook shows how to work with cuDF DataFrames in RAPIDS.                                                                                                                                      |
+| [03_Introduction_to_Dask](intro_tutorials_and_guides/03_Introduction_to_Dask.ipynb)   | This notebook shows how to work with Dask using basic Python primitives like integers and strings.                                                                                                                                      |
+| [04_Introduction_to_Dask_using_cuDF_DataFrames](intro_tutorials_and_guides/04_Introduction_to_Dask_using_cuDF_DataFrames.ipynb)   | This notebook shows how to work with cuDF DataFrames using Dask.                                                                                                                                      |
+| [Guide to UDFs](https://github.com/rapidsai/cudf/blob/branch-0.16/docs/cudf/source/guide-to-udfs.ipynb) | This notebook provides and overview of User Defined Functions with cuDF |
 
 
 
 ### Extra credit and Exercises
 - [10 minute review of cuDF](https://github.com/rapidsai/cudf/blob/branch-0.16/docs/cudf/source/10min.ipynb)
 - [Extra Credit - 10 minute guide to cuDF and cuPY](https://github.com/rapidsai/cudf/blob/branch-0.16/docs/cudf/source/10min-cudf-cupy.ipynb)
-- [Extra Credit - Multi-GPU with Dask-cuDF](https://rapidsai.github.io/projects/cudf/en/0.12.0/dask-cudf.html)
-- [Review and Exercises 1- Review of cuDF](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/conference_notebooks/SCIPY_2019/cudf/01-Intro_to_cuDF.ipynb)
-- [Review and Exercises 2- Creating User Defined Functions (UDFs) in cuDF](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/conference_notebooks/SCIPY_2019/cudf/02-Intro_to_cuDF_UDFs.ipynb)
+- [Extra Credit - Multi-GPU with Dask-cuDF](https://rapidsai.github.io/projects/cudf/en/0.16.0/dask-cudf.html)
+- [Review and Exercises 1- Review of cuDF](conference_notebooks/SCIPY_2019/cudf/01-Intro_to_cuDF.ipynb)
+- [Review and Exercises 2- Creating User Defined Functions (UDFs) in cuDF](conference_notebooks/SCIPY_2019/cudf/02-Intro_to_cuDF_UDFs.ipynb)
 
 ## **2. Accelerating those Algorithms: cuML and XGBoost**
 ### Introduction
@@ -148,40 +148,40 @@ While we look at cuML , we'll take a look at how further on how to increase your
 - [latest RAPIDS cuML documentation](https://docs.rapids.ai/api)
 - [RAPIDS cuML GitHub repo](https://github.com/rapidsai/cuml)
 
-Let's look at a few video walkthroughs of XGBoost, as it may be an unfamiliar concept to some, and then expereince how to use the above in your learning notebooks.  
+Let's look at a few video walkthroughs of XGBoost, as it may be an unfamiliar concept to some, and then experience how to use the above in your learning notebooks.  
 
 ### Videos
 
 | Video Title         | Description |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Video - Introduction to XGBoost](https://www.youtube.com/watch?v=EQR3bP6XFW0) | Walks through the [07_Introduction_to_XGBoost](getting_started_notebooks/intro_tutorials/07_Introduction_to_XGBoost.ipynb) notebook and shows how to work with GPU accelerated XGBoost in RAPIDS. |
-| [Video - Introduction to Dask XGBoost](https://www.youtube.com/watch?v=q8HfEZythjM) |  Walks through the [08_Introduction_to_Dask_XGBoost](getting_started_notebooks/intro_tutorials/08_Introduction_to_Dask_XGBoost.ipynb) notebook and hows how to work with Dask XGBoost in RAPIDS.  This can be run on a single GPU as well and is useful when your dataset is larger than the memory size of your GPU. Will be deprecated in 0.15, and removed in 0.16                 |
+| [Video - Introduction to XGBoost](https://www.youtube.com/watch?v=EQR3bP6XFW0) | Walks through the [07_Introduction_to_XGBoost](intro_tutorials_and_guides/07_Introduction_to_XGBoost.ipynb) notebook and shows how to work with GPU accelerated XGBoost in RAPIDS. |
+| [Video - Introduction to Dask XGBoost](https://www.youtube.com/watch?v=q8HfEZythjM) |  Walks through the [08_Introduction_to_Dask_XGBoost](intro_tutorials_and_guides/08_Introduction_to_Dask_XGBoost.ipynb) notebook and hows how to work with Dask XGBoost in RAPIDS.  This can be run on a single GPU as well and is useful when your dataset is larger than the memory size of your GPU. Will be deprecated in 0.15, and removed in 0.16                 |
 
 ### Learning Notebooks
 
 | Notebook Title         | Description |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [06_Introduction_to_Supervised_Learning](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/getting_started_notebooks/intro_tutorials/06_Introduction_to_Supervised_Learning.ipynb)   | This notebook shows how to do GPU accelerated Supervised Learning in RAPIDS.                                                                                                                                      |
-| [07_Introduction_to_XGBoost](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/getting_started_notebooks/intro_tutorials/07_Introduction_to_XGBoost.ipynb)   | This notebook shows how to work with GPU accelerated XGBoost in RAPIDS.                                                                                                                                      |
-| [08_Introduction_to_Dask_XGBoost](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/getting_started_notebooks/intro_tutorials/08_Introduction_to_Dask_XGBoost.ipynb)   | This notebook shows how to work with Dask XGBoost in RAPIDS.  Will be deprecated in 0.15, and removed in 0.16                                                                                                                                     | 
-| [09_Introduction_to_Dimensionality_Reduction](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/getting_started_notebooks/intro_tutorials/09_Introduction_to_Dimensionality_Reduction.ipynb)   | This notebook shows how to do GPU accelerated Dimensionality Reduction in RAPIDS.                                                                                                                                      |
-| [10_Introduction_to_Clustering](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/getting_started_notebooks/intro_tutorials/10_Introduction_to_Clustering.ipynb)  | This notebook shows how to do GPU accelerated Clustering in RAPIDS. |
+| [06_Introduction_to_Supervised_Learning](intro_tutorials_and_guides/06_Introduction_to_Supervised_Learning.ipynb)   | This notebook shows how to do GPU accelerated Supervised Learning in RAPIDS.                                                                                                                                      |
+| [07_Introduction_to_XGBoost](intro_tutorials_and_guides/07_Introduction_to_XGBoost.ipynb)   | This notebook shows how to work with GPU accelerated XGBoost in RAPIDS.                                                                                                                                      |
+| [08_Introduction_to_Dask_XGBoost](intro_tutorials_and_guides/08_Introduction_to_Dask_XGBoost.ipynb)   | This notebook shows how to work with Dask XGBoost in RAPIDS.  Will be deprecated in 0.15, and removed in 0.16                                                                                                                                     | 
+| [09_Introduction_to_Dimensionality_Reduction](intro_tutorials_and_guides/09_Introduction_to_Dimensionality_Reduction.ipynb)   | This notebook shows how to do GPU accelerated Dimensionality Reduction in RAPIDS.                                                                                                                                      |
+| [10_Introduction_to_Clustering](intro_tutorials_and_guides/10_Introduction_to_Clustering.ipynb)  | This notebook shows how to do GPU accelerated Clustering in RAPIDS. |
 
 
 ### Extra credit and Exercises
-- [10 Review of Dask XGBoost](https://rapidsai.github.io/projects/cudf/en/0.12.0/dask-xgb-10min.html)
+- [10 Review of Dask XGBoost](https://rapidsai.github.io/projects/cudf/en/0.16.0/dask-xgb-10min.html)
 
 - [10 Review of cuML Estimators](https://github.com/rapidsai/cuml/blob/branch-0.16/docs/source/estimator_intro.ipynb)
 
-- [Review and Exercises 1 - Linear Regression](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/conference_notebooks/SCIPY_2019/cuml/01-Introduction-LinearRegression-Hyperparam.ipynb)
+- [Review and Exercises 1 - Linear Regression](conference_notebooks/SCIPY_2019/cuml/01-Introduction-LinearRegression-Hyperparam.ipynb)
 
-- [Review and Exercises 2 -  Logistic Regression](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/conference_notebooks/SCIPY_2019/cuml/02-LogisticRegression.ipynb)
+- [Review and Exercises 2 -  Logistic Regression](conference_notebooks/SCIPY_2019/cuml/02-LogisticRegression.ipynb)
 
-- [Review and Exercises 3- Intro to UMAP](https://github.com/rapidsai/notebooks-contrib/blob/branch-0.12/conference_notebooks/SCIPY_2019/cuml/03-UMAP.ipynb)
+- [Review and Exercises 3- Intro to UMAP](conference_notebooks/SCIPY_2019/cuml/03-UMAP.ipynb)
 
 ### RAPIDS cuML Example Notebooks
-- [Index of Notebooks](https://github.com/rapidsai/notebooks#cuml-notebooks)
-- [Direct Link to Notebooks](https://github.com/rapidsai/notebooks/tree/branch-0.12/cuml)
+- [Index of Notebooks](https://github.com/rapidsai/cuml/blob/branch-0.16/notebooks/README.md)
+- [Direct Link to Notebooks](https://github.com/rapidsai/cuml/tree/branch-0.16/notebooks)
 
 
 ### Conclusion to Sections 1 and 2
@@ -196,6 +196,6 @@ It is often useful to look at the relationships contained in the data, which we 
 - [RAPIDS cuGraph GitHub repo](https://github.com/rapidsai/cugraph)
 
 ### RAPIDS cuGraph Example Notebooks
-- [Index of Notebooks](https://github.com/rapidsai/notebooks/#cugraph-notebooks)
-- [Direct Link to Notebooks](https://github.com/rapidsai/notebooks/tree/branch-0.12/cugraph)
+- [Index of Notebooks](https://github.com/rapidsai/cugraph/blob/branch-0.16/notebooks/README.md)
+- [Direct Link to Notebooks](https://github.com/rapidsai/cugraph/tree/branch-0.16/notebooks)
 """
