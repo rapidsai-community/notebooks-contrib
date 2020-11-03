@@ -2,10 +2,17 @@
     "SpecInfo": 
     [
         {
-            "Total_Mem" : 511e9,
+            "Total_Mem" : 630e9,
             "Start_Year" : 2000,
             "End_Year" : 2016,
             "Part_Count" : [48, 96]
+        },
+
+        {
+            "Total_Mem" : 511e9,
+            "Start_Year" : 2000,
+            "End_Year" : 2016,
+            "Part_Count" : [32, 64]
         },
 
         {

@@ -1,4 +1,3 @@
-from packaging import version
 import json
 import glob
 import multiprocessing
@@ -80,8 +79,10 @@ def determine_dataset(total_mem, min_mem, part_count=None):
                 spec["Part_Count"][1] if use_1GB_splits else spec["Part_Count"][0]
             )
             if part_count > spec_part_count:
-                start_year = spec_list[i-1]["Start_Year"] if i>0 else spec["Start_Year"]
-                end_year = spec_list[i-1]["End_Year"] if i>0 else spec["End_Year"]
+                start_year = (
+                    spec_list[i - 1]["Start_Year"] if i > 0 else spec["Start_Year"]
+                )
+                end_year = spec_list[i - 1]["End_Year"] if i > 0 else spec["End_Year"]
                 break
         if not start_year:
             start_year = spec_list[-1]["Start_Year"]
