@@ -141,7 +141,7 @@ Click each topic to expand
 <details>
   <summary>Past Competitions </summary>
 
-- contains archived notebooks that were used in competitions, such as Kaggle or RAPIDS Community Competitions. 
+- [RAPIDS.AI KGMON Competition Notebooks](the_archive/archived_competition_notebooks/kaggle)- contains a selection of notebooks that were used in Kaggle competitions.
 
 </details> 
 
