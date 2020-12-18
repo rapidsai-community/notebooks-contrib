@@ -129,8 +129,8 @@ Let's get started with a couple videos!
 - [10 minute review of cuDF](https://github.com/rapidsai/cudf/blob/branch-0.18/docs/cudf/source/10min.ipynb)
 - [Extra Credit - 10 minute guide to cuDF and cuPY](https://github.com/rapidsai/cudf/blob/branch-0.18/docs/cudf/source/10min-cudf-cupy.ipynb)
 - [Extra Credit - Multi-GPU with Dask-cuDF](https://rapidsai.github.io/projects/cudf/en/0.18.0/dask-cudf.html)
-- [Review and Exercises 1- Review of cuDF](the_archive/archived_rapids_event_notebooks/SCIPY_2019/cudf/01-Intro_to_cuDF.ipynb)
-- [Review and Exercises 2- Creating User Defined Functions (UDFs) in cuDF](the_archive/archived_rapids_event_notebooks/SCIPY_2019/cudf/02-Intro_to_cuDF_UDFs.ipynb)
+- [Review and Exercises 1- Review of cuDF](../the_archive/archived_rapids_event_notebooks/SCIPY_2019/cudf/01-Intro_to_cuDF.ipynb)
+- [Review and Exercises 2- Creating User Defined Functions (UDFs) in cuDF](../the_archive/archived_rapids_event_notebooks/SCIPY_2019/cudf/02-Intro_to_cuDF_UDFs.ipynb)
 
 ## **2. Accelerating those Algorithms: cuML and XGBoost**
 ### Introduction
@@ -171,11 +171,11 @@ Let's look at a few video walkthroughs of XGBoost, as it may be an unfamiliar co
 
 - [10 Review of cuML Estimators](https://github.com/rapidsai/cuml/blob/branch-0.18/docs/source/estimator_intro.ipynb)
 
-- [Review and Exercises 1 - Linear Regression](the_archive/archived_rapids_event_notebooks/SCIPY_2019/cuml/01-Introduction-LinearRegression-Hyperparam.ipynb)
+- [Review and Exercises 1 - Linear Regression](../the_archive/archived_rapids_event_notebooks/SCIPY_2019/cuml/01-Introduction-LinearRegression-Hyperparam.ipynb)
 
-- [Review and Exercises 2 -  Logistic Regression](the_archive/archived_rapids_event_notebooks/SCIPY_2019/cuml/02-LogisticRegression.ipynb)
+- [Review and Exercises 2 -  Logistic Regression](../the_archive/archived_rapids_event_notebooks/SCIPY_2019/cuml/02-LogisticRegression.ipynb)
 
-- [Review and Exercises 3- Intro to UMAP](the_archive/archived_rapids_event_notebooks/SCIPY_2019/cuml/03-UMAP.ipynb)
+- [Review and Exercises 3- Intro to UMAP](../the_archive/archived_rapids_event_notebooks/SCIPY_2019/cuml/03-UMAP.ipynb)
 
 ### RAPIDS cuML Example Notebooks
 - [Index of Notebooks](https://github.com/rapidsai/notebooks#cuml-notebooks)
