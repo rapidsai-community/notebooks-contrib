@@ -13,6 +13,9 @@
 | 08_Introduction_to_Dask_XGBoost | This notebook shows how to work with Dask XGBoost in RAPIDS. |
 | 09_Introduction_to_Dimensionality_Reduction | This notebook shows how to do GPU accelerated Dimensionality Reduction in RAPIDS. |
 | 10_Introduction_to_Clustering | This notebook shows how to do GPU accelerated Clustering in RAPIDS. |
+| 11_Introduction_to_KMeans | This notebook shows how to do K Means Clustering in RAPIDS. |
+| 12_Introduction_to_KNN| This notebook shows how to do KNN in RAPIDS. |
+| 13_Introduction_to_LogisticRegression | This notebook shows how to do Logistic Regression in RAPIDS. |
 
 Coming soon!
 
