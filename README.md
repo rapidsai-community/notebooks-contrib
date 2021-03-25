@@ -54,7 +54,7 @@ Click each topic to expand
   <summary>RAPIDS Libraries Basics</summary>
 
 ##### Getting Started Document
-* [Crash Course Document](getting_started_materials/README.md)
+* [Intro to RAPIDS](getting_started_materials/README.md)
 
 ##### Teaching Notebooks
 * [Intro Notebooks to RAPIDS](getting_started_materials/intro_tutorials_and_guides)- covers cuDF, Dask, cuML and XGBoost.
