@@ -124,7 +124,10 @@ Click each topic to expand
 <details>
   <summary>Genomics </summary>
 
-  * [Video- GPU accelerated Single Cell Analytics](https://www.youtube.com/watch?v=nYneL_uif3Q) 
+  * [Clara Parabricks Single Cell Analytics Repo](https://github.com/clara-parabricks/rapids-single-cell-examples) - [Notebooks](https://github.com/clara-parabricks/rapids-single-cell-examples/tree/master/notebooks)
+  * [RAPIDS Single Cell Analytics with updated scanpy wrappers](https://github.com/Intron7/rapids-single-cell-examples/tree/Intron7-patch-2) - by [Severin Dicks](https://github.com/Intron7)
+  * [Video - GPU accelerated Single Cell Analytics](https://www.youtube.com/watch?v=nYneL_uif3Q) 
+  * [Video - Accelerate and scale genomic analysis with open source analytics](https://cloudonair.withgoogle.com/events/genomic-analysis) (Free Google registration required)
 
 </details>
 <details>
