@@ -23,16 +23,16 @@ Join our engineers and data scientists as they walk through a collection of DS a
 	1. [New York Taxi Data](./notebooks/Taxi/NYCTax.ipynb)
       	1. In troduction to RAPIDS via an analysis of the New York City taxi data set
       	2. Key Libraries: cuDF, cuML, cuGraph, cuXfilter​
-	2. [Deep Learning for Tabular Data](nvtabular/rossmann-store-sales-example.ipynb)
+	2. [Deep Learning for Tabular Data](./notebooks/nvtabular/rossmann-store-sales-example.ipynb)
 		1. Perform store sales prediction using tabular deep learning​
 		2. Key Libraries: NVTabular, cuDF, TensorFlow​
-	3. [Single-Cell RNA Sequencing Analysis](notebooks/Lungs/hlca_lung_gpu_analysis.ipynb)
+	3. [Single-Cell RNA Sequencing Analysis](./notebooks/Lungs/hlca_lung_gpu_analysis.ipynb)
 		1. Analyzing gene expression from a population of cells from a human lung​
 		2. Key Libraries: scanpy, cuDF, cuML, cuGraph​
 	4. [Where to Park](./notebooks/parking/codes/)
 		1. Analyzing Seattle Parking data and determining the best parking spot within a walkable distance from Space Needle​
 		2. Key Libraries: cuSpatial, cuDF, cuGraph​
-    5. CyBERT
+    5. [CyBERT](./notebooks/cybert/cyBERT_training_inference.ipynb)
        1. Cyber Log Parsing using Neural Networks and Language Based Model​
        2. Key Libraries: CLX, cuDF, PyTorch​
 3. Conclusions (not hands-on) [15 min]
