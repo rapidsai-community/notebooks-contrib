@@ -137,7 +137,7 @@ Click each topic to expand
   * [CLX API Docs](https://docs.rapids.ai/api/clx/stable/api.html)
   * [10 Minutes to CLX](https://docs.rapids.ai/api/clx/stable/10min-clx.html)
   * [Getting Started with CLX and Streamz](https://docs.rapids.ai/api/clx/stable/intro-clx-streamz.html)
-* [Learn RAPIDS Cyber Security mini Tour (External)](https://github.com/RAPIDSAcademy/rapidsacademy/tree/master/tutorials/security/tour)
+* [Learn RAPIDS Cyber Security Mini Tour (External)](https://github.com/RAPIDSAcademy/rapidsacademy/tree/master/tutorials/security/tour)
 * [Cyber Blog Notebooks (Archives)](the_archive/archived_rapids_blog_notebooks/cyber)
 
 </details>
@@ -167,7 +167,14 @@ Click each topic to expand
 - [BlazingSQL](#) - these notebooks supplement app.blazingsql.com and provide tutorials for local BlazingSQL workflows.  Make List.   
 - cuStreamz
 - [LearnRAPIDS](https://www.learnrapids.com/)
-- Graphistry
+<details>
+  <summary>Graphistry</summary>
+
+* [Graph viz/connectors/transforms for cuGraph/cuDF with Demos](https://github.com/graphistry/pygraphistry) - Demos in /demos
+* [RAPIDS dashboarding with Graphistry with Demos](https://github.com/graphistry/graph-app-kit) - Various demos in /python/views
+* [Graphistry Hub](https://hub.graphistry.com/) - Includes no-code file uploader + free API keys
+  
+</details>
 
 ## Additional Information
 * The `data` folder also includes the full image set from the [Fashion MNIST dataset](https://github.com/zalandoresearch/fashion-mnist).
