@@ -53,7 +53,7 @@ Click each topic to expand
 <details>
   <summary>RAPIDS Libraries Basics</summary>
 
-##### Getting Started Document
+##### Getting Started Readings and Cheat Sheets
 * [Intro to RAPIDS](getting_started_materials/README.md)
 
 ##### Teaching Notebooks
@@ -65,36 +65,60 @@ Click each topic to expand
 <details>
   <summary>Cloud Service Providers</summary>
 
-  * [AWS](https://rapids.ai/cloud#aws) 
-    * [Single Instance](https://rapids.ai/cloud#AWS-EC2)
-    * [Multi GPU Dask](https://rapids.ai/cloud#AWS-Dask)
-    * [Kubernetes](https://rapids.ai/cloud#AWS-Kubernetes)
-    * [Sagemaker](https://rapids.ai/cloud#AWS-Sagemaker)
-      * [Video- Tutorial of RAPIDS on AWS Sagemaker](https://www.youtube.com/watch?v=BtE4d0v6Css)
-  * [Azure](https://rapids.ai/cloud#azure)
-    * [Single Instance](https://rapids.ai/cloud#AZ-single)
-    * [Multi GPU Dask](https://rapids.ai/cloud#AZ-Dask)
-    * [Kubernetes](https://rapids.ai/cloud#AZ-Kubernetes)
-    * [AzureML Service](https://rapids.ai/cloud#AZ-ML)
-      * [Video- Tutorial of RAPIDS on AzureML](https://www.youtube.com/watch?v=aqTmVVFnEwI)
-  * [GCP](https://rapids.ai/cloud#googlecloud)
-    * [Single Instance](https://rapids.ai/cloud#GC-single)
-    * [Multi GPU Dask (Dataproc)](https://rapids.ai/cloud#GC-Dask)
-    * [Kubernetes](https://rapids.ai/cloud#GC-Kubernetes)
-    * [CloudAI](https://rapids.ai/cloud#GC-AI)
+  #### [AWS](https://rapids.ai/cloud#aws) 
+  * [Single Instance](https://rapids.ai/cloud#AWS-EC2)
+  * [Multi GPU Dask](https://rapids.ai/cloud#AWS-Dask)
+    * [Getting started with RAPIDS on AWS ECS using Dask Cloud Provider](https://medium.com/rapids-ai/getting-started-with-rapids-on-aws-ecs-using-dask-cloud-provider-b1adfdbc9c6e)
+  * [Kubernetes](https://rapids.ai/cloud#AWS-Kubernetes)
+  * [Sagemaker](https://rapids.ai/cloud#AWS-Sagemaker)
+    * [Video- Tutorial of RAPIDS on AWS Sagemaker](https://www.youtube.com/watch?v=BtE4d0v6Css)
+  #### [Azure](https://rapids.ai/cloud#azure)
+  * [Single Instance](https://rapids.ai/cloud#AZ-single)
+  * [Multi GPU Dask](https://rapids.ai/cloud#AZ-Dask)
+  * [Kubernetes](https://rapids.ai/cloud#AZ-Kubernetes)
+  * [AzureML Service](https://rapids.ai/cloud#AZ-ML)
+    * [Video- Tutorial of RAPIDS on AzureML](https://www.youtube.com/watch?v=aqTmVVFnEwI)
+  #### [GCP](https://rapids.ai/cloud#googlecloud)
+  * [Single Instance](https://rapids.ai/cloud#GC-single)
+  * [Multi GPU Dask (Dataproc)](https://rapids.ai/cloud#GC-Dask)
+    * [Bursting Data Science Workloads to GPUs on Google Cloud Platform with Dask Cloud Provider (Blog with Code snippets)](https://medium.com/rapids-ai/bursting-data-science-workloads-to-gpus-on-google-cloud-platform-with-dask-cloud-provider-685be1eff204)
+  * [Kubernetes](https://rapids.ai/cloud#GC-Kubernetes)
+  * [CloudAI](https://rapids.ai/cloud#GC-AI)
+
 
 </details>
 <details>
   <summary>Multi GPU </summary>
 
+  #### Getting Started 
 * [Hello Word to Dask](getting_started_materials/hello_worlds/Dask_Hello_World.ipynb)
 * [Intro to Dask](getting_started_materials/intro_tutorials_and_guides/03_Introduction_to_Dask.ipynb)
 * [Dask using cuDF](getting_started_materials/intro_tutorials_and_guides/04_Introduction_to_Dask_using_cuDF_DataFrames.ipynb)
+* [10 Minutes to Dask cuDF]()
 * [Learn RAPIDS Multi GPU Mini Tour (External)](https://github.com/RAPIDSAcademy/rapidsacademy/tree/master/tutorials/multigpu/minitour)
-* NYC taxi on Dataproc
+#### Example Workflows
+  
+* [NYC Taxi on Dataproc (or Local)](https://github.com/rapidsai-community/notebooks-contrib/blob/main/community_tutorials_and_guides/taxi/NYCTaxi-E2E.ipynb)
 * [Weather Analysis](community_tutorials_and_guides/intermediate_notebooks/examples/weather.ipynb)
+* Dask Mortgage Analysis
+* Performance Mortgage Analysis
+* [State of the art NLP at scale with RAPIDS, HuggingFace and Dask (Blog and Code)](https://medium.com/rapids-ai/state-of-the-art-nlp-at-scale-with-rapids-huggingface-and-dask-a885c19ce87b)
+* [LearnRAPIDS Multi-GPU Mini Tour (External)](https://github.com/RAPIDSAcademy/rapidsacademy/tree/master/tutorials/multigpu/minitour)
+#### Dask Tricks
+  
+* [Monitoring Dask RAPIDS with Prometheus and Grafana (Blog with Code)](https://medium.com/rapids-ai/monitoring-dask-rapids-with-prometheus-grafana-96eaf6b8f3a0)
+* [Scheduling & Optimizing RAPIDS Workflows with Dask and Prefect (Blog and Code)](https://medium.com/rapids-ai/scheduling-optimizing-rapids-workflows-with-dask-and-prefect-6fc26d011bf)
+* [Filtered Reading with RAPIDS & Dask to Optimize ETL (Blog and Code)](https://medium.com/rapids-ai/filtered-reading-with-rapids-dask-to-optimize-etl-5f1624f4be55)
 
 </details>
+<details>
+  <summary>RAPIDS and Deep Learning </summary>
+  
+* [Official RAPIDSAI Deep Learning Repo](https://github.com/rapidsai/deeplearning)
+* [GPU Hackthons RAPIDS + Deep Learning Crash Course](https://github.com/gpuhackathons-org/gpubootcamp/blob/master/ai/RAPIDS/)
+  
+</details>
+
 <details>
   <summary>Streaming Data </summary>
   
@@ -158,15 +182,33 @@ Click each topic to expand
 <details>
   <summary>Random Tips and Tricks </summary>
 
-*  [Synthetic 3D End-to-End ML Workflow](community_tutorials_and_guides/synthetic)
+* [Synthetic 3D End-to-End ML Workflow](community_tutorials_and_guides/synthetic)
+* [Reading Larger than Memory CSVs with RAPIDS and Dask (Blog)](https://medium.com/rapids-ai/reading-larger-than-memory-csvs-with-rapids-and-dask-e6e27dfa6c0f)
 
 </details>
 
 ### How-Tos with our Ecosystem Partners 
+<details>  
+  <summary>BlazingSQL</summary>
 
-- [BlazingSQL](#) - these notebooks supplement app.blazingsql.com and provide tutorials for local BlazingSQL workflows.  Make List.   
+* [Main Website](https://blazingsql.com/)
+* [Docs](https://docs.blazingsql.com/)
+* [Intro Notebooks](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks/tree/master/intro_notebooks)
+* [Welcome to Blazing's RAPIDS Cheatsheets](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks/tree/master/cheatsheets)
+* [Webinar Notebooks](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks/tree/master/webinars)
+  
+</details> 
+
 - cuStreamz
 - [LearnRAPIDS](https://www.learnrapids.com/)
+<details>
+  <summary>LearnRAPIDS</summary>
+
+* [Main Website]((https://www.learnrapids.com/)
+* [Tutorial Github Repo](https://github.com/RAPIDSAcademy/rapidsacademy/tree/master/tutorials)
+* [Graphistry Hub](https://hub.graphistry.com/) - Includes no-code file uploader + free API keys
+  
+</details>
 <details>
   <summary>Graphistry</summary>
 
