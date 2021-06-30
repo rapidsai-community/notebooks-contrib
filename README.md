@@ -199,14 +199,14 @@ Click each topic to expand
   
 </details> 
 
-- cuStreamz
-- [LearnRAPIDS](https://www.learnrapids.com/)
+<details>
+  <summary>cuStreamz</summary>
+</details> 
 <details>
   <summary>LearnRAPIDS</summary>
 
-* [Main Website]((https://www.learnrapids.com/)
+* [Main Website](https://www.learnrapids.com/)
 * [Tutorial Github Repo](https://github.com/RAPIDSAcademy/rapidsacademy/tree/master/tutorials)
-* [Graphistry Hub](https://hub.graphistry.com/) - Includes no-code file uploader + free API keys
   
 </details>
 <details>
