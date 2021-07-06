@@ -194,6 +194,6 @@ It is often useful to look at the relationships contained in the data, which we 
 - [RAPIDS cuGraph GitHub repo](https://github.com/rapidsai/cugraph)
 
 ### RAPIDS cuGraph Example Notebooks
-- [Index of Notebooks](https://github.com/rapidsai/notebooks/#cugraph-notebooks)
-- [Direct Link to Notebooks](https://github.com/rapidsai/notebooks/tree/branch-0.18/cugraph)
+- [Index of Notebooks](https://github.com/rapidsai/cugraph/blob/branch-21.08/notebooks/README.md)
+- [Direct Link to Notebooks](https://github.com/rapidsai/cugraph/tree/branch-21.08/notebooks)
 """
