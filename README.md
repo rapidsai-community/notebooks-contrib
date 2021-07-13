@@ -43,7 +43,9 @@ Once you've followed our guide, please don't forget to [test your notebooks!](TE
 - `data` - contains small data samples used for purely functional demonstrations. Some notebooks include cells that download larger datasets from external websites.
 
 ### Additional Resources
-- [Visit out Youtube Channel](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw/featured?view_as=subscriber) or see [list of videos](multimedia_links.md) by RAPIDS or our community.  Feel free to contribute your videos and RAPIDS themed playlists as well!
+Beyond our [Official RAPIDS Docs](https://docs.rapids.ai/api), please:
+- Visit the [NVIDIA Developer Forums](https://forums.developer.nvidia.com/c/ai-data-science/86)
+- [Visit our Youtube Channel](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw/featured?view_as=subscriber) or see [list of videos](multimedia_links.md) by RAPIDS or our community.  Feel free to contribute your videos and RAPIDS themed playlists as well!
 - [Visit our Blogs on Medium](https://medium.com/rapids-ai/) 
 
 ## Great places to get started <a name="get_started"></a>
@@ -53,13 +55,22 @@ Click each topic to expand
 <details>
   <summary>RAPIDS Libraries Basics</summary>
 
-##### Getting Started Readings and Cheat Sheets
+#### Getting Started Readings
+* [RAPIDS Release Deck](https://docs.rapids.ai/overview/latest.pdf)
 * [Intro to RAPIDS](getting_started_materials/README.md)
-
-##### Teaching Notebooks
+  
+#### Teaching Notebooks
 * [Intro Notebooks to RAPIDS](getting_started_materials/intro_tutorials_and_guides)- covers cuDF, Dask, cuML and XGBoost.
 * [Learn RAPIDS Getting Started Tour (External)](https://github.com/RAPIDSAcademy/rapidsacademy/tree/master/tutorials/datasci/tour)
 * [Hello Worlds](getting_started_materials/hello_worlds)
+  
+#### Official Cheat Sheets
+* [cuDF Cheat Sheet (PDF Download)](https://forums.developer.nvidia.com/uploads/short-url/mIndAvHNud3UXeWwC7Ore3d021D.pdf)
+* [BlazingSQL Cheat Sheet (PDF Download)](https://forums.developer.nvidia.com/uploads/short-url/v0Wt2kUisxHUwr9fJSD6yA1J2bP.pdf)
+* [cuGraph Cheat Sheet (PDF Download)](https://forums.developer.nvidia.com/uploads/short-url/kIbMG6LZjFfLFibbyqvVl2XcSbB.pdf)
+* [RAPIDS-Dask Cheat Sheet (PDF Download)](https://forums.developer.nvidia.com/uploads/short-url/xiN07MC8FSHsXS6lekxSaY1CWs4.pdf)
+* [CLX and cyBert Cheat Sheet (PDF Download)](https://forums.developer.nvidia.com/uploads/short-url/edzS5WizVTYZMWRtTl3AqHI5AL4.pdf)
+* [cuSignal Cheat Sheet (PDF Download)](https://forums.developer.nvidia.com/uploads/short-url/hkh6vQ2rzl6mAHL8Vt0CYhctark.pdf)
 </details>
 
 <details>
@@ -120,6 +131,18 @@ Click each topic to expand
 </details>
 
 <details>
+  <summary>Data Visualizations with RAPIDS </summary>
+  
+#### Offical RAPIDS Demos
+* [Intro to cuXFilter](https://github.com/rapidsai-community/showcase/blob/main/team_contributions/cuxfilter-tutorial/cuxfilter_tutorial.ipynb)
+* [Spatial Analytics Viz](https://github.com/exactlyallan/Spatial-Analytics-Viz/tree/main)
+ 
+#### Tutorials
+* [Visual EDA on NYC Taxi Spatial Analytics (As Shown in PyDataDC Meetup 11/2020)](https://github.com/taureandyernv/rapidsai_visual_eda)
+* [RAPIDS + Plot.ly Dask Tutorial (As shown in PyDataTT on 05/2021)](https://github.com/taureandyernv/rapids-plotly-webapps/tree/main).
+</details>
+
+<details>
   <summary>Streaming Data </summary>
   
 * [Chinmay Chandak's cuStreamz Gists (External)](https://gist.github.com/chinmaychandak)
@@ -143,6 +166,7 @@ Click each topic to expand
   <summary>GIS/Spatial Analytics </summary>
 
 * [Seismic Facies Analysis (External)](https://github.com/NVIDIA/energy-sdk/tree/master/rapids_seismic_facies)
+
 
 </details>
 <details>
