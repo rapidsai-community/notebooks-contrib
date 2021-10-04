@@ -127,6 +127,7 @@ Click each topic to expand
   
 * [Official RAPIDSAI Deep Learning Repo](https://github.com/rapidsai/deeplearning)
 * [GPU Hackthons RAPIDS + Deep Learning Crash Course](https://github.com/gpuhackathons-org/gpubootcamp/blob/master/ai/RAPIDS/)
+* [deeplearningwizard.com's Wizard Tutorial](https://github.com/ritchieng/deep-learning-wizard/) (External, uses Google Colab)
   
 </details>
 
