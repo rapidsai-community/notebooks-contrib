@@ -4,6 +4,7 @@
 * [Intro](#intro)
 * [Exploring the Repo](#exploring)
 * [Great places to get started](#get_started)
+* [Additional Resources](#more)
   
 ---
 
@@ -41,12 +42,6 @@ Once you've followed our guide, please don't forget to [test your notebooks!](TE
 - `community_archive` - This contains notebooks with known issues that have not have not been fixed in 45 days or more.  contains shared notebooks mentioned and used in blogs that showcase RAPIDS workflows and capabilities
 - `the_archive` - contains older notebooks from community members as well as notebooks that the RAPIDS team no longer updates, but are useful to the community, such as [`archived_rapids_blog_notebooks`](community_relaunch/the_archive/archived_rapids_blog_notebooks),  [`archived_rapids_event_notebooks`](the_archive/archived_rapids_event_notebooks), and [`competition_notebooks`](the_archive/archived_rapids_competition_notebooks)
 - `data` - contains small data samples used for purely functional demonstrations. Some notebooks include cells that download larger datasets from external websites.
-
-### Additional Resources
-Beyond our [Official RAPIDS Docs](https://docs.rapids.ai/api), please:
-- Visit the [NVIDIA Developer Forums](https://forums.developer.nvidia.com/c/ai-data-science/86)
-- [Visit our Youtube Channel](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw/featured?view_as=subscriber) or see [list of videos](multimedia_links.md) by RAPIDS or our community.  Feel free to contribute your videos and RAPIDS themed playlists as well!
-- [Visit our Blogs on Medium](https://medium.com/rapids-ai/) 
 
 ## Great places to get started <a name="get_started"></a>
 
@@ -243,7 +238,13 @@ Click each topic to expand
   
 </details>
 
-## Additional Information
+## Additional Resources <a name="more"></a>
+Beyond our [Official RAPIDS Docs](https://docs.rapids.ai/api), please:
+- Visit the [NVIDIA Developer Forums](https://forums.developer.nvidia.com/c/ai-data-science/86)
+- [Visit our Youtube Channel](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw/featured?view_as=subscriber) or see [list of videos](multimedia_links.md) by RAPIDS or our community.  Feel free to contribute your videos and RAPIDS themed playlists as well!
+- [Visit our Blogs on Medium](https://medium.com/rapids-ai/) 
+
+### Additional Information
 * The `data` folder also includes the full image set from the [Fashion MNIST dataset](https://github.com/zalandoresearch/fashion-mnist).
 
 * `utils`: contains a set of useful scripts for interacting with RAPIDS Community Notebooks
