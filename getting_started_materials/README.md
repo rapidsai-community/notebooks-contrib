@@ -14,7 +14,7 @@ Each of the three modules should take less than 2 hours to complete.  When compl
 This course was written with the expectation that you know Python and Jupyter Lab.  It is helpful, but not necessary, to have at least some understanding of Pandas, Scikit Learn, NetworkX, and Datashader. 
 
 [You should be able to run these exercises and use these libraries on any machine with these prerequisites](https://rapids.ai/start.html#PREREQUISITES), which namely are 
-- OS of Ubuntu 16.04 or 18.04 or CentOS7 with gcc 5.4 & 7.3
+- OS of Ubuntu 18.04 or 20.04 or CentOS7 with gcc 5.4 & 7.3
 - an NVIDIA GPU of Pascal Architecture or better (basically 10xx series or newer)
 
 RAPIDS works on a broad range of GPUs, including NVIDIA GeForce, TITAN, Quadro, Tesla, A100, and DGX systems
@@ -46,10 +46,11 @@ There are two option for using Cloud Instances:
 1. Shared, **free** instances like app.blazingsql.com and Google Colab
 1. Dedicated, **paid** [usually]  [GPU instances from providers like AWS, Azure, GCP, Paperspace, and more](https://rapids.ai/cloud.html)
 
-### Shared Cloud via Free Instances
+### Shared Cloud via Free.Almost Free Instances
 Free cloud instances have quick start capabilities or scripts to ease onboarding.  
-- **Google Colab**: The installation will take about 8 minutes.  First select a GPU instance from Runtime type.  After, use the provided RAPIDS installation scripts, found here by copying and pasting into a code cell.  Please note, RAPIDS will not run on an unsupported GPU instance like K80 - ONLY the T4, P4, and P100s (Refer to `!nvidia-smi`).  If you are given a K80, please factory reset your instance and the check again.  
-- **app.blazingsql.com**: these instances are preloaded with RAPIDS and you can start right away
+- **Google Colab**: The installation will take about 8 minutes.  First select a GPU instance from Runtime type.  After, use the provided RAPIDS installation scripts, found here by copying and pasting into a code cell.  Please note, RAPIDS will not run on an unsupported GPU instance like K80 - ONLY the T4, P4, and P100s (Refer to `!nvidia-smi`).  If you are given a K80, please factory reset your instance and the check again. You can upgrade for $10 a month to Colab Pro to greatly increase the chances of getting a RAPIDS compatible GPU.
+- **Paperspace**: these instances can be preloaded with RAPIDS and you can start right away, but the free GPUs are only free with a subscription to other GPUs.
+- **NVIDIA Launchpad**: corporate only instances to let you kick the tires of many NVIDIA technologies
 
 ### Dedicated Cloud via Paid Instances
 There are several ways to provision a dedicated cloud GPU workspace, and our instructions are found here.  Your OS will need to be **Ubuntu or RHEL/CentOS 7**.  For installing RAPIDS, These instances follow the same installation process as a local instance.  
@@ -63,18 +64,21 @@ You can satisfy your prerequisites to install RAPIDS by:
 ### OS and GPU Drivers
  Please ensure that your workstation has these installed as our prerequisites are as follows:
 - GPU: NVIDIA Pascal™ or better with compute capability 6.0+ (completed above)
-- OS: Ubuntu 16.04/18.04 or CentOS 7 with gcc/++ 7.5+
+- OS: Ubuntu 18.04/20.04 or CentOS 7 with gcc/++ 7.5+
   - See RSN 1 for details on our recent update to gcc/++ 7.5
   - RHEL 7 support is provided through CentOS 7 builds/installs
 - CUDA & NVIDIA Drivers: One of the following supported versions:
-  - 10.0 & v410.48+ (valid option for version 0.14 and earlier only)
+  - **11.2**
+  - **11.0**
+  - 10.2 & v440.33+  (valid option for version 0.19 and earlier only)
   - 10.1.2 & v418.87+
-  - 10.2 & v440.33+  
-  - 11.0 (valid option for version 0.16 and later)
+  - 10.0 & v410.48+ (valid option for version 0.14 and earlier only)
 - Python 
+  - **3.8** 
+  - **3.7**
   - 3.6 (valid option for version 0.14 and earlier)
-  - 3.7 
-  - 3.8 (valid option for version 0.16 and later)
+
+
 
 
 ### Install Packaging Environment (Docker or Conda)
@@ -179,7 +183,7 @@ Let's look at a few video walkthroughs of XGBoost, as it may be an unfamiliar co
 
 ### RAPIDS cuML Example Notebooks
 - [Index of Notebooks](https://github.com/rapidsai/notebooks#cuml-notebooks)
-- [Direct Link to Notebooks](https://github.com/rapidsai/notebooks/tree/branch-0.18/cuml)
+- [Direct Link to Notebooks](https://github.com/rapidsai/cuml/tree/branch-21.12/notebooks)
 
 
 ### Conclusion to Sections 1 and 2
@@ -194,6 +198,6 @@ It is often useful to look at the relationships contained in the data, which we 
 - [RAPIDS cuGraph GitHub repo](https://github.com/rapidsai/cugraph)
 
 ### RAPIDS cuGraph Example Notebooks
-- [Index of Notebooks](https://github.com/rapidsai/cugraph/blob/branch-21.08/notebooks/README.md)
-- [Direct Link to Notebooks](https://github.com/rapidsai/cugraph/tree/branch-21.08/notebooks)
+- [Index of Notebooks](https://github.com/rapidsai/cugraph/blob/branch-21.12/notebooks/README.md)
+- [Direct Link to Notebooks](https://github.com/rapidsai/cugraph/tree/branch-21.12/notebooks)
 """
