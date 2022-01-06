@@ -1,6 +1,6 @@
 # Competition Notebooks List:
 
-These notebooks are **not maintained**, should not be expected to run with the latest release, but are a masterclass in getting the most out of your GPU accelerated workflows with the RAPIDS partner ecosystem.  
+These notebooks are **not maintained**, should not be expected to run with the latest release, but are a master class in getting the most out of your GPU accelerated workflows with the RAPIDS partner ecosystem.  
 
 If you would like to update the notebooks, please do, and I'll link your update below.
 
