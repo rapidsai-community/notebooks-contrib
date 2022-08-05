@@ -13,12 +13,12 @@
 | 08_Introduction_to_Dask_XGBoost | This notebook shows how to work with Dask XGBoost in RAPIDS. |
 | 09_Introduction_to_Dimensionality_Reduction | This notebook shows how to do GPU accelerated Dimensionality Reduction in RAPIDS. |
 | 10_Introduction_to_Clustering | This notebook shows how to do GPU accelerated Clustering in RAPIDS. |
+| 11_Introduction_to_Strings | This notebook shows how to use cuDF to process text data. |
 
 Coming soon!
 
 | Notebook Title | Description |
 |----------------|-------------|
-| 11_Introduction_to_Strings | To be edited. |
 | 12_Introduction_Data_Preprocessing | To be edited. |
 | 13_Introduction_to_Model_Evaluation_and_Hyperparameter_Tuning | To be edited. |
 | 14_Predicting_Customer_Transactions | To be edited. |
