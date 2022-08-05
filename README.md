@@ -91,9 +91,9 @@ Click each topic to expand
   * [Kubernetes](https://rapids.ai/cloud#GC-Kubernetes)
   * [CloudAI](https://rapids.ai/cloud#GC-AI)
   #### [IBM](https://rapids.ai/cloud#ibmcloud)
-  * [Single Instance](https://rapids.ai/cloud#AZ-single)
+  * [Single Instance]
     * [Step by Step - Tutorial of RAPIDS on Virtual Server Instance](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-virtual-server-for-vpc-ce3e4b3ede1c)
-  * [Kubernetes](https://rapids.ai/cloud#AZ-Kubernetes)
+  * [Kubernetes]
     * [Step by Step - Tutorial of RAPIDS on Kubernetes Service](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-kubernetes-service-920de68dc6c4)
   
 
