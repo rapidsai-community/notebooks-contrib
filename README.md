@@ -92,9 +92,9 @@ Click each topic to expand
   * [CloudAI](https://rapids.ai/cloud#GC-AI)
   #### [IBM]()
   * Single Instance
-    * [Step by Step - Tutorial of RAPIDS on Virtual Server Instance](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-virtual-server-for-vpc-ce3e4b3ede1c)- by  [Muhammad Arif](https://www.linkedin.com/in/arifnafees/) in collabaration with [Syed Afzal Ahmed](https://www.linkedin.com/in/leaveamemo/)
+    * [Step by Step - Tutorial of RAPIDS on Virtual Server Instance](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-virtual-server-for-vpc-ce3e4b3ede1c)- by  [Muhammad Arif](https://www.linkedin.com/in/arifnafees/) in collabaration with [Syed Afzal Ahmed](https://www.linkedin.com/in/syed-ahmed-6927749/)
   * Kubernetes
-    * [Step by Step - Tutorial of RAPIDS on Kubernetes Service](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-kubernetes-service-920de68dc6c4)- by  [Muhammad Arif](https://www.linkedin.com/in/arifnafees/) in collabaration with [Syed Afzal Ahmed](https://www.linkedin.com/in/leaveamemo/)
+    * [Step by Step - Tutorial of RAPIDS on Kubernetes Service](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-kubernetes-service-920de68dc6c4)- by  [Muhammad Arif](https://www.linkedin.com/in/arifnafees/) in collabaration with [Syed Afzal Ahmed](https://www.linkedin.com/in/syed-ahmed-6927749/)
   
 
 
