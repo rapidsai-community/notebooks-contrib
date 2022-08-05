@@ -28,6 +28,9 @@ There are some additional Community Responsibilities, as the RAPIDS team isn't m
 ### RAPIDS Showcase Notebooks
 These notebooks are built by the RAPIDS team and will be maintained by them.  When we remove the notebooks, it will become community maintained until it hits `the_archive`
 
+### RAPIDS Event Notebooks
+[These notebooks that we presented at conferences or meetups](https://github.com/rapidsai-community/event-notebooks).  While we strive to use open source or easily accessible data, some notebooks may require datasets that have restricted access.  They also will be frozen in time and not maintained as RAPIDS progresses.  Please download the appropriate RAPIDS version that these workflows were build on or expect to update them to the newer verisons.  Your favorite notebooks from our previous events can now be found there as well!
+
 ### How to Contribute <a name="contributing"></a>
 
 Please see our [guide for contributing to notebooks-contrib](CONTRIBUTING.md).
