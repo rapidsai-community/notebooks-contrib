@@ -93,6 +93,12 @@ Click each topic to expand
     * [Bursting Data Science Workloads to GPUs on Google Cloud Platform with Dask Cloud Provider (Blog with Code snippets)](https://medium.com/rapids-ai/bursting-data-science-workloads-to-gpus-on-google-cloud-platform-with-dask-cloud-provider-685be1eff204)
   * [Kubernetes](https://rapids.ai/cloud#GC-Kubernetes)
   * [CloudAI](https://rapids.ai/cloud#GC-AI)
+  #### [IBM]()
+  * Single Instance
+    * [Step by Step - Tutorial of RAPIDS on Virtual Server Instance](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-virtual-server-for-vpc-ce3e4b3ede1c)- by  [Muhammad Arif](https://www.linkedin.com/in/arifnafees/) in collabaration with [Syed Afzal Ahmed](https://www.linkedin.com/in/syed-ahmed-6927749/)
+  * Kubernetes
+    * [Step by Step - Tutorial of RAPIDS on Kubernetes Service](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-kubernetes-service-920de68dc6c4)- by  [Muhammad Arif](https://www.linkedin.com/in/arifnafees/) in collabaration with [Syed Afzal Ahmed](https://www.linkedin.com/in/syed-ahmed-6927749/)
+  
 
 
 </details>
