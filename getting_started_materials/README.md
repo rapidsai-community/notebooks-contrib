@@ -126,6 +126,8 @@ Let's get started with a couple videos!
 | [03_Introduction_to_Dask](intro_tutorials_and_guides/03_Introduction_to_Dask.ipynb)   | This notebook shows how to work with Dask using basic Python primitives like integers and strings.                                                                                                                                      |
 | [04_Introduction_to_Dask_using_cuDF_DataFrames](intro_tutorials_and_guides/04_Introduction_to_Dask_using_cuDF_DataFrames.ipynb)   | This notebook shows how to work with cuDF DataFrames using Dask.                                                                                                                                      |
 | [Guide to UDFs](https://github.com/rapidsai/cudf/blob/branch-0.18/docs/cudf/source/guide-to-udfs.ipynb) | This notebook provides and overview of User Defined Functions with cuDF |
+| [12_Introduction_to_Exploratory_Data_Analysis_using_cuDF](intro_tutorials_and_guides/12_Introduction_to_Exploratory_Data_Analysis_using_cuDF.ipynb) | This notebook shows how to perform basic EDA with cuDF DataFrames |
+| [13_Introduction_to_Time_Series_Data_Analysis_using_cuDF](intro_tutorials_and_guides/13_Introduction_to_Time_Series_Data_Analysis_using_cuDF.ipynb) | This notebook shows how to do EDA on time-series DataFrame with cuDF |
 
 
 
