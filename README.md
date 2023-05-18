@@ -52,13 +52,13 @@ Once you've followed our guide, please don't forget to [test your notebooks!](TE
 Click each topic to expand
 <details>
   <summary>RAPIDS Libraries Basics</summary>
-
-#### Getting Started Readings
-* [RAPIDS Release Deck](https://docs.rapids.ai/overview/latest.pdf)
-* [Intro to RAPIDS](getting_started_materials/README.md)
   
-#### Teaching Notebooks
+#### Teaching Notebooks and User Guides
+* [Intro to RAPIDS Crash Course](getting_started_materials/README.md)
 * [Intro Notebooks to RAPIDS](getting_started_materials/intro_tutorials_and_guides)- covers cuDF, Dask, cuML and XGBoost.
+* [Official RAPIDS User Guides](https://docs.rapids.ai/user-guide)
+* [10 Minutes to cuDF and Dask cuDF](https://docs.rapids.ai/api/cudf/stable/user_guide/10min/)
+* [cuDF for Data Scientists: Functions for Data Wrangling (External)](https://medium.com/@tiraldj/cudf-for-data-scientists-part-1-2-functions-for-data-wrangling-12a8f889b33e#e7ee) - by [Mohammed R. Osman]()
 * [Learn RAPIDS Getting Started Tour (External)](https://github.com/RAPIDSAcademy/rapidsacademy/tree/master/tutorials/datasci/tour)
 * [Hello Worlds](getting_started_materials/hello_worlds)
   
@@ -72,33 +72,15 @@ Click each topic to expand
 </details>
 
 <details>
-  <summary>Cloud Service Providers</summary>
+  <summary>Deploying RAPIDS</summary>
 
-  #### [AWS](https://rapids.ai/cloud#aws) 
-  * [Single Instance](https://rapids.ai/cloud#AWS-EC2)
-  * [Multi GPU Dask](https://rapids.ai/cloud#AWS-Dask)
-    * [Getting started with RAPIDS on AWS ECS using Dask Cloud Provider](https://medium.com/rapids-ai/getting-started-with-rapids-on-aws-ecs-using-dask-cloud-provider-b1adfdbc9c6e)
-  * [Kubernetes](https://rapids.ai/cloud#AWS-Kubernetes)
-  * [Sagemaker](https://rapids.ai/cloud#AWS-Sagemaker)
-    * [Video- Tutorial of RAPIDS on AWS Sagemaker](https://www.youtube.com/watch?v=BtE4d0v6Css)
-  #### [Azure](https://rapids.ai/cloud#azure)
-  * [Single Instance](https://rapids.ai/cloud#AZ-single)
-  * [Multi GPU Dask](https://rapids.ai/cloud#AZ-Dask)
-  * [Kubernetes](https://rapids.ai/cloud#AZ-Kubernetes)
-  * [AzureML Service](https://rapids.ai/cloud#AZ-ML)
-    * [Video- Tutorial of RAPIDS on AzureML](https://www.youtube.com/watch?v=aqTmVVFnEwI)
-  #### [GCP](https://rapids.ai/cloud#googlecloud)
-  * [Single Instance](https://rapids.ai/cloud#GC-single)
-  * [Multi GPU Dask (Dataproc)](https://rapids.ai/cloud#GC-Dask)
-    * [Bursting Data Science Workloads to GPUs on Google Cloud Platform with Dask Cloud Provider (Blog with Code snippets)](https://medium.com/rapids-ai/bursting-data-science-workloads-to-gpus-on-google-cloud-platform-with-dask-cloud-provider-685be1eff204)
-  * [Kubernetes](https://rapids.ai/cloud#GC-Kubernetes)
-  * [CloudAI](https://rapids.ai/cloud#GC-AI)
-  #### [IBM]()
-  * Single Instance
-    * [Step by Step - Tutorial of RAPIDS on Virtual Server Instance](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-virtual-server-for-vpc-ce3e4b3ede1c)- by  [Muhammad Arif](https://www.linkedin.com/in/arifnafees/) in collabaration with [Syed Afzal Ahmed](https://www.linkedin.com/in/syed-ahmed-6927749/)
-  * Kubernetes
-    * [Step by Step - Tutorial of RAPIDS on Kubernetes Service](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-kubernetes-service-920de68dc6c4)- by  [Muhammad Arif](https://www.linkedin.com/in/arifnafees/) in collabaration with [Syed Afzal Ahmed](https://www.linkedin.com/in/syed-ahmed-6927749/)
-  
+* [Official RAPIDS Deployment Guide](Deploying RAPIDS — RAPIDS Deployment Documentation documentation)
+* [Video- Tutorial of RAPIDS on AWS Sagemaker](https://www.youtube.com/watch?v=BtE4d0v6Css)
+* [Video- Tutorial of RAPIDS on AzureML](https://www.youtube.com/watch?v=aqTmVVFnEwI)
+* [Bursting Data Science Workloads to GPUs on Google Cloud Platform with Dask Cloud Provider (Blog with Code snippets)](https://medium.com/rapids-ai/bursting-data-science-workloads-to-gpus-on-google-cloud-platform-with-dask-cloud-provider-685be1eff204)
+* [Step by Step - Tutorial of RAPIDS on IBM Virtual Server Instance](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-virtual-server-for-vpc-ce3e4b3ede1c)- by  [Muhammad Arif](https://www.linkedin.com/in/arifnafees/) in collabaration with [Syed Afzal Ahmed](https://www.linkedin.com/in/syed-ahmed-6927749/)
+* [Step by Step - Tutorial of RAPIDS on IBM Kubernetes Service](https://medium.com/@ahmed_82744/deploy-rapids-on-ibm-cloud-kubernetes-service-920de68dc6c4)- by  [Muhammad Arif](https://www.linkedin.com/in/arifnafees/) in collabaration with [Syed Afzal Ahmed](https://www.linkedin.com/in/syed-ahmed-6927749/)
+
 
 
 </details>
@@ -109,7 +91,6 @@ Click each topic to expand
 * [Hello Word to Dask](getting_started_materials/hello_worlds/Dask_Hello_World.ipynb)
 * [Intro to Dask](getting_started_materials/intro_tutorials_and_guides/03_Introduction_to_Dask.ipynb)
 * [Dask using cuDF](getting_started_materials/intro_tutorials_and_guides/04_Introduction_to_Dask_using_cuDF_DataFrames.ipynb)
-* [10 Minutes to Dask cuDF]()
 * [Learn RAPIDS Multi GPU Mini Tour (External)](https://github.com/RAPIDSAcademy/rapidsacademy/tree/master/tutorials/multigpu/minitour)
 #### Example Workflows
   
@@ -217,20 +198,6 @@ Click each topic to expand
 </details>
 
 ### How-Tos with our Ecosystem Partners 
-<details>  
-  <summary>BlazingSQL</summary>
-
-* [Main Website](https://blazingsql.com/)
-* [Docs](https://docs.blazingsql.com/)
-* [Intro Notebooks](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks/tree/master/intro_notebooks)
-* [Welcome to Blazing's RAPIDS Cheatsheets](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks/tree/master/cheatsheets)
-* [Webinar Notebooks](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks/tree/master/webinars)
-  
-</details> 
-
-<details>
-  <summary>cuStreamz</summary>
-</details> 
 <details>
   <summary>LearnRAPIDS</summary>
 
