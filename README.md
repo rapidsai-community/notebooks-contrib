@@ -217,20 +217,6 @@ Click each topic to expand
 </details>
 
 ### How-Tos with our Ecosystem Partners 
-<details>  
-  <summary>BlazingSQL</summary>
-
-* [Main Website](https://blazingsql.com/)
-* [Docs](https://docs.blazingsql.com/)
-* [Intro Notebooks](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks/tree/master/intro_notebooks)
-* [Welcome to Blazing's RAPIDS Cheatsheets](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks/tree/master/cheatsheets)
-* [Webinar Notebooks](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks/tree/master/webinars)
-  
-</details> 
-
-<details>
-  <summary>cuStreamz</summary>
-</details> 
 <details>
   <summary>LearnRAPIDS</summary>
 
