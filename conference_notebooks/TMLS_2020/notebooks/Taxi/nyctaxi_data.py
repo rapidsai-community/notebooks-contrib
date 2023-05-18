@@ -43,6 +43,7 @@ def download_nyctaxi_data(years, path):
       filename_elements = [filename_element.split('-') for filename_element in filename.split('_')]
       filename_elements = list(chain.from_iterable(filename_elements))
       if year in filename_elements:
+        https://data.cityofnewyork.us/api/odata/v4/t29m-gskq
         url = "https://storage.googleapis.com/anaconda-public-data/nyc-taxi/csv/{year}/".format(year=year) + filename
         print("- Downloading " + url)
         if not os.path.exists(local_paths[idx]):
