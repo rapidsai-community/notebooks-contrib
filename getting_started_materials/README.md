@@ -150,7 +150,7 @@ cuML runs many common scikit-learn algorithms and methods on cuDF dataframes to 
 - Decomposition & Dimensionality Reduction
 - Time Series
 
-While we look at cuML , we'll take a look at how further on how to increase your speed up with [XGBoost](https://machinelearningmastery.com/gentle-introduction-xgboost-applied-machine-learning/), scale it out with Dask XGboost, then see how to use cuML for Dimensionality Reduction and Clustering.
+While we look at cuML, we'll take a look at how further on how to increase your speed up with [XGBoost](https://machinelearningmastery.com/gentle-introduction-xgboost-applied-machine-learning/), scale it out with Dask XGboost, then see how to use cuML for Dimensionality Reduction and Clustering.
 - [latest RAPIDS cuML documentation](https://docs.rapids.ai/api)
 - [RAPIDS cuML GitHub repo](https://github.com/rapidsai/cuml)
 
@@ -171,6 +171,7 @@ Let's look at a few video walkthroughs of XGBoost, as it may be an unfamiliar co
 | [07_Introduction_to_XGBoost](intro_tutorials_and_guides/07_Introduction_to_XGBoost.ipynb)   | This notebook shows how to work with GPU accelerated XGBoost in RAPIDS.                                                                                                                                      |
 | [09_Introduction_to_Dimensionality_Reduction](intro_tutorials_and_guides/09_Introduction_to_Dimensionality_Reduction.ipynb)   | This notebook shows how to do GPU accelerated Dimensionality Reduction in RAPIDS.                                                                                                                                      |
 | [10_Introduction_to_Clustering](intro_tutorials_and_guides/10_Introduction_to_Clustering.ipynb)  | This notebook shows how to do GPU accelerated Clustering in RAPIDS. |
+| [14_Introduction_to_Machine_Learning_using_cuML](intro_tutorials_and_guides/14_Introduction_to_Machine_Learning_cuML.ipynb) | This notebook show to do GPU accelerated machine learning for core tasks like Classification, Regression, and Clustering | 
 
 
 ### Extra credit and Exercises
