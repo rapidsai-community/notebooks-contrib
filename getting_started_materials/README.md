@@ -49,7 +49,7 @@ There are two option for using Cloud Instances:
 ### Shared Cloud via Free/Almost Free Instances
 Free cloud instances have quick start capabilities or scripts to ease onboarding.  
 - **Google Colab**: Pip based environment that we can also install conda on.  The installation will take about 3 using pip and 8-15 minutes using conda.  First select a GPU instance from Runtime type.  After, use the provided RAPIDS installation scripts, found here by copying and pasting into a code cell.  Please note, RAPIDS will not run on an unsupported GPU instance like K80 - ONLY the T4, P4, and P100s (Refer to `!nvidia-smi`).  If you are given a K80, please factory reset your instance and the check again. You can upgrade for $10 a month to Colab Pro to greatly increase the chances of getting a RAPIDS compatible GPU.  Will run a single notebook and data -incuding installation- is not stored between instances.
-- **SageMaker Studio Lab**: Conda based environment ryunning jupyterlab.  These instances will save your data, your installation, and run multiple notebooks.
+- **SageMaker Studio Lab**: Conda based environment running jupyterlab.  These instances will save your data, your installation, and run multiple notebooks.
 - **Paperspace**: Docker based environment. These instances can be preloaded with RAPIDS and you can start right away, but the free GPUs are only free with a subscription to other GPUs.
 - **NVIDIA Launchpad**: corporate only instances to let you kick the tires of many NVIDIA technologies
 
@@ -121,15 +121,14 @@ Let's get started with a couple videos!
 
 
 ### Extra credit and Exercises
-- [10 minute review of cuDF](https://github.com/rapidsai/cudf/blob/branch-23.10/docs/cudf/source/10min.ipynb)
+- [10 minute review of cuDF and Dask-cuDF](https://github.com/rapidsai/cudf/blob/branch-23.10/docs/cudf/source/10min.ipynb)
 - [Extra Credit - 10 minute guide to cuDF and cuPY](https://github.com/rapidsai/cudf/blob/branch-23.10/docs/cudf/source/10min-cudf-cupy.ipynb)
-- [Extra Credit - Multi-GPU with Dask-cuDF](https://rapidsai.github.io/projects/cudf/en/0.18.0/dask-cudf.html)
 - [Review and Exercises 1- Review of cuDF](https://github.com/rapidsai-community/event-notebooks/blob/main/SCIPY_2019/cudf/01-Intro_to_cuDF.ipynb)
 - [Review and Exercises 2- Creating User Defined Functions (UDFs) in cuDF](https://github.com/rapidsai-community/event-notebooks/blob/main/SCIPY_2019/cudf/02-Intro_to_cuDF_UDFs.ipynb)
 
 ## **2. Accelerating those Algorithms: cuML and XGBoost**
 ### Introduction
-Congrats learning the basics of cuDF and Dask.  Now let's take a look at cuML
+Congrats learning the basics of cuDF and Dask-cuDF for your data forming.  Now let's take a look at cuML to run GPU accelerated machine learning algorithms.
 
 cuML runs many common scikit-learn algorithms and methods on cuDF dataframes to model, infer, regress, reduce, and predict outcomes on the data. [Among the ever growing suite of algorithms, you can perform several GPU accelerated algortihms for each of these methods:]()
 
