@@ -121,7 +121,7 @@ Let's get started with a couple videos!
 
 
 ### Extra credit and Exercises
-- [10 minute review of cuDF and Dask-cuDF](https://github.com/rapidsai/cudf/blob/branch-23.10/docs/cudf/source/10min.ipynb)
+- [10 minute review of cuDF and Dask-cuDF](https://github.com/rapidsai/cudf/blob/branch-23.10/docs/cudf/source/user_guide/10min.ipynb)
 - [Extra Credit - 10 minute guide to cuDF and cuPY](https://github.com/rapidsai/cudf/blob/branch-23.10/docs/cudf/source/10min-cudf-cupy.ipynb)
 - [Review and Exercises 1- Review of cuDF](https://github.com/rapidsai-community/event-notebooks/blob/main/SCIPY_2019/cudf/01-Intro_to_cuDF.ipynb)
 - [Review and Exercises 2- Creating User Defined Functions (UDFs) in cuDF](https://github.com/rapidsai-community/event-notebooks/blob/main/SCIPY_2019/cudf/02-Intro_to_cuDF_UDFs.ipynb)
