@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) <year> NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 import sys, os 
 
 sys.path.append('/usr/local/lib/python3.6/site-packages/')

@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) <year> NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 """
 A toy example to demonstrate how to convert python arrays into cuSpatial
 inputs, invoke the GPU accelerated directed Hausdorff distance computing

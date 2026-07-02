@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) <year> NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 """
 Demo code to verify the correctness of GPU-accelerated computing directed
 Hausdorff distance on Locust trajectory dataset for 592 trajectories whose

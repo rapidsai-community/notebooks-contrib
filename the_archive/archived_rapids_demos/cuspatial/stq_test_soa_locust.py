@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) <year> NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 """
 GPU-based spatial window query demo using 1.3 million points read from file
 and (x1,x2,y1,y2)=[-180,180,-90,90] as the query window num should be the same

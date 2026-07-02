@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) <year> NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 """
 verify the correctness of GPU-based implementation by comparing with shapely
 python package GPU C++ kernel time 0.966ms, GPU C++ libcuspatial end-to-end

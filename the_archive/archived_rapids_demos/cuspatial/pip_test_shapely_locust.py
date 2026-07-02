@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) <year> NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 """
 PIP demo directly using shapely, more efficient than using python gdal/ogr
 directly polygons are created only once and stored for reuse

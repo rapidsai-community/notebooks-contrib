@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) <year> NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 """
 pip demo directly using gdal/ogr for python; not for performance comparisons.
 To run the demo, first install python-gdal by `conda install -c conda-forge

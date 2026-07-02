@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) <year> NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 """
 demo of chaining three APIs: derive_trajectories+subset_trajectory(by ID)
 +hausdorff_distance also serves as an example to integrate cudf and cuspatial
