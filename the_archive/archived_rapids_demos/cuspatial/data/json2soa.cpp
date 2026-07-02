@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 // g++ json2soa.cpp cJSON.c -o json2soa -O3
 //./json2soa schema_HWY_20_AND_LOCUST-filtered.json locust -1
 
