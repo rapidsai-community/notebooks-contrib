@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 // g++ -I /usr/local/include -L /usr/local/lib poly2soa.cpp -lgdal -o poly2soa
 // ./poly2soa its.cat itsroi.ply
 

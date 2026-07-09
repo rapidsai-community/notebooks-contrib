@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
 
 RAPIDS_DIR=/rapids
 NBTEST=${RAPIDS_DIR}/utils/nbtest.sh
